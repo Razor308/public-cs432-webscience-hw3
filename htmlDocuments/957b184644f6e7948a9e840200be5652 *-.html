@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <!-- Consent framework code -->
+      <script type="text/javascript">
+          //GDPR Stub file
+          !function () { var e = function () { var e, t = "__tcfapiLocator", a = [], n = window; for (; n;) { try { if (n.frames[t]) { e = n; break } } catch (e) { } if (n === window.top) break; n = n.parent } e || (!function e() { var a = n.document, r = !!n.frames[t]; if (!r) if (a.body) { var i = a.createElement("iframe"); i.style.cssText = "display:none", i.name = t, a.body.appendChild(i) } else setTimeout(e, 5); return !r }(), n.__tcfapi = function () { for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++)n[r] = arguments[r]; if (!n.length) return a; if ("setGdprApplies" === n[0]) n.length > 3 && 2 === parseInt(n[1], 10) && "boolean" == typeof n[3] && (e = n[3], "function" == typeof n[2] && n[2]("set", !0)); else if ("ping" === n[0]) { var i = { gdprApplies: e, cmpLoaded: !1, cmpStatus: "stub" }; "function" == typeof n[2] && n[2](i) } else a.push(n) }, n.addEventListener("message", (function (e) { var t = "string" == typeof e.data, a = {}; try { a = t ? JSON.parse(e.data) : e.data } catch (e) { } var n = a.__tcfapiCall; n && window.__tcfapi(n.command, n.version, (function (a, r) { var i = { __tcfapiReturn: { returnValue: a, success: r, callId: n.callId } }; t && (i = JSON.stringify(i)), e.source.postMessage(i, "*") }), n.parameter) }), !1)) }; "undefined" != typeof module ? module.exports = e : e() }();
+      </script>
+      <script type="text/javascript">
+          //CCPA Stub file
+          (function () { var e = false; var c = window; var t = document; function r() { if (!c.frames["__uspapiLocator"]) { if (t.body) { var a = t.body; var e = t.createElement("iframe"); e.style.cssText = "display:none"; e.name = "__uspapiLocator"; a.appendChild(e) } else { setTimeout(r, 5) } } } r(); function p() { var a = arguments; __uspapi.a = __uspapi.a || []; if (!a.length) { return __uspapi.a } else if (a[0] === "ping") { a[2]({ gdprAppliesGlobally: e, cmpLoaded: false }, true) } else { __uspapi.a.push([].slice.apply(a)) } } function l(t) { var r = typeof t.data === "string"; try { var a = r ? JSON.parse(t.data) : t.data; if (a.__cmpCall) { var n = a.__cmpCall; c.__uspapi(n.command, n.parameter, function (a, e) { var c = { __cmpReturn: { returnValue: a, success: e, callId: n.callId } }; t.source.postMessage(r ? JSON.stringify(c) : c, "*") }) } } catch (a) { } } if (typeof __uspapi !== "function") { c.__uspapi = p; __uspapi.msgHandler = l; c.addEventListener("message", l, false) } })();
+      </script>
+      <script  type="text/javascript">
+          window._sp_ = {
+              config: {
+                  accountId: 1247,
+                  baseEndpoint: 'https://cdn.privacy-mgmt.com',
+                  targetingParams: {
+                      type: "GDPR"
+                  }
+              }
+          }
+          window._sp_ccpa = {
+              config: {
+                  mmsDomain: "https://message.sp-prod.net",
+                  ccpaOrigin: "https://ccpa-service.sp-prod.net",
+                  accountId: 1247,
+                  getDnsMsgMms: true,
+                  alwaysDisplayDns: false,
+                  targetingParams: {
+                      type: "CCPA"
+                  }
+              }
+          }
+      </script>
+      <script src="https://cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js"></script>
+      <script src="https://ccpa.sp-prod.net/ccpa.js"></script>
+    <!-- Consent framework code END -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KC8VTBP');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-15a968d5fbd6dc57745",applicationID:"472043694"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }</style>
+<link rel="canonical" href="https://justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" />
+<meta property="og:site_name" content="Just The News" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="shortcut icon" href="/themes/custom/jtn/icons/icon.png" />
+<meta name="twitter:title" content="Joe Biden says voters don’t deserve to know if he would pack the Supreme Court" />
+<meta name="twitter:site" content="@justthenews" />
+<meta name="twitter:description" content="Biden says the public will know his position on court-packing the day after the election." />
+<meta name="description" content="Biden says the public will know his position on court-packing the day after the election." />
+<link rel="mask-icon" href="/themes/custom/jtn/icons/icon.svg" />
+<meta property="og:type" content="article" />
+<link rel="icon" sizes="16x16" href="/themes/custom/jtn/icons/icon-16x16.png" />
+<meta name="twitter:site:id" content="1216793092134723586" />
+<meta property="og:url" content="https://justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" />
+<meta property="og:title" content="Joe Biden says voters don’t deserve to know if he would pack the Supreme Court" />
+<link rel="icon" sizes="32x32" href="/themes/custom/jtn/icons/icon-32x32.png" />
+<link rel="icon" sizes="96x96" href="/themes/custom/jtn/icons/icon-96x96.png" />
+<meta name="twitter:url" content="https://justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" />
+<meta property="og:description" content="Biden says the public will know his position on court-packing the day after the election." />
+<link rel="icon" sizes="192x192" href="/themes/custom/jtn/icons/icon-192x192.png" />
+<link rel="apple-touch-icon" href="/themes/custom/jtn/icons/apple-touch-icon-60x60.png" />
+<meta name="twitter:image:height" content="1200" />
+<meta name="twitter:image:alt" content="Democratic candidate Joe Biden at first 2020 presidential debate | (Win McNamee/Getty Images)" />
+<meta name="twitter:image" content="https://justthenews.com/sites/default/files/styles/social_media_share/public/2020-09/GettyImages-1277463811.jpg?h=199d8c1f&amp;itok=2spemRw7" />
+<meta name="twitter:image:width" content="628" />
+<link rel="apple-touch-icon" sizes="72x72" href="/themes/custom/jtn/icons/apple-touch-icon-72x72.png" />
+<meta property="og:image" content="https://justthenews.com/sites/default/files/styles/social_media_share/public/2020-09/GettyImages-1277463811.jpg?h=199d8c1f&amp;itok=2spemRw7" />
+<link rel="apple-touch-icon" sizes="76x76" href="/themes/custom/jtn/icons/apple-touch-icon-76x76.png" />
+<meta property="og:image:url" content="https://justthenews.com/sites/default/files/styles/social_media_share/public/2020-09/GettyImages-1277463811.jpg?h=199d8c1f&amp;itok=2spemRw7" />
+<link rel="apple-touch-icon" sizes="114x114" href="/themes/custom/jtn/icons/apple-touch-icon-114x114.png" />
+<meta property="og:image:secure_url" content="https://justthenews.com/sites/default/files/styles/social_media_share/public/2020-09/GettyImages-1277463811.jpg?h=199d8c1f&amp;itok=2spemRw7" />
+<link rel="apple-touch-icon" sizes="120x120" href="/themes/custom/jtn/icons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/themes/custom/jtn/icons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/themes/custom/jtn/icons/apple-touch-icon-152x152.png" />
+<meta property="og:image:width" content="1200" />
+<link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/jtn/icons/apple-touch-icon-180x180.png" />
+<meta property="og:image:height" content="628" />
+<link rel="apple-touch-icon-precomposed" href="/themes/custom/jtn/icons/apple-touch-icon-57x57.png" />
+<meta property="og:image:alt" content="Democratic candidate Joe Biden at first 2020 presidential debate | (Win McNamee/Getty Images)" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/themes/custom/jtn/icons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/themes/custom/jtn/icons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/themes/custom/jtn/icons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/themes/custom/jtn/icons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/themes/custom/jtn/icons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/themes/custom/jtn/icons/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/themes/custom/jtn/icons/apple-touch-icon-180x180.png" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="revision" href="https://justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" />
+<link rel="amphtml" href="https://justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court?amp" />
+
+    <title>Joe Biden says voters don’t deserve to know if he would pack the Supreme Court | Just The News</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_oKbul3uvS-gmWBfok_4_hJ3v1hUpjWJseqNb_ZP3bLY.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css__YsZMASUdpeHZrDe6CaVCjYtjFVZF1ox4yoEZ-wHXbU.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async></script>
+<script src="/sites/default/files/js/js_Ti2w0gYKSvD-ZAp-aFmA49ErVz1Jf_rKe1gNcVeNBcQ.js"></script>
+<script src="//widgets.outbrain.com/outbrain.js" async></script>
+<script src="//tradecraft.s.llnwi.net/v1/pub/07/jtna.js" async></script>
+
+    <script src="//tradecraft.s.llnwi.net/v1/pub/07/jtnlib.js" async></script>
+    <script type="text/javascript" src="//js-sec.indexww.com/ht/p/191040-27970744739601.js" async></script>
+    <script async src="//c.amazon-adsystem.com/aax2/apstag.js"></script>
+    <script src="//mediatradecraft-com.videoplayerhub.com/galleryloader.js" async></script>
+    <script src="//get.s-onetag.com/47416066-75ac-4502-baa0-de158d16c3ce/tag.min.js" async defer></script>
+  </head>
+  <body class="path--node body-sidebars-none alias--politics-policy-elections-joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court nodetype--article logged-out">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC8VTBP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#content">
+        Skip to content
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div  class="page-standard" id="pg__c">
+  <!-- ______________________ BRANDING _______________________ -->
+
+  <header id="breaking-news">
+  </header>
+  <!-- /branding -->
+  <!-- ______________________ BRANDING _______________________ -->
+
+  <header id="branding">
+    <div class="cog--mq mq-branding">
+              <div id="branding-region">
+            <div class="region region-branding">
+    <div id="block-jtn-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+      <button class="hamburger hamburger--squeeze" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+            <a href="/" title="Home" rel="home" class="logo">
+            <img src="/themes/custom/jtn/logo.svg" alt="Home"/>
+        </a>
+        <div class="block block-search-api-page block-search-api-page-form-block">
+  
+    
+      <form class="search-api-page-block-form-search search-api-page-block-form search-form search-block-form container-inline" data-drupal-selector="search-api-page-block-form-search" action="/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" method="post" id="search-api-page-block-form-search" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<input autocomplete="off" data-drupal-selector="form-ckjcmd8ajatfduomemah56pw1yyr9uatvwptoc62g5c" type="hidden" name="form_build_id" value="form-cKjcMD8ajaTFDUOmemaH56Pw1YYR9uaTVWPtoC62G5c" />
+<input data-drupal-selector="edit-search-api-page-block-form-search" type="hidden" name="form_id" value="search_api_page_block_form_search" />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="" />
+</div>
+
+</form>
+
+    <div class="search-toggle"><i class="fas fa-search open-search"></i><i class="fas fa-times close-search"></i></div>
+</div>
+
+</div>
+
+
+<nav role="navigation" aria-labelledby="block-mainnavigation" id="block-mainnavigation" class="block block-menu navigation block-system-menublock menu--main">
+      
+        
+              <ul class="menu">
+                  <li>
+          <a href="/government" data-drupal-link-system-path="taxonomy/term/1">Government</a>
+                  </li>
+              <li>
+          <a href="/politics-policy" data-drupal-link-system-path="taxonomy/term/2">Politics</a>
+                  </li>
+              <li>
+          <a href="/accountability" data-drupal-link-system-path="taxonomy/term/3">Accountability</a>
+                  </li>
+              <li>
+          <a href="/nation" data-drupal-link-system-path="taxonomy/term/4">America</a>
+                  </li>
+              <li>
+          <a href="/podcasts/scott-rasmussens-number-day" data-drupal-link-system-path="node/2802">Rasmussen</a>
+                  </li>
+              <li>
+          <a href="/podcasts" data-drupal-link-system-path="podcasts">Podcasts</a>
+                  </li>
+              <li>
+          <a href="/tv-shows" data-drupal-link-system-path="tv-shows">TV Shows</a>
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+  </div>
+
+        </div>
+          </div>
+  </header>
+  <!-- /branding -->
+
+  <!-- ______________________ HEADER _______________________ -->
+
+  <header id="header" class="page-header">
+    <div class="mq-header">
+              <div id="header-region">
+          <div class="cog--mq">
+              <div class="region region-header">
+    
+
+<nav role="navigation" aria-labelledby="block-jtn-main-menu" id="block-jtn-main-menu" class="block block-menu navigation block-system-menublock menu--main">
+      
+        
+              <ul class="menu">
+                  <li>
+          <a href="/government" data-drupal-link-system-path="taxonomy/term/1">Government</a>
+                                    <ul class="menu">
+                  <li>
+          <a href="/government/white-house" data-drupal-link-system-path="taxonomy/term/15">White House</a>
+                  </li>
+              <li>
+          <a href="/government/local" data-drupal-link-system-path="taxonomy/term/22">Local</a>
+                  </li>
+              <li>
+          <a href="/government/security" data-drupal-link-system-path="taxonomy/term/17">Security</a>
+                  </li>
+              <li>
+          <a href="/government/diplomacy" data-drupal-link-system-path="taxonomy/term/18">Diplomacy</a>
+                  </li>
+              <li>
+          <a href="/government/congress" data-drupal-link-system-path="taxonomy/term/16">Congress</a>
+                  </li>
+              <li>
+          <a href="/government/courts-law" data-drupal-link-system-path="taxonomy/term/19">Courts &amp; Law</a>
+                  </li>
+              <li>
+          <a href="/government/state-houses" data-drupal-link-system-path="taxonomy/term/21">State Houses</a>
+                  </li>
+              <li>
+          <a href="/government/federal-agencies" data-drupal-link-system-path="taxonomy/term/20">Federal Agencies</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/politics-policy" data-drupal-link-system-path="taxonomy/term/2">Politics</a>
+                                    <ul class="menu">
+                  <li>
+          <a href="/politics-policy/all-things-trump" data-drupal-link-system-path="taxonomy/term/25">All Things Trump</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/cybersecurity" data-drupal-link-system-path="taxonomy/term/34">Cybersecurity</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/education" data-drupal-link-system-path="taxonomy/term/30">Education</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/elections" data-drupal-link-system-path="taxonomy/term/23">Elections</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/energy" data-drupal-link-system-path="taxonomy/term/26">Energy</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/environment" data-drupal-link-system-path="taxonomy/term/27">Environment</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/finance" data-drupal-link-system-path="taxonomy/term/28">Finance</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/coronavirus" data-drupal-link-system-path="taxonomy/term/29">Coronavirus</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/polling" data-drupal-link-system-path="taxonomy/term/24">Polling</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/privacy" data-drupal-link-system-path="taxonomy/term/33">Privacy</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/regulation" data-drupal-link-system-path="taxonomy/term/32">Regulation</a>
+                  </li>
+              <li>
+          <a href="/politics-policy/transportation" data-drupal-link-system-path="taxonomy/term/31">Transportation</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/accountability" data-drupal-link-system-path="taxonomy/term/3">Accountability</a>
+                                    <ul class="menu">
+                  <li>
+          <a href="/accountability/media" data-drupal-link-system-path="taxonomy/term/54">Media</a>
+                  </li>
+              <li>
+          <a href="/accountability/political-ethics" data-drupal-link-system-path="taxonomy/term/50">Political Ethics</a>
+                  </li>
+              <li>
+          <a href="/accountability/waste-fraud-and-abuse" data-drupal-link-system-path="taxonomy/term/53">Waste, Fraud and Abuse</a>
+                  </li>
+              <li>
+          <a href="/accountability/watchdogs" data-drupal-link-system-path="taxonomy/term/52">Watchdogs</a>
+                  </li>
+              <li>
+          <a href="/accountability/whistleblowers" data-drupal-link-system-path="taxonomy/term/51">Whistleblowers</a>
+                  </li>
+              <li>
+          <a href="/accountability/russia-and-ukraine-scandals" data-drupal-link-system-path="taxonomy/term/183">Russia and Ukraine Scandals</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/nation" data-drupal-link-system-path="taxonomy/term/4">America</a>
+                                    <ul class="menu">
+                  <li>
+          <a href="/nation/crime" data-drupal-link-system-path="taxonomy/term/36">Crime</a>
+                  </li>
+              <li>
+          <a href="/nation/culture" data-drupal-link-system-path="taxonomy/term/39">Culture</a>
+                  </li>
+              <li>
+          <a href="/nation/economy" data-drupal-link-system-path="taxonomy/term/35">Economy</a>
+                  </li>
+              <li>
+          <a href="/nation/science" data-drupal-link-system-path="taxonomy/term/38">Science</a>
+                  </li>
+              <li>
+          <a href="/nation/technology" data-drupal-link-system-path="taxonomy/term/37">Technology</a>
+                  </li>
+              <li>
+          <a href="/nation/extremism" data-drupal-link-system-path="taxonomy/term/65">Extremism</a>
+                  </li>
+              <li>
+          <a href="/nation/free-speech" data-drupal-link-system-path="taxonomy/term/66">Free Speech</a>
+                  </li>
+              <li>
+          <a href="/nation/religion" data-drupal-link-system-path="taxonomy/term/64">Religion</a>
+                  </li>
+              <li>
+          <a href="/world" data-drupal-link-system-path="taxonomy/term/5">World</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/podcasts/scott-rasmussens-number-day" data-drupal-link-system-path="node/2802">Rasmussen</a>
+                                    <ul class="menu">
+                  <li>
+          <a href="/politics-policy/polling" data-drupal-link-system-path="taxonomy/term/24">Polls</a>
+                  </li>
+              <li>
+          <a href="/podcasts/scott-rasmussens-number-day" data-drupal-link-system-path="node/2802">Just the Polls with Scott Rasmussen</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/podcasts" data-drupal-link-system-path="podcasts">Podcasts</a>
+                                    <ul class="menu">
+                  <li>
+          <a href="/podcasts/john-solomon-reports" data-drupal-link-system-path="node/38">John Solomon Reports</a>
+                  </li>
+              <li>
+          <a href="/podcasts/sharyl-attkisson-podcast" data-drupal-link-system-path="node/42">The Sharyl Attkisson Podcast</a>
+                  </li>
+              <li>
+          <a href="/podcasts/pods-honest-truth-david-brody" data-drupal-link-system-path="node/40">The Water Cooler With David Brody</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/tv-shows" data-drupal-link-system-path="tv-shows">TV Shows</a>
+                                    <ul class="menu">
+                  <li>
+          <a href="/tv-shows/water-cooler-david-brody" data-drupal-link-system-path="node/5978">The Water Cooler with David Brody</a>
+                  </li>
+              <li>
+          <a href="/tv-shows/just-news-am-carrie-sheffield" data-drupal-link-system-path="node/5979">Just the News a.m. with Carrie Sheffield</a>
+                  </li>
+          </ul>
+  
+                  </li>
+          </ul>
+  
+
+
+  </nav><div class="search-api-page-block-form-search search-api-page-block-form search-form search-block-form container-inline block block-search-api-page block-search-api-page-form-block" data-drupal-selector="search-api-page-block-form-search-2" id="block-searchapipagesearchblockform">
+  
+    
+      <form action="/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" method="post" id="search-api-page-block-form-search--2" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys--2" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys--2" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<input autocomplete="off" data-drupal-selector="form-ssz5w97sfcsy8cn54vxlgn-yvqt5tndbjy-kdeaxkcq" type="hidden" name="form_build_id" value="form-SSz5W97sFcsY8cN54VXlGn-yVQT5tNDbJy-KdEAXkCQ" />
+<input data-drupal-selector="edit-search-api-page-block-form-search-2" type="hidden" name="form_id" value="search_api_page_block_form_search" />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2"><input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op" value="" />
+</div>
+
+</form>
+
+    <div class="search-toggle"><i class="fas fa-search open-search"></i><i class="fas fa-times close-search"></i></div>
+</div>
+<div id="block-followus-2" class="block block-simple-block block-simple-blockfollow-us">
+  
+      <h2 class="block--title">Follow Us</h2>
+    
+          <div class="follow-us">
+        <ul class="social-icons">
+            <li class="twitter"><a href="https://twitter.com/JustTheNews"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></li>
+            <li class="facebook"><a href="https://facebook.com/JustTheNewsReports"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"/></svg></a></li>
+            <li class="instagram"><a href="https://instagram.com/JTNReports"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li>
+            <li class="youtube"><a href="https://youtube.com/channel/UC588htN7jqso3D80OnGGrAw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>
+            <li class="rss"><a href="/rss.xml"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM112 416c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm157.533 0h-34.335c-6.011 0-11.051-4.636-11.442-10.634-5.214-80.05-69.243-143.92-149.123-149.123-5.997-.39-10.633-5.431-10.633-11.441v-34.335c0-6.535 5.468-11.777 11.994-11.425 110.546 5.974 198.997 94.536 204.964 204.964.352 6.526-4.89 11.994-11.425 11.994zm103.027 0h-34.334c-6.161 0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882 152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83 6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z" fill="#f26522" /></svg></a></li>
+        </ul>
+    </div>
+  </div>
+
+  </div>
+
+          </div>
+        </div>
+          </div>
+  </header>
+  <!-- /header -->
+
+  <!-- ______________________ Pre content _______________________ -->
+      <div class="clearfix pre-content" id="pre-content">
+      <div class="cog--mq mq-precontent">
+          <div class="region region-pre-content">
+    <div id="block-sitewideleaderboard" class="block block-simple-block block-simple-blockad-728-90">
+  
+    
+      <div style='text-align:center;'>
+  <div id='div-gpt-ad-topFlex' style='display:inline-block;'></div>
+</div>
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-jtn-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  <a href="/politics-policy">Politics &amp; Policy</a>
+              </li>
+          <li>
+                  <a href="/politics-policy/elections">Elections</a>
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+
+  </div>
+
+      </div>
+    </div>
+  
+  <!-- ______________________ MAIN _______________________ -->
+
+  <div class="clearfix" id="main">
+    <div class="cog--mq mq-main">
+
+            <!-- /sidebar-first -->
+
+      <section id="content">
+
+        
+        <div id="content-area">
+            <div class="region region-content">
+    <div id="block-jtn-content" class="block block-system block-system-main-block">
+  
+    
+      
+
+
+<article  role="article" about="/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" typeof="schema:Article" class="entity--type-node node node--type-article node--view-mode-full">
+
+    <header>
+    
+          <span property="schema:name" content="Joe Biden says voters don’t deserve to know if he would pack the Supreme Court" class="hidden"></span>
+
+
+    
+      </header>
+  
+  <div class="content">
+      <div class="layout--wrapper">
+    <div class="layout layout--onecol">
+      <div  class="layout__region layout__region--content">
+        <div class="block block-layout-builder block-field-blocknodearticletitle">
+  
+    
+      <h1 class="js-quickedit-page-title">
+      <span property="schema:name">Joe Biden says voters don’t deserve to know if he would pack the Supreme Court</span>
+
+    </h1>
+  </div>
+
+
+
+<div class="block block-layout-builder block-field-blocknodearticlebody">
+  
+    
+      
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Biden says the public will know his position on court-packing the day after the election.</p>
+</div>
+      
+  </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="layout--wrapper">
+    <div class="layout layout--twocol-section layout--twocol-section--75-25">
+
+              <div  class="layout__region layout__region--first">
+          <div class="block block-ctools block-entity-viewnode">
+  
+    
+      
+
+
+  
+            <div property="schema:image" resource="/media/9029" class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article>
+  
+      
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Image</div>
+              <div class="field__item">  <img width="1270" height="800" alt="Biden at the first debate" loading="lazy" class="lazyload" data-src="/sites/default/files/styles/hero/public/2020-09/GettyImages-1277463811.jpg?h=199d8c1f&amp;itok=19v-RSBH" typeof="foaf:Image" />
+
+
+</div>
+          </div>
+
+            <div class="field field--name-field-caption field--type-string field--label-hidden field__item">Democratic candidate Joe Biden at first 2020 presidential debate</div>
+      
+            <div class="field field--name-field-credit field--type-string field--label-hidden field__item">(Win McNamee/Getty Images)</div>
+      
+  </article>
+</div>
+      
+
+
+
+
+  </div>
+<div class="block block-ctools block-entity-viewnode">
+  
+    
+      
+
+
+<article  role="article" about="/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court" typeof="schema:Article" class="node node--type-article node--view-mode-left-rail">
+
+    <header>
+    
+
+      <span property="schema:name" content="Joe Biden says voters don’t deserve to know if he would pack the Supreme Court" class="hidden"></span>
+
+
+
+    
+      </header>
+  
+  <div class="content">
+      <div class="layout--wrapper">
+    <div class="layout layout--twocol-section layout--twocol-section--25-75">
+
+              <div  class="layout__region layout__region--first">
+          <div class="block block-layout-builder block-field-blocknodearticlefield-authors">
+  
+    
+      
+      <div class="field field--name-field-authors field--type-entity-reference field--label-hidden field__items">By
+    <span class="field field--name-field-authors field--type-entity-reference field--label-hidden field__item"><a href="/brianna-kraemer" hreflang="en">Brianna Kraemer </a></span>    </div>
+  
+  </div>
+<div class="block block-jtn-fe block-social-icons">
+  
+    
+      <div class="item-list"><ul role="toolbar" aria-label="Social Media Share buttons" class="social-icons"><li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court%3Futm_medium%3Dsocial_media%26utm_source%3Dfacebook_social_icon%26utm_campaign%3Dsocial_icons" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li><li><a href="https://www.twitter.com/intent/tweet?via=JustTheNews&amp;url=https%3A//justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court%3Futm_medium%3Dsocial_media%26utm_source%3Dtwitter_social_icon%26utm_campaign%3Dsocial_icons&amp;text=Joe%20Biden%20says%20voters%20don%E2%80%99t%20deserve%20to%20know%20if%20he%20would%20pack%20the%20Supreme%20Court" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a></li><li><a href="https://parler.com/new-post?url=https%3A//justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court%3Futm_medium%3Dsocial_media%26utm_source%3Dparler_social_icon%26utm_campaign%3Dsocial_icons&amp;message=Joe%20Biden%20says%20voters%20don%E2%80%99t%20deserve%20to%20know%20if%20he%20would%20pack%20the%20Supreme%20Court" target="_blank" rel="noopener noreferrer" aria-label="Share on Parler"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 100 100"><g fill="#000000"><path d="M58.34 83.31h-25v-8.49c0-4.5 3.64-8.14 8.14-8.14h16.87c13.8 0 25.02-11.19 25.02-24.94 0-13.75-11.23-24.94-25.03-24.94h-.26l-5.3-.16H0C0 7.45 7.45 0 16.63 0h36.41l5.44.17C81.39.24 100 18.86 100 41.74c0 22.92-18.69 41.57-41.66 41.57z"/><path d="M16.65 100C7.46 100 .02 92.55.02 83.37V49.49c0-8.92 7.23-16.16 16.16-16.16h42.19a8.32 8.32 0 010 16.64h-33.5c-4.53 0-8.21 3.67-8.21 8.21V100z"/></g></svg></a></li><li><a href="mailto:?subject=JustTheNews.com%20%7C%20Joe%20Biden%20says%20voters%20don%E2%80%99t%20deserve%20to%20know%20if%20he%20would%20pack%20the%20Supreme%20Court&amp;body=From%20JustTheNews.com%3A%20Joe%20Biden%20says%20voters%20don%E2%80%99t%20deserve%20to%20know%20if%20he%20would%20pack%20the%20Supreme%20Court%0A%0Ahttps%3A//justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court%3Futm_medium%3Dsocial_media%26utm_source%3Dmail_social_icon%26utm_campaign%3Dsocial_icons" target="_blank" rel="noopener noreferrer" aria-label="Share by Email"><i class="far fa-envelope"></i></a></li></ul></div>
+  </div>
+<div class="block block-layout-builder block-field-blocknodearticlechanged">
+  
+    
+      
+
+
+  <div class="field field--name-changed field--type-changed field--label-hidden field__item">
+    Updated: October 10, 2020 - 3:00pm
+  </div>
+
+
+  </div>
+
+        </div>
+      
+              <div  class="layout__region layout__region--second">
+          <div class="block block-simple-block block-simple-blockarticle-tabs">
+  
+    
+      <div class="block-tabs article-tabs">
+  <ul>
+    <li><a href="#article" class="is-active" data-show-class="block-field-blocknodearticlebody">Article</a></li>
+    <li><a href="#digital-diary" data-show-class="block-field-blocknodearticlefield-dig-deeper">Dig In</a></li>
+   </ul>
+</div>
+  </div>
+<div class="block block-layout-builder block-field-blocknodearticlebody">
+  
+    
+      
+            <div property="schema:text" class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p dir="ltr">During a trip to Las Vegas, a reporter confronted Democratic presidential nominee Joe Biden on if he would pack the court, in which he replied that voters don’t deserve to know.</p>
+<p>A KTNV reporter told Biden the number one thing viewers have asked in the past couple days is if he would choose to pack the court.</p>
+<p>"Well you’ve been asked by the viewers who are probably Republicans who don't want me continuing to talk about what they’re doing to the court right now," Biden responded Friday.</p>
+<p>"Well, sir don’t the voters deserve to know…?" reporter Ross DiMattei asked.</p>
+<p>"No they don’t.... I'm not gonna play his game, he’d love me to talk about, and I’ve already said something on court packing, he’d love that to be the discussion instead of what he’s doing now," Biden said. </p>
+<p>Last year during the Democratic primary, Biden claimed to oppose packing the court, something some of the other candidates supported.  </p>
+<p>"You’ll know my position on court-packing the day after the election," Biden said in Phoenix on Thursday, explaining that the moment he answers that question all headlines will be about his stance.</p>
+</div>
+      
+  </div>
+<div class="block block-views block-views-blockrelated-articles-block-1">
+  
+      <h2 class="block--title">Related Articles</h2>
+    
+      <div class="views-element-container"><div class="view view-related-articles view-id-related_articles view-display-id-block_1 js-view-dom-id-dfe8a1b344e5affbb9f3af51e4b6a90d9061f5b8916a57540d3b73e59991efc8">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-field-image"><div class="field-content">  <a href="/politics-policy/elections/has-rejected-nearly-375000-mail-ballot-applications" hreflang="en"><img width="800" height="450" alt="Ballot applications in Reading, Pennsylvania" typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/GettyImages-1270684753.jpg?h=7c542cee&amp;itok=odqXzoKE" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/politics-policy/elections/has-rejected-nearly-375000-mail-ballot-applications" hreflang="en">Pennsylvania has rejected nearly 375,000 mail-in ballot applications so far</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-image"><div class="field-content">  <a href="/politics-policy/elections/michigan-appeals-court-strikes-down-two-week-window-count-ballots-after" hreflang="en"><img width="800" height="450" alt="Demonstrators hold a rally in front of the Michigan state capital building to protest the governor&#039;s stay-at-home order." typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-05/GettyImages-1224848144.jpg?h=c6980913&amp;itok=rAeNX3go" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/politics-policy/elections/michigan-appeals-court-strikes-down-two-week-window-count-ballots-after" hreflang="en">Michigan appeals court strikes down two-week window to count ballots after election</a></span></div>
+  </div>
+    <div class="views-row views-row-last">
+    <div class="views-field views-field-field-image"><div class="field-content">  <a href="/politics-policy/elections/its-myth-police-criticize-bidens-advice-cops-should-shoot-suspects-leg" hreflang="en"><img width="800" height="450" alt="Joe Biden at his Oct. 15 town hall event." typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/GettyImages-1280424533.jpg?h=199d8c1f&amp;itok=Cr8D8N1J" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/politics-policy/elections/its-myth-police-criticize-bidens-advice-cops-should-shoot-suspects-leg" hreflang="en">Law enforcement world slams Biden&#039;s advice to shoot suspects &#039;in the leg&#039;</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+<div class="block block-simple-block block-simple-blockoutbrain-articles">
+  
+    
+      <div class="OUTBRAIN" data-src="DROP_PERMALINK_HERE" data-widget-id="GS_1"></div>
+  </div>
+
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+
+<!-- /content -->
+
+  
+  
+  
+</article>
+<!-- /article #node -->
+
+  </div>
+
+        </div>
+      
+              <div  class="layout__region layout__region--second">
+          <div class="block block-views block-views-blockfrontpage-block-5">
+  
+      <h2 class="block--title">Top Stories</h2>
+    
+      <div class="views-element-container"><div class="view view-frontpage view-id-frontpage view-display-id-block_5 js-view-dom-id-0d7dfdf35a62e46c287301bac620b39d3d8854507180cbc22b58ab295290419f">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-field-section"><div class="field-content"><a href="/politics-policy/elections" hreflang="en">Elections</a></div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/politics-policy/elections/its-myth-police-criticize-bidens-advice-cops-should-shoot-suspects-leg" hreflang="en"><img width="480" height="480" alt="Joe Biden at his Oct. 15 town hall event." typeof="foaf:Image" data-src="/sites/default/files/styles/square/public/2020-10/GettyImages-1280424533.jpg?h=199d8c1f&amp;itok=OsAdyoKR" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/politics-policy/elections/its-myth-police-criticize-bidens-advice-cops-should-shoot-suspects-leg" hreflang="en">Law enforcement world slams Biden&#039;s advice to shoot suspects &#039;in the leg&#039;</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-section"><div class="field-content"><a href="/nation/free-speech" hreflang="en">Free Speech</a></div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/nation/free-speech/sat-amamazon-nixes-new-documentary-celebrated-black-author-shelby-steele" hreflang="en"><img width="480" height="480" alt="Shelby Steele" typeof="foaf:Image" data-src="/sites/default/files/styles/square/public/2020-10/Shelby%20Steele.jpg?h=54dc283d&amp;itok=UTaBoG_9" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/nation/free-speech/sat-amamazon-nixes-new-documentary-celebrated-black-author-shelby-steele" hreflang="en">Amazon nixes new documentary from celebrated black author Shelby Steele </a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-section"><div class="field-content"><a href="/government/congress" hreflang="en">Congress</a></div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/government/congress/senate-homeland-security-leader-johnson-demands-fbi-verify-hunter-biden" hreflang="en"><img width="480" height="480" alt="Hunter Biden with father Joe Biden" typeof="foaf:Image" data-src="/sites/default/files/styles/square/public/2020-02/GettyImages-520783510.jpg?h=199d8c1f&amp;itok=8185uVHv" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/government/congress/senate-homeland-security-leader-johnson-demands-fbi-verify-hunter-biden" hreflang="en">Senate Homeland Security leader Johnson demands FBI verify Hunter Biden whistleblower emails</a></span></div>
+  </div>
+    <div class="views-row views-row-last">
+    <div class="views-field views-field-field-section"><div class="field-content"><a href="/politics-policy/elections" hreflang="en">Elections</a></div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/politics-policy/elections/has-rejected-nearly-375000-mail-ballot-applications" hreflang="en"><img width="480" height="480" alt="Ballot applications in Reading, Pennsylvania" typeof="foaf:Image" data-src="/sites/default/files/styles/square/public/2020-10/GettyImages-1270684753.jpg?h=7c542cee&amp;itok=5wCU5tDo" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/politics-policy/elections/has-rejected-nearly-375000-mail-ballot-applications" hreflang="en">Pennsylvania has rejected nearly 375,000 mail-in ballot applications so far</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+<div class="block block-simple-block block-simple-blockad-320-250">
+  
+    
+      <div style="text-align:center;">
+  <div id="div-gpt-ad-top300x250"></div>
+</div>
+  </div>
+<div class="block block-views block-views-blocknews-not-noise-block-1">
+  
+      <h2 class="block--title">News, Not Noise</h2>
+    
+      <div class="views-element-container"><div class="view view-news-not-noise view-id-news_not_noise view-display-id-block_1 js-view-dom-id-48c98e909db165e6ae5f23f9c9c1d1df6a1fcd434a5d625d2eb5902a936cc12d">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-field-section"><div class="field-content"><a href="/nation/religion" hreflang="en">Religion</a></div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/nation/religion/calif-church-host-large-worship-service-sunday-against-governors-nonessential-order" hreflang="en"><img width="800" height="450" alt="Worshippers at Texas church in 2017 " typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/GettyImages-842236776.jpg?h=d05eaef0&amp;itok=cOdyyX6P" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/nation/religion/calif-church-host-large-worship-service-sunday-against-governors-nonessential-order" hreflang="en">TV star Kirk Cameron to help lead protest against California restrictions on churches</a></span></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-field-section"><div class="field-content"><a href="/accountability/russia-and-ukraine-scandals" hreflang="en">Russia and Ukraine Scandals</a></div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/accountability/russia-and-ukraine-scandals/joe-biden-snaps-reporter-asking-about-sons-emails-calls" hreflang="en"><img width="800" height="450" alt="Biden" typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/biden3%20%282%29_0.jpg?h=23619c12&amp;itok=k1VegPDr" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/accountability/russia-and-ukraine-scandals/joe-biden-snaps-reporter-asking-about-sons-emails-calls" hreflang="en">Joe Biden snaps at reporter asking about son&#039;s emails, calls it &#039;smear campaign&#039;</a></span></div>
+  </div>
+    <div class="views-row views-row-last">
+    <div class="views-field views-field-field-section"><div class="field-content"><a href="/politics-policy/regulation" hreflang="en">Regulation</a></div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/politics-policy/regulation/fcc-member-says-watershed-moment-big-tech-companies" hreflang="en"><img width="800" height="450" alt=" Federal Communication Commission Chairman Ajit Pai and commissioners Michael O&#039;Rielly, Brendan Carr" typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/GettyImages-1192122094.jpg?h=199d8c1f&amp;itok=njnvOGKa" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/politics-policy/regulation/fcc-member-says-watershed-moment-big-tech-companies" hreflang="en">FCC member says recent Biden stories blocked on social media ‘watershed moment’ for big tech</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+<div class="block block-simple-block block-simple-blockad-320-250-2">
+  
+    
+      <div style="text-align:center;">
+  <div id="div-gpt-ad-mid300xFlex"></div>
+</div>
+  </div>
+<div class="block block-jtn-fe block-most-popular-block">
+  
+      <h2 class="block--title">Trending</h2>
+    
+      <!-- 2 day trending Rebuilt: October 17, 2020 18:18  -->
+<div class="clear-both">
+  <div class="item-list"><ol class="most-popular"><li><a href="/politics-policy/elections/savannah-guthrie-comes-under-fire-some-her-performance-moderating-trumps">Social media blasts Trump town hall moderator Guthrie, asks why no questions to Biden on son Hunter</a></li><li><a href="/politics-policy/polling/battleground-state-polling-shows-tighter-trump-v-biden-race-nationwide">Battleground state polling shows tighter Trump-Biden race than national polls</a></li><li><a href="/government/white-house/ice-cube-says-cnn-cancelled-his-interview-chris-cuomo-because-they-cant">Ice Cube says CNN canceled his interview because they &#039;can&#039;t handle the truth&#039;</a></li><li><a href="/politics-policy/coronavirus/mask-mandates-dont-work-white-house-covid-adviser-criticizes-obsession">‘Mask mandates don’t work’: White House COVID adviser criticizes ‘obsession’ with masks</a></li><li><a href="/politics-policy/elections/it-would-be-inappropriate-trump-says-he-didnt-discuss-specific-cases-or">&#039;It would be inappropriate&#039; Trump says he didn&#039;t discuss specific Supreme Court cases with Barrett </a></li></ol></div>
+</div>
+
+  </div>
+<div class="block block-views block-views-blockthe-latest-block-4">
+  
+      <h2 class="block--title">Latest</h2>
+    
+      <div class="views-element-container"><div class="view view-the-latest view-id-the_latest view-display-id-block_4 js-view-dom-id-0fa9e2a29db083e1cfd42f617f54ed65da1bd14c6c7c50e281df2953d15bd1d1">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row views-row-last">
+    <div class="views-field views-field-field-section"><h2 class="field-content"><a href="/nation/science" hreflang="en">Science</a></h2></div><div class="views-field views-field-field-image-1"><div class="field-content">  <a href="/nation/science/elon-musk-says-spacex-starship-will-travel-mars-little-four-years" hreflang="en"><img width="800" height="450" alt="Elon Musk" typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/GettyImages-1228336948.jpg?h=3ac079aa&amp;itok=jAUR09we" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/nation/science/elon-musk-says-spacex-starship-will-travel-mars-little-four-years" hreflang="en"><img width="480" height="480" alt="Elon Musk" typeof="foaf:Image" data-src="/sites/default/files/styles/square/public/2020-10/GettyImages-1228336948.jpg?h=3ac079aa&amp;itok=o3k_Utak" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/nation/science/elon-musk-says-spacex-starship-will-travel-mars-little-four-years" hreflang="en">Elon Musk says SpaceX Starship will travel to Mars in as little as four years</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+<div class="block block-simple-block block-simple-blockjtn-shop-article">
+  
+      <h2 class="block--title">Just the News Spotlight</h2>
+    
+      <!-- /21924249896/JTN_Shop_Article -->
+<div id='div-gpt-ad-1593202172652-0' style='width: 300px; height: 250px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1593202172652-0'); });
+  </script>
+</div>
+  </div>
+<div class="block block-views block-views-blockthe-latest-block-3">
+  
+    
+      <div class="views-element-container"><div class="view view-the-latest view-id-the_latest view-display-id-block_3 js-view-dom-id-bab65e6530726ac52c4e9575472f950b9bb9e41c17d03c7b42000ee5fedf09b2">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-field-section"><h2 class="field-content"><a href="/government/federal-agencies" hreflang="en">Federal Agencies</a></h2></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/government/federal-agencies/ice-say-virginia-county-ignored-federal-warrant-released-illegal" hreflang="en"><img width="480" height="480" alt="U.S. Immigration and Customs Enforcement headquarters" typeof="foaf:Image" data-src="/sites/default/files/styles/square/public/2020-10/GettyImages-1227670499.jpg?h=a31d927f&amp;itok=NuDzPWyQ" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-field-image-1"><div class="field-content">  <a href="/government/federal-agencies/ice-say-virginia-county-ignored-federal-warrant-released-illegal" hreflang="en"><img width="800" height="450" alt="U.S. Immigration and Customs Enforcement headquarters" typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/GettyImages-1227670499.jpg?h=a31d927f&amp;itok=FcsJYzq5" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/government/federal-agencies/ice-say-virginia-county-ignored-federal-warrant-released-illegal" hreflang="en">Virginia county ignored federal warrant, released illegal immigrant from jail, ICE says</a></span></div>
+  </div>
+    <div class="views-row views-row-last">
+    <div class="views-field views-field-field-section"><h2 class="field-content"><a href="/government/courts-law" hreflang="en">Courts &amp; Law</a></h2></div><div class="views-field views-field-field-image"><div class="field-content">  <a href="/government/courts-law/stolen-struck" hreflang="en"><img width="480" height="480" alt="asfsdf" typeof="foaf:Image" data-src="/sites/default/files/styles/square/public/2020-10/truck.jpg?h=9554b9a1&amp;itok=eCpnL7-j" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-field-image-1"><div class="field-content">  <a href="/government/courts-law/stolen-struck" hreflang="en"><img width="800" height="450" alt="asfsdf" typeof="foaf:Image" data-src="/sites/default/files/styles/card/public/2020-10/truck.jpg?h=9554b9a1&amp;itok=D7xhTS87" class="lazyload" loading="lazy" />
+
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/government/courts-law/stolen-struck" hreflang="en">U.S. Postal Service truck stolen in Washington, D.C., police make arrest</a></span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+<div class="block block-simple-block block-simple-blockad-320-250-3">
+  
+    
+      <div style="text-align:center;">
+   <div id="div-gpt-ad-bot300xFlex" style="" align="center" data-google-query-id="COj-0JiF9ekCFZrHhgodMsICMw"></div>
+</div>
+  </div>
+
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+
+<!-- /content -->
+
+  
+  
+  
+</article>
+<!-- /article #node -->
+
+  </div>
+
+  </div>
+
+        </div>
+
+        
+
+      </section>
+      <!-- /content-inner /content -->
+
+            <!-- /sidebar-first -->
+
+    </div>
+    <!-- /cog--mq -->
+  </div>
+  <!-- /main -->
+
+  <!-- ______________________ Post content _______________________ -->
+
+  
+  <!-- ______________________ FOOTER _______________________ -->
+
+      <footer id="footer">
+      <div class="cog--mq mq-footer">
+          <div class="region region-footer">
+    
+
+<nav role="navigation" aria-labelledby="block-jtn-footer" id="block-jtn-footer" class="block block-menu navigation block-system-menublock menu--footer">
+      
+        
+              <ul class="menu">
+                  <li>
+          <a href="/about-us" data-drupal-link-system-path="node/1">About Us</a>
+                  </li>
+              <li>
+          <a href="/our-staff" data-drupal-link-system-path="node/90">Our Staff</a>
+                  </li>
+              <li>
+          <a href="/privacy-policy" data-drupal-link-system-path="node/3">Privacy Policy</a>
+                  </li>
+              <li>
+          <a href="/terms-service" data-drupal-link-system-path="node/2">Terms of Service</a>
+                  </li>
+              <li>
+          <a href="mailto:corrections@justthenews.com">Request a Correction</a>
+                  </li>
+              <li>
+          <a href="/form/contact" data-drupal-link-system-path="webform/contact">Contact</a>
+                  </li>
+              <li>
+          <a href="/form/advertising" data-drupal-link-system-path="webform/advertising">Advertising</a>
+                  </li>
+          </ul>
+  
+
+
+  </nav><div id="block-copyrightnotice" class="block block-simple-block block-simple-blockcopyright">
+  
+    
+      <p>© 2020 Bentley Media Group, LLC</p>
+<div id="do-not-sell-button"></div>
+  </div>
+
+  </div>
+
+      </div>
+    </footer>
+    <!-- /footer -->
+  
+</div>
+<!-- /page -->
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6126","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.8,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":[]},"placeholderSrc":"","preferNative":true},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"90f4069a5866237023b1cceb609e374afff67fca16e8a822dfeb69d60e03c0b1"}}</script>
+<script src="/sites/default/files/js/js_AW98R1XvScbB2sggu4GHhodwPi2TNC5t63bvR6j3CbI.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-15a968d5fbd6dc57745","applicationID":"472043694","transactionName":"NQBWNURUCEJRWkFYWAxKdQJCXAlfH0lUVlI9BlUCXlA=","queueTime":0,"applicationTime":15,"atts":"GUdVQwxOG0w=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+https://justthenews.com/politics-policy/elections/joe-biden-says-voters-dont-deserve-know-if-he-would-pack-supreme-court

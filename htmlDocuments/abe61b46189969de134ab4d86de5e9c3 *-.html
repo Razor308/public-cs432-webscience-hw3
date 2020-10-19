@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+ <html amp>
+   <head><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,minimum-scale=1">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet" type="text/css">
+     <style amp-custom>#branch-sdk{position:fixed;bottom:0;left:0;right:0;}
+       body {
+         margin: 0;
+         word-wrap: break-word;
+         font-family: "Open Sans", Helvetica, serif;
+       }
+       /* ============ Portrait ============ */
+       .main-image {
+         width: 100%;
+         height: 250px;
+         height: 75vw;
+           background-image: url(https://img.nbc.com/sites/nbcunbc/files/images/2016/10/31/161023_3333596_Haunted_Elevator_anvver_2.jpg);
+         background-size: cover;
+         background-position: top center;
+       }
+       #content-container {
+         box-sizing: border-box;
+         padding: 24px;
+         margin: 0 24px;
+         background-color: #fff;
+       }
+       .app-title {
+         font-size: 14px;
+         padding-bottom: 11px;
+         text-transform: uppercase;
+       }
+       .card-title {
+         font-size: 33px;
+         line-height: 36px;
+       }
+       .app-content {
+         padding-top: 10px;
+         padding-bottom: 100px;
+         font-size: 20px;
+       }
+       .input-wrapper {
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 110px;
+         background-color: #fff;
+         box-shadow: 0px -20px 20px -8px rgba(255,255,255,1);
+       }
+       .input-container {
+         width: 100%;
+         padding: 0 24px;
+         text-align: center;
+         box-sizing: border-box;
+       }
+       .form-get-the-app {
+         display: -webkit-box;
+         display: flex;
+         text-align: center;
+         padding-top: 10px;
+         border-top: 2px solid #cecece;
+         min-height: 300px;
+       }
+       .input-label {
+         padding: 4px 10px;
+         font-size: 13px;
+         overflow: hidden;
+         word-wrap: break-word;
+         text-align: center;
+       }
+       .app-icon {
+         width: 62px;
+         height: 62px;
+         line-height: 62px;
+         background-size: 100% auto;
+           background-image: url(https://cdn.branch.io/branch-assets/1540326899177-og_image.png);
+       }
+       .cta-button {
+         -webkit-box-flex: 1;
+         flex-grow: 1;
+         height: 62px;
+         line-height: 62px;
+         background-color: #444;
+         border-radius: 2px;
+         font-size: 20px;
+         padding: 0 20px;
+         margin-left: 10px;
+         color: #fff;
+         text-align: center;
+         text-decoration: none;
+         display: block;
+       }
+       /* No data (portrait) */
+       @media only screen and (orientation: portrait) {
+         .card--no-data .main-image {
+           background-image: url("http://s3-us-west-1.amazonaws.com/branch-assets/b_stripes-small.png");
+           background-size: auto;
+           background-position: top center;
+           background-repeat: repeat;
+           height: 190px;
+         }
+         .card--no-data > .app-icon {
+           position: absolute;
+           top: 160px;
+           left: 34px;
+         }
+         .card--no-data #content-container {
+           margin-top: 20px;
+         }
+         }
+         @media screen /* >= iPhone 5 */
+         and (min-device-width: 321px) {
+         .input-label {
+           font-size: 14px;
+         }
+       }
+       @media only screen /* >= iPhone 6 */
+         and (min-device-width: 375px)
+         and (orientation: portrait) {
+         .main-image {
+           height: 300px;
+           height: 80vw;
+         }
+         .app-content {
+           padding-bottom: 120px;
+         }
+         .input-wrapper {
+           height: 115px;
+         }
+       }
+       @media only screen /* >= iPhone 6+ */
+       and (min-device-width: 414px)
+       and (orientation: portrait) {
+         .main-image {
+           height: 390px;
+           height: 95vw;
+         }
+       }
+       /* ============ Landscape ============ */
+       @media only screen and (orientation: landscape){
+         .main-image {
+           position: fixed;
+           height: 100%;
+           height: 100vh;
+           width: 50%;
+         }
+         .input-wrapper {
+           right: 0;
+           left: auto;
+           width: 50%;
+         }
+         #content-container {
+           float: left;
+           width: 50%;
+           margin-left: 50%;
+         }
+         .input-wrapper {
+           height: 108px;
+         }
+         .app-content {
+           padding-bottom: 110px;
+         }
+         .form-get-the-app {
+           padding-top: 8px;
+         }
+         .input-container {
+           left: 50%;
+         }
+         .cta-button {
+           height: 44px;
+           line-height: 44px;
+           padding: 0 5px;
+           margin-left: 50px;
+         }
+         .app-icon {
+           width: 44px;
+           height: 44px;
+         }
+         /* No data (landscape) */
+         .card--no-data .main-image {
+           height: 100%;
+         }
+         .card--no-data > .app-icon {
+           display: none;
+         }
+         .card--no-data #content-container {
+           margin-top: 0;
+         }
+       }
+       @media only screen /* >= iPhone 6 */
+       and (min-device-width: 645px)
+       and (orientation: landscape) {
+         .form-get-the-app {
+           padding-top: 8px;
+         }
+         .cta-button {
+           height: 62px;
+           line-height: 62px;
+           padding: 0 20px;
+           margin-left: 70px;
+         }
+         .app-icon {
+           width: 62px;
+           height: 62px;
+           top: -2px;
+         }
+       }
+       /* Reusables */
+       .text-bold {
+         font-weight: 700
+       }
+       .text-light {
+         font-weight: 300;
+       }
+       .cta-button--no-app-icon {
+         margin-left: 0;
+       }
+     </style>
+       <link rel="alternate" href="ios-app://442839435/nbctve/video/3333596?link_click_id=link-843630347141142359">
+       <link rel="alternate" href="android-app://com.nbcuni.nbc/nbctve/video/3333596?link_click_id=link-843630347141142359">
+       <link rel="apple-touch-icon" href="https://img.nbc.com/sites/nbcunbc/files/images/2016/10/31/161023_3333596_Haunted_Elevator_anvver_2.jpg">
+       <meta property="al:ios:url" content="nbctve://video/3333596?link_click_id=link-843630347141142359-eyIkb2dfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkdHdpdHRlcl9zaXRlIjoiQG5iYyIsIiRkZWVwbGlua19wYXRoIjoidmlkZW8vMzMzMzU5NiIsIiRvZ192aWRlbyI6Imh0dHBzOi8vcGRrLnRoZXBsYXRmb3JtLmNvbS9jdXJyZW50L3Bkay9zd2YvZmx2UGxheWVyLnN3Zj9pZD1wbGF5ZXImdj0lMkYlMkZwbGF5ZXIudGhlcGxhdGZvcm0uY29tJTJGcCUyRk5uenNQQyUyRndpZGdldCUyRmNvbmZpZyUyRnNlbGVjdCUyRm1lZGlhJTJGZ3VpZCUyRjI0MTA4ODc2MjklMkYzMzMzNTk2JTNGZndzaXRlc2VjdGlvbiUzRG5iY192aWRlb192b2RfZW1iZWQlMjZmb3JtJTNEdmFycyUyNmNvbXBvbmVudCUzRHBsYXllciUyNmF1dG9QbGF5JTNEdHJ1ZSUyNnJlZmVycmVyJTNEZmFjZWJvb2siLCIkaWRlbnRpdHlfaWQiOiI1NTYzMTEwMDY5NjQ4Mzk2MTgiLCJ-ZmVhdHVyZSI6InNoYXJpbmciLCIkZGVza3RvcF91cmwiOiJodHRwczovL3d3dy5uYmMuY29tL3NhdHVyZGF5LW5pZ2h0LWxpdmUvdmlkZW8vaGF1bnRlZC1lbGV2YXRvci1mdC1kYXZpZC1zLXB1bXBraW5zLzMzMzM1OTYiLCIkaW9zX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJHR3aXR0ZXJfYXBwX2NvdW50cnkiOiJVUyIsIiRjYW5vbmljYWxfaWRlbnRpZmllciI6InZpZGVvL09wdGlvbmFsKFwiMzMzMzU5NlwiKSIsIn5pZCI6Ijg0MzYzMDM0NzE0MTE0MjM1OSIsIn5jYW1wYWlnbiI6Ik5CQyBBcHAgKGlPUykgVmlkZW8gU2hhcmUiLCJ-Y2hhbm5lbCI6IlBhc3RlYm9hcmQiLCJ-Y3JlYXRpb25fc291cmNlIjozLCIkb2dfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIiR0d2l0dGVyX2NhcmQiOiJhcHAiLCIkb2dfaW1hZ2VfdXJsIjoiaHR0cHM6Ly9pbWcubmJjLmNvbS9zaXRlcy9uYmN1bmJjL2ZpbGVzL2ltYWdlcy8yMDE2LzEwLzMxLzE2MTAyM18zMzMzNTk2X0hhdW50ZWRfRWxldmF0b3JfYW52dmVyXzIuanBnIiwiJHR3aXR0ZXJfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkb2dfdHlwZSI6InZpZGVvLm90aGVyIiwiK3VybCI6Imh0dHBzOi8vbmJjLmFwcC5saW5rLzdNRTY2dlpadGFiIiwiJG9nX2FwcF9pZCI6IjY1MzUyMTE1NDY1OTE3MSIsIiRhbmRyb2lkX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJG9uZV90aW1lX3VzZSI6ZmFsc2UsIiRjYW5vbmljYWxfdXJsIjoiaHR0cHM6Ly93d3cubmJjLmNvbS9zYXR1cmRheS1uaWdodC1saXZlL3ZpZGVvL2hhdW50ZWQtZWxldmF0b3ItZnQtZGF2aWQtcy1wdW1wa2lucy8zMzMzNTk2IiwiJHR3aXR0ZXJfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIitkb21haW4iOiJuYmMuYXBwLmxpbmsiLCIrY2xpY2tfdGltZXN0YW1wIjoxNjAyOTczNTYwfQ">
+       <meta name="twitter:app:url:iphone" content="nbctve://video/3333596?link_click_id=link-843630347141142359-eyIkb2dfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkdHdpdHRlcl9zaXRlIjoiQG5iYyIsIiRkZWVwbGlua19wYXRoIjoidmlkZW8vMzMzMzU5NiIsIiRvZ192aWRlbyI6Imh0dHBzOi8vcGRrLnRoZXBsYXRmb3JtLmNvbS9jdXJyZW50L3Bkay9zd2YvZmx2UGxheWVyLnN3Zj9pZD1wbGF5ZXImdj0lMkYlMkZwbGF5ZXIudGhlcGxhdGZvcm0uY29tJTJGcCUyRk5uenNQQyUyRndpZGdldCUyRmNvbmZpZyUyRnNlbGVjdCUyRm1lZGlhJTJGZ3VpZCUyRjI0MTA4ODc2MjklMkYzMzMzNTk2JTNGZndzaXRlc2VjdGlvbiUzRG5iY192aWRlb192b2RfZW1iZWQlMjZmb3JtJTNEdmFycyUyNmNvbXBvbmVudCUzRHBsYXllciUyNmF1dG9QbGF5JTNEdHJ1ZSUyNnJlZmVycmVyJTNEZmFjZWJvb2siLCIkaWRlbnRpdHlfaWQiOiI1NTYzMTEwMDY5NjQ4Mzk2MTgiLCJ-ZmVhdHVyZSI6InNoYXJpbmciLCIkZGVza3RvcF91cmwiOiJodHRwczovL3d3dy5uYmMuY29tL3NhdHVyZGF5LW5pZ2h0LWxpdmUvdmlkZW8vaGF1bnRlZC1lbGV2YXRvci1mdC1kYXZpZC1zLXB1bXBraW5zLzMzMzM1OTYiLCIkaW9zX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJHR3aXR0ZXJfYXBwX2NvdW50cnkiOiJVUyIsIiRjYW5vbmljYWxfaWRlbnRpZmllciI6InZpZGVvL09wdGlvbmFsKFwiMzMzMzU5NlwiKSIsIn5pZCI6Ijg0MzYzMDM0NzE0MTE0MjM1OSIsIn5jYW1wYWlnbiI6Ik5CQyBBcHAgKGlPUykgVmlkZW8gU2hhcmUiLCJ-Y2hhbm5lbCI6IlBhc3RlYm9hcmQiLCJ-Y3JlYXRpb25fc291cmNlIjozLCIkb2dfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIiR0d2l0dGVyX2NhcmQiOiJhcHAiLCIkb2dfaW1hZ2VfdXJsIjoiaHR0cHM6Ly9pbWcubmJjLmNvbS9zaXRlcy9uYmN1bmJjL2ZpbGVzL2ltYWdlcy8yMDE2LzEwLzMxLzE2MTAyM18zMzMzNTk2X0hhdW50ZWRfRWxldmF0b3JfYW52dmVyXzIuanBnIiwiJHR3aXR0ZXJfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkb2dfdHlwZSI6InZpZGVvLm90aGVyIiwiK3VybCI6Imh0dHBzOi8vbmJjLmFwcC5saW5rLzdNRTY2dlpadGFiIiwiJG9nX2FwcF9pZCI6IjY1MzUyMTE1NDY1OTE3MSIsIiRhbmRyb2lkX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJG9uZV90aW1lX3VzZSI6ZmFsc2UsIiRjYW5vbmljYWxfdXJsIjoiaHR0cHM6Ly93d3cubmJjLmNvbS9zYXR1cmRheS1uaWdodC1saXZlL3ZpZGVvL2hhdW50ZWQtZWxldmF0b3ItZnQtZGF2aWQtcy1wdW1wa2lucy8zMzMzNTk2IiwiJHR3aXR0ZXJfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIitkb21haW4iOiJuYmMuYXBwLmxpbmsiLCIrY2xpY2tfdGltZXN0YW1wIjoxNjAyOTczNTYwfQ">
+       <meta property="al:ios:app_store_id" content="442839435">
+       <meta name="twitter:app:id:iphone" content="442839435">
+       <meta property="al:ios:app_name" content="The NBC">
+       <meta name="twitter:app:name:iphone" content="The NBC">
+       <meta property="al:android:url" content="nbctve://video/3333596?link_click_id=link-843630347141142359-eyIkb2dfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkdHdpdHRlcl9zaXRlIjoiQG5iYyIsIiRkZWVwbGlua19wYXRoIjoidmlkZW8vMzMzMzU5NiIsIiRvZ192aWRlbyI6Imh0dHBzOi8vcGRrLnRoZXBsYXRmb3JtLmNvbS9jdXJyZW50L3Bkay9zd2YvZmx2UGxheWVyLnN3Zj9pZD1wbGF5ZXImdj0lMkYlMkZwbGF5ZXIudGhlcGxhdGZvcm0uY29tJTJGcCUyRk5uenNQQyUyRndpZGdldCUyRmNvbmZpZyUyRnNlbGVjdCUyRm1lZGlhJTJGZ3VpZCUyRjI0MTA4ODc2MjklMkYzMzMzNTk2JTNGZndzaXRlc2VjdGlvbiUzRG5iY192aWRlb192b2RfZW1iZWQlMjZmb3JtJTNEdmFycyUyNmNvbXBvbmVudCUzRHBsYXllciUyNmF1dG9QbGF5JTNEdHJ1ZSUyNnJlZmVycmVyJTNEZmFjZWJvb2siLCIkaWRlbnRpdHlfaWQiOiI1NTYzMTEwMDY5NjQ4Mzk2MTgiLCJ-ZmVhdHVyZSI6InNoYXJpbmciLCIkZGVza3RvcF91cmwiOiJodHRwczovL3d3dy5uYmMuY29tL3NhdHVyZGF5LW5pZ2h0LWxpdmUvdmlkZW8vaGF1bnRlZC1lbGV2YXRvci1mdC1kYXZpZC1zLXB1bXBraW5zLzMzMzM1OTYiLCIkaW9zX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJHR3aXR0ZXJfYXBwX2NvdW50cnkiOiJVUyIsIiRjYW5vbmljYWxfaWRlbnRpZmllciI6InZpZGVvL09wdGlvbmFsKFwiMzMzMzU5NlwiKSIsIn5pZCI6Ijg0MzYzMDM0NzE0MTE0MjM1OSIsIn5jYW1wYWlnbiI6Ik5CQyBBcHAgKGlPUykgVmlkZW8gU2hhcmUiLCJ-Y2hhbm5lbCI6IlBhc3RlYm9hcmQiLCJ-Y3JlYXRpb25fc291cmNlIjozLCIkb2dfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIiR0d2l0dGVyX2NhcmQiOiJhcHAiLCIkb2dfaW1hZ2VfdXJsIjoiaHR0cHM6Ly9pbWcubmJjLmNvbS9zaXRlcy9uYmN1bmJjL2ZpbGVzL2ltYWdlcy8yMDE2LzEwLzMxLzE2MTAyM18zMzMzNTk2X0hhdW50ZWRfRWxldmF0b3JfYW52dmVyXzIuanBnIiwiJHR3aXR0ZXJfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkb2dfdHlwZSI6InZpZGVvLm90aGVyIiwiK3VybCI6Imh0dHBzOi8vbmJjLmFwcC5saW5rLzdNRTY2dlpadGFiIiwiJG9nX2FwcF9pZCI6IjY1MzUyMTE1NDY1OTE3MSIsIiRhbmRyb2lkX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJG9uZV90aW1lX3VzZSI6ZmFsc2UsIiRjYW5vbmljYWxfdXJsIjoiaHR0cHM6Ly93d3cubmJjLmNvbS9zYXR1cmRheS1uaWdodC1saXZlL3ZpZGVvL2hhdW50ZWQtZWxldmF0b3ItZnQtZGF2aWQtcy1wdW1wa2lucy8zMzMzNTk2IiwiJHR3aXR0ZXJfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIitkb21haW4iOiJuYmMuYXBwLmxpbmsiLCIrY2xpY2tfdGltZXN0YW1wIjoxNjAyOTczNTYwfQ">
+       <meta name="twitter:app:url:googleplay" content="nbctve://video/3333596?link_click_id=link-843630347141142359-eyIkb2dfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkdHdpdHRlcl9zaXRlIjoiQG5iYyIsIiRkZWVwbGlua19wYXRoIjoidmlkZW8vMzMzMzU5NiIsIiRvZ192aWRlbyI6Imh0dHBzOi8vcGRrLnRoZXBsYXRmb3JtLmNvbS9jdXJyZW50L3Bkay9zd2YvZmx2UGxheWVyLnN3Zj9pZD1wbGF5ZXImdj0lMkYlMkZwbGF5ZXIudGhlcGxhdGZvcm0uY29tJTJGcCUyRk5uenNQQyUyRndpZGdldCUyRmNvbmZpZyUyRnNlbGVjdCUyRm1lZGlhJTJGZ3VpZCUyRjI0MTA4ODc2MjklMkYzMzMzNTk2JTNGZndzaXRlc2VjdGlvbiUzRG5iY192aWRlb192b2RfZW1iZWQlMjZmb3JtJTNEdmFycyUyNmNvbXBvbmVudCUzRHBsYXllciUyNmF1dG9QbGF5JTNEdHJ1ZSUyNnJlZmVycmVyJTNEZmFjZWJvb2siLCIkaWRlbnRpdHlfaWQiOiI1NTYzMTEwMDY5NjQ4Mzk2MTgiLCJ-ZmVhdHVyZSI6InNoYXJpbmciLCIkZGVza3RvcF91cmwiOiJodHRwczovL3d3dy5uYmMuY29tL3NhdHVyZGF5LW5pZ2h0LWxpdmUvdmlkZW8vaGF1bnRlZC1lbGV2YXRvci1mdC1kYXZpZC1zLXB1bXBraW5zLzMzMzM1OTYiLCIkaW9zX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJHR3aXR0ZXJfYXBwX2NvdW50cnkiOiJVUyIsIiRjYW5vbmljYWxfaWRlbnRpZmllciI6InZpZGVvL09wdGlvbmFsKFwiMzMzMzU5NlwiKSIsIn5pZCI6Ijg0MzYzMDM0NzE0MTE0MjM1OSIsIn5jYW1wYWlnbiI6Ik5CQyBBcHAgKGlPUykgVmlkZW8gU2hhcmUiLCJ-Y2hhbm5lbCI6IlBhc3RlYm9hcmQiLCJ-Y3JlYXRpb25fc291cmNlIjozLCIkb2dfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIiR0d2l0dGVyX2NhcmQiOiJhcHAiLCIkb2dfaW1hZ2VfdXJsIjoiaHR0cHM6Ly9pbWcubmJjLmNvbS9zaXRlcy9uYmN1bmJjL2ZpbGVzL2ltYWdlcy8yMDE2LzEwLzMxLzE2MTAyM18zMzMzNTk2X0hhdW50ZWRfRWxldmF0b3JfYW52dmVyXzIuanBnIiwiJHR3aXR0ZXJfdGl0bGUiOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIEhpZ2hsaWdodDogSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKSAtIE5CQy5jb20iLCIkb2dfdHlwZSI6InZpZGVvLm90aGVyIiwiK3VybCI6Imh0dHBzOi8vbmJjLmFwcC5saW5rLzdNRTY2dlpadGFiIiwiJG9nX2FwcF9pZCI6IjY1MzUyMTE1NDY1OTE3MSIsIiRhbmRyb2lkX2RlZXBsaW5rX3BhdGgiOiJ2aWRlby8zMzMzNTk2IiwiJG9uZV90aW1lX3VzZSI6ZmFsc2UsIiRjYW5vbmljYWxfdXJsIjoiaHR0cHM6Ly93d3cubmJjLmNvbS9zYXR1cmRheS1uaWdodC1saXZlL3ZpZGVvL2hhdW50ZWQtZWxldmF0b3ItZnQtZGF2aWQtcy1wdW1wa2lucy8zMzMzNTk2IiwiJHR3aXR0ZXJfZGVzY3JpcHRpb24iOiJXYXRjaCBTYXR1cmRheSBOaWdodCBMaXZlIGhpZ2hsaWdodCAnSGF1bnRlZCBFbGV2YXRvciAoZnQuIERhdmlkIFMuIFB1bXBraW5zKScgb24gTkJDLmNvbSIsIitkb21haW4iOiJuYmMuYXBwLmxpbmsiLCIrY2xpY2tfdGltZXN0YW1wIjoxNjAyOTczNTYwfQ">
+       <meta property="al:android:package" content="com.nbcuni.nbc">
+       <meta name="twitter:app:id:googleplay" content="com.nbcuni.nbc">
+       <meta property="al:android:app_name" content="The NBC">
+       <meta name="twitter:app:name:googleplay" content="The NBC">
+         <meta name="twitter:player" content="https://pdk.theplatform.com/current/pdk/swf/flvPlayer.swf?id=player&amp;v=%2F%2Fplayer.theplatform.com%2Fp%2FNnzsPC%2Fwidget%2Fconfig%2Fselect%2Fmedia%2Fguid%2F2410887629%2F3333596%3Ffwsitesection%3Dnbc_video_vod_embed%26form%3Dvars%26component%3Dplayer%26autoPlay%3Dtrue%26referrer%3Dfacebook">
+       <meta property="og:video" content="https://pdk.theplatform.com/current/pdk/swf/flvPlayer.swf?id=player&amp;v=%2F%2Fplayer.theplatform.com%2Fp%2FNnzsPC%2Fwidget%2Fconfig%2Fselect%2Fmedia%2Fguid%2F2410887629%2F3333596%3Ffwsitesection%3Dnbc_video_vod_embed%26form%3Dvars%26component%3Dplayer%26autoPlay%3Dtrue%26referrer%3Dfacebook">
+       <meta property="og:image" content="https://img.nbc.com/sites/nbcunbc/files/images/2016/10/31/161023_3333596_Haunted_Elevator_anvver_2.jpg">
+         <meta name="twitter:image:src" content="https://img.nbc.com/sites/nbcunbc/files/images/2016/10/31/161023_3333596_Haunted_Elevator_anvver_2.jpg">
+       <title>Watch Saturday Night Live Highlight: Haunted Elevator (ft. David S. Pumpkins) - NBC.com</title>
+       <meta property="og:title" content="Watch Saturday Night Live Highlight: Haunted Elevator (ft. David S. Pumpkins) - NBC.com">
+       <meta property="og:description" content="Watch Saturday Night Live highlight &apos;Haunted Elevator (ft. David S. Pumpkins)&apos; on NBC.com">
+       <meta property="fb:app_id" content="653521154659171">
+       <meta property="og:type" content="video.other">
+       <meta name="twitter:card" content="app">
+       <meta name="twitter:app:country" content="US">
+       <meta name="twitter:title" content="Watch Saturday Night Live Highlight: Haunted Elevator (ft. David S. Pumpkins) - NBC.com">
+       <meta name="twitter:site" content="@nbc">
+   <script async src="https://cdn.ampproject.org/v0.js"></script><script async src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" custom-element="amp-iframe"></script><script async src="https://cdn.ampproject.org/v0/amp-list-0.1.js" custom-element="amp-list"></script><script async src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js" custom-template="amp-mustache"></script><link rel="canonical" href="https://nbc.app.link/7ME66vZZtab"></head>
+   <body>
+     <div class="card center">
+       <div class="main-image"></div>
+       <div id="content-container">
+         <div class="app-title text-bold">The NBC</div>
+         <div class="card-title text-light">Watch Saturday Night Live Highlight: Haunted Elevator (ft. David S. Pumpkins) - NBC.com</div>
+         <div class="app-content text-light">Watch Saturday Night Live highlight &apos;Haunted Elevator (ft. David S. Pumpkins)&apos; on NBC.com</div>
+       </div>
+       <div class="input-wrapper">
+         <div class="input-container">
+           <div class="input-label text-light">See this content immediately after install</div>
+           <div class="form-get-the-app">
+               <div class="app-icon">&#xA0;</div>
+             <amp-list src="https://nbc.app.link/7ME66vZZtab?__branch_amp_json=1" layout="flex-item">
+      <template type="amp-mustache" id="cta-template">
+        <a href="{{action}}" class="cta-button text-light">
+               Get The App
+             </a>
+      <amp-iframe id="branch-sdk" src="/amp-iframe-redirect?scheme_redirect={{scheme_redirect}}&redirect_strategy={{redirect_strategy}}&app_id=472476249994842248&has_app=false" sandbox="allow-scripts allow-top-navigation" height="11" layout="fixed-height" frameborder="0"></amp-iframe></template>
+    </amp-list>
+           </div>
+         </div>
+       </div>
+     </div>
+   </body>
+ </html>https://nbc.app.link/7ME66vZZtab

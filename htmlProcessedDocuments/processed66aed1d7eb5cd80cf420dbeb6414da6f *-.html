@@ -1,0 +1,38 @@
+<h> 608 Followers
+<h> ·
+<h> Zeroing in on Zerologon crypto: More than zeros
+<p> The recently discovered Zerologon vulnerability (CVE-2020-1472) is one of the most dangerous Windows’ security issues exposed in recent years. Zerologon enables attackers to take over a whole Windows domain, and therefore its criticality appropriately scored the ultimate, perfect 10 CVSS score.
+<p> Microsoft released a patch for this issue on August, but it got the deserved attention only after the discovering party, Secura, released their technical report on September. Once the technical details were exposed, multipleexploits were publicly released, requiring an emergency directive for federal agencies to patch immediately. As expected, in-the-wild exploits were soon observed.
+<p> Zerologon exploited in the wild
+<p> In this article, we will dive into the details of the cryptography vulnerability in the heart of Zerologon, explain it and share a simulator for it to demonstrate some additional possible exploitations on top of the main one.
+<p> Simulating non all zero Zerologon exploitation, details below
+<h> Netlogon authentication: The crypto vulnerability
+<p> The designers of the vulnerable Netlogon authentication protocol made some unorthodox design choices; I marked all parts I find odd with a 🤦.
+<p> To authenticate, the client proves its possession of password by encrypting a previously sent Client Challenge (selected by the client 🤦 ) with a key that is derived from the client’s password with the Client Challenge and Server Challenge.
+<p> The protocol uses the standard AES algorithm, but instead of having a random Initialization Vector (IV), the IV valueis fixed (🤦) and consists of all zeros (🤦) . The mode of operation used is CFB8, which operates not on the whole block of input, but rather in a “one byte at a time” manner (🤦).
+<p> The client then sends the result of the encryption to the server using the Client Credential parameter. Since the server knows the client’s password, Client Challenge, Server Challenge and uses same all zeroes IV, it can independently compute Client Credential and declare the authentication as successful if its calculated value matches the sent value.
+<p> Zerologon is a method for attackers to abuse this vulnerable algorithm and “authenticate” without knowing the password at all!
+<p> If attackers select an all zeros Client Challenge, then the whole input buffer of 24 bytes (including IV) consists of only zeros. Since AES generates a pseudo-random output, there’s a 1/256 probability that a given key will generate an output whose first byte is 0. If that happens, the input for next byte calculation is also 16 zeros and due to the deterministic nature of AES the result will be 0 again. This process will repeat throughout the rest of the Client Challenge bytes, resulting an all zeros 8 bytes of the Client Credential.
+<p> If the first output byte is a non zero, then the result of course will be wrong and server will fail the authentication. However, nothing stops the attacker from trying again with the same input parameters, but now with a different key (as the Server Challenge has changed). Since the probability is 1/256, it would take the attackers only 128 attempts on average until they successfully reach such key and bypass authentication.
+<h> Going beyond zeros
+<p> The aforementioned exploit works perfectly, but is the all zeros the only possible exploit?
+<p> This is not a merely theoretical question, as it might have practical implications for systems that try to block this exploit: first and foremost for the Microsoft patch itself, but also for some compensating controls trying to detect Zerologon exploitation in realtime or in post-mortem situations.
+<p> Apparently, the answer is “No”! and we will detail these additional, non all zeros exploits below.
+<p> To simulate the issue locally and relieve us of the task of creating a lab with a client and vulnerable server, we created a small python simulator for the Netlogon authentication.
+<h> Going beyond zero #1: Identical challenge bytes
+<p> As the original Secura report suggests:
+<p> this property is a bit more general: when an IV consists of only zeroes, there will be one integer 0 ≤ X ≤ 255 for which it holds that a plaintext that starts with n bytes with value X will have a ciphertext that starts with n bytes with value 0. X depends on the encryption key and is randomly distributed.
+<p> Attackers can select an identical bytes Client Challenge, for example all 7’s. For the first round the AES, the input consists only of the IV whichis all zeros. There is still a 1/256 probability of the first output byte to be 7. When XORed with the first byte of the Client Challenge the result for the next input will be 0 and the input for the next AES round will be all zeros again, leading to the same results as above.
+<p> Simulating identical bytes challenge
+<h> Going beyond zero #2: The last byte
+<p> Taking a deeper look into CFB8 mode of operation, we can see the last Client Challenge is not used in AES, it’s just XORed directly into the output. Which means that if the result of previous block is zero, then the attacker is free to choose any value for the last byte of the Client Challenge and update the value of Client Credential accordingly.
+<p> For example, the attacker can choose Client Challenge of all 7’s as before but take the last byte to be 8 and set Client Credential to be all zeros except the last byte, which will take the value of previous block output (7) XORed with last byte of challenge (8), in this case 15 (0xf).
+<p> Simulating modifying the last byte of challenge
+<h> Going beyond zero #2.5: Beyond last byte
+<p> The attacker can apply the aforementioned change of byte to Client Challenge in bytes before the last one, with the appropriate modification to the Client Credential.
+<p> However, the rest of the results of next output bytes are now unknown to attackers as the input for the next rounds of AES is new, which means the attackers must guess them. Therefore the attackers’ success probability decays by a factor of 256 per each additional byte. If attackers limit their attack to changing bytes only towards the end of the Client Challenge, thenthe number of additional guesses might be still bearable.
+<p> Simulating modifying the byte before last byte of challenge (note the increased number of required guesses)
+<h> Examining the Microsoft patch
+<p> Fortunately, it seems Microsoft did a good job of catching all of the discussed non all zero exploits. It looks for identical bytes and not just for all zeros. Additionally, by limiting the identical bytes in the beginning of the Client Challenge to five, Microsoft implicitly assumes that the cost of the bruteforce attack associated with changing more than three last bytes (256^-4, 1 in 4 billion) will be prohibitive.
+<h> Conclusions
+<p> Secura report is great and addresses most (all?) of the issues mentioned in this article in a succinct manner, but it is always insightful to look into details in an explicit manner and recreate exploits, to make sure the topic is well understood. In this case, looking deeper into the different exploit possibilities allowed us to better understand Microsoft’s patch and become more confident about its solidity. Since there are some easy to use exploits in-the-wild, please go ahead and patch your systems if you had not!

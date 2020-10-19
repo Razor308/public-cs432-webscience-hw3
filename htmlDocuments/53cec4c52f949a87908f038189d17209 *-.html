@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4defa64537",applicationID:"240539542"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<meta name="awa-pageType" content="ID@Xbox">
+
+
+	<!-- This site is optimized with the Yoast SEO plugin v14.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>July 2019 - Xbox Wire</title>
+	<meta name="robots" content="noindex, follow" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="July 2019 - Xbox Wire" />
+	<meta property="og:url" content="https://news.xbox.com/en-us/2019/07/" />
+	<meta property="og:site_name" content="Xbox Wire" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://news.xbox.com/en-us/#website","url":"https://news.xbox.com/en-us/","name":"Xbox Wire","description":"Your source for news, information, product releases, events, sports, entertainment &amp; exclusive content relating to Xbox","potentialAction":[{"@type":"SearchAction","target":"https://news.xbox.com/en-us/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"CollectionPage","@id":"https://news.xbox.com/en-us/2019/07/#webpage","url":"https://news.xbox.com/en-us/2019/07/","name":"July 2019 - Xbox Wire","isPartOf":{"@id":"https://news.xbox.com/en-us/#website"},"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//wcpstatic.microsoft.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel="alternate" type="application/rss+xml" title="Xbox Wire &raquo; Feed" href="https://news.xbox.com/en-us/feed/"/>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/news.xbox.com\/en-us\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0' href='https://news.xbox.com/en-us/_static/??/wp-includes/css/dist/block-library/style.min.css,/wp-includes/css/dist/components/style.min.css?m=1598987307' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link crossorigin="anonymous" rel='stylesheet' id='wp-editor-font-css'  href='https://fonts.googleapis.com/css?family=Noto+Serif%3A400%2C400i%2C700%2C700i&#038;ver=5.5.1' media='all' />
+<link rel='stylesheet' id='all-css-2' href='https://news.xbox.com/en-us/_static/??-eJyNkN1uwjAMRl9orukkJriY9ixt4oJZfqrYoeXtF1KQNqDS7j7F+U6Og9MIHIzLlgSNCFoWxd5F8w1kWWNC0YujxnNoyvwNXxZCnv91bxVpYlAKiqPLBw6Ccx9nqBq/laRZmn1mZ1e75Ugj6MSqlOrbtwwD0XNNj+SLo2eTosRBsRMhFTxTsMVVOVxAHFv6k1cxAlf3O6S6L9KPBZ/hbnwiHbvy4/tmgz7a7ApoYnu4EoS6ZI51jSXCMoEhVVBd6Mt/th+bdrt737b7Hwkqrzk=' type='text/css' media='all' />
+<script type='text/javascript' src='https://news.xbox.com/en-us/wp-includes/js/jquery/jquery.js?m=1598987308g'></script>
+<script src='https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js?ver=0.1' id='cookie-consent-script-js'></script>
+<link rel="https://api.w.org/" href="https://news.xbox.com/en-us/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://news.xbox.com/en-us/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://news.xbox.com/en-us/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5.1" />
+<style type='text/css'>img#wpstats{display:none}</style>			<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<!-- There is no amphtml version available for this URL. --><link rel="icon" href="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/12/Nexus_GRN_on_WHT2.png?fit=32%2C32" sizes="32x32" />
+<link rel="icon" href="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/12/Nexus_GRN_on_WHT2.png?fit=192%2C192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/12/Nexus_GRN_on_WHT2.png?fit=180%2C180" />
+<meta name="msapplication-TileImage" content="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/12/Nexus_GRN_on_WHT2.png?fit=270%2C270" />
+</head>
+
+<body class="archive date group-blog hfeed">
+<div id="cookie-banner"></div>
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+<header id="masthead" class="site-header" role="banner">
+	<section class="main-container navbar-container">
+		<div class="navbar-top">
+			<div class="navbar-wrap">
+				<div class="navbar-brand">
+					<a class="navbar-brand__link logo-left" href="https://www.microsoft.com"><img src="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/img/logo-microsoft-sq.png" alt="Goto to Microsoft.com"></a><a class="logo-right" href="https://www.xbox.com"><img src="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/img/logo-xbox.png" alt="Goto to Xbox.com"></a>
+
+				</div>
+				<ul class="navbar-nav" id="all-microsoft">
+
+					<li class="nav-item nav-item-hide-mobile">
+						<button class="nav-link dropdown-toggle dropdown-toggle-chevron" data-toggle="dropdown" data-target="#all-microsoft">All Microsoft<svg class="icon icon-arrow-down"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#arrow-down"></use></svg></button>
+					</li>
+					<section class="dropdown-menu dropdown-container collapse">
+	<div class="dropdown-container__wrapper">
+				<div class="dropdown-container__section">
+			<p class="text-bold dropdown-container__header">Software</p>
+												<a href="https://www.microsoft.com/en-us/windows/windows-10-apps" class="dropdown-container__link dropdown-item">Window Apps</a>
+									<a href="https://onedrive.live.com/about/en-us/" class="dropdown-container__link dropdown-item">OneDrive</a>
+									<a href="https://outlook.live.com/owa/" class="dropdown-container__link dropdown-item">Outlook</a>
+									<a href="https://www.skype.com/en/" class="dropdown-container__link dropdown-item">Skype</a>
+									<a href="https://www.onenote.com/" class="dropdown-container__link dropdown-item">OneNote</a>
+									</div>
+				<div class="dropdown-container__section">
+			<p class="text-bold dropdown-container__header">PCs &amp; Devices</p>
+												<a href="https://www.microsoft.com/en-us/windows/devices" class="dropdown-container__link dropdown-item">PCs &amp; Tablets</a>
+									<a href="https://www.microsoft.com/accessories/en-us" class="dropdown-container__link dropdown-item">Accessories</a>
+									</div>
+				<div class="dropdown-container__section">
+			<p class="text-bold dropdown-container__header">Entertainment</p>
+												<a href="https://www.xbox.com/en-us/games/xbox-one?xr=shellnav" class="dropdown-container__link dropdown-item">Xbox Games</a>
+									<a href="https://www.microsoft.com/en-us/windows/windows-10-games" class="dropdown-container__link dropdown-item">PC Games</a>
+									<a href="https://www.microsoft.com/en-us/store/games/windows?icid=TopNavWindowsGames" class="dropdown-container__link dropdown-item">Windows digital games</a>
+									<a href="https://www.microsoft.com/en-us/store/movies-and-tv?icid=TopNavMoviesTv" class="dropdown-container__link dropdown-item">Movies &amp; TV</a>
+									</div>
+				<div class="dropdown-container__section">
+			<p class="text-bold dropdown-container__header">Business</p>
+												<a href="https://azure.microsoft.com/en-us/" class="dropdown-container__link dropdown-item">Microsoft Azure</a>
+									<a href="https://www.microsoft.com/en-us/dynamics365/home" class="dropdown-container__link dropdown-item">Microsoft Dyanmics 365</a>
+									<a href="https://www.microsoft.com/en-us/microsoft-365" class="dropdown-container__link dropdown-item">Microsoft 365</a>
+									<a href="https://www.microsoft.com/en-us/enterprise" class="dropdown-container__link dropdown-item">Microsoft Industry</a>
+									<a href="https://www.microsoft.com/en-us/sql-server/" class="dropdown-container__link dropdown-item">Data Platform</a>
+									<a href="https://go.microsoft.com/fwlink/?linkid=2026638" class="dropdown-container__link dropdown-item">Microsoft Advertising</a>
+									<a href="https://www.microsoft.com/licensing/default" class="dropdown-container__link dropdown-item">Licensing</a>
+									</div>
+				<div class="dropdown-container__section">
+			<p class="text-bold dropdown-container__header">Developer &amp; IT</p>
+												<a href="https://www.microsoft.com/net/" class="dropdown-container__link dropdown-item">.NET</a>
+									<a href="https://visualstudio.microsoft.com/" class="dropdown-container__link dropdown-item">Visual Studio</a>
+									<a href="https://www.microsoft.com/cloud-platform/windows-server" class="dropdown-container__link dropdown-item">Windows Server</a>
+									<a href="https://developer.microsoft.com/en-us/windows" class="dropdown-container__link dropdown-item">Windows Dev Server</a>
+									<a href="https://docs.microsoft.com/en-us/" class="dropdown-container__link dropdown-item">Docs</a>
+									</div>
+				<div class="dropdown-container__section">
+			<p class="text-bold dropdown-container__header">Other</p>
+												<a href="https://www.microsoft.com/en-us/store/b/home" class="dropdown-container__link dropdown-item">Microsoft Store</a>
+									<a href="https://www.microsoft.com/rewards" class="dropdown-container__link dropdown-item">Microsoft Rewards</a>
+									<a href="https://www.microsoft.com/en-us/download/default.aspx" class="dropdown-container__link dropdown-item">Free downloads &amp; security</a>
+									<a href="https://www.microsoft.com/en-us/education?icid=CNavMSCOML0_Studentsandeducation" class="dropdown-container__link dropdown-item">Education</a>
+									<a href="https://www.microsoft.com/en-us/store/locations/find-a-store?icid=TopNavStoreLocations" class="dropdown-container__link dropdown-item">Store locations</a>
+									<a href="https://www.microsoft.com/en-us/store/b/gift-cards" class="dropdown-container__link dropdown-item">Gift cards</a>
+									</div>
+			</div>
+</section>
+
+
+				</ul>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand">
+
+			<button class="navbar-toggler dropdown-toggle" type="button" data-toggle="collapse" data-target="#navbarToggleContainer" aria-controls="navbarToggleContainer" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-brand navbar-brand-main">
+				<a href="https://news.xbox.com/en-us/">
+					<img src="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/img/logo-xbox-live.png" alt="Xbox Wire" style="max-height: 45px; width: auto;" />
+				</a>
+			</div>
+			<button id="searchToggle" class="nav-link dropdown-toggle search-toggle" data-toggle="dropdown" data-target="#search-bar-nav"><span class="screen-reader-mobile">Search</span><svg class="icon icon-search-sharp"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#search-sharp"></use></svg></button>
+
+
+			<div class="collapse navbar-collapse navbar-rows" id="navbarToggleContainer">
+				
+<div class="navbar-container navbar-bottom" id="navbar-main">
+
+	<ul id="menu-main-navigation" class="navbar-nav navbar-wrap"><li id="menu-item-16761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16761 nav-item"><a href="/en-us/xbox-one/" class="nav-link nav-hover dropdown-item xboxone">Xbox One</a></li>
+<li id="menu-item-16762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16762 nav-item"><a href="/en-us/games/" class="nav-link nav-hover dropdown-item games">Games</a></li>
+<li id="menu-item-128125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-128125 nav-item"><a href="https://majornelson.com" class="nav-link nav-hover dropdown-item majornelson">Major Nelson</a></li>
+<li id="menu-item-138015" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-138015 nav-item"><a href="https://news.xbox.com/en-us/xbox-game-pass/" class="nav-link nav-hover dropdown-item xboxgamepass">Xbox Game Pass</a></li>
+<li id="menu-item-129960" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129960 nav-item"><a href="https://news.xbox.com/en-us/xboxinsider/" class="nav-link nav-hover dropdown-item insider">Xbox Insider</a></li>
+<li id="menu-item-110397" class="id-xbox-menu menu-item menu-item-type-taxonomy menu-item-object-category menu-item-110397 nav-item"><a href="https://news.xbox.com/en-us/idatxbox/" class="nav-link nav-hover dropdown-item idxbox">ID@Xbox</a></li>
+<li id="menu-item-16764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16764 nav-item"><a href="/en-us/windows-10/" class="nav-link nav-hover dropdown-item windows10">Windows 10</a></li>
+</ul></div>
+				
+<button class="nav-link dropdown-toggle dropdown-toggle-chevron dropdown-toggle-link search-toggle wire-toggle" data-toggle="dropdown"><span>Xbox Wire Sites</span><svg class="icon icon-arrow-down"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#arrow-down"></use></svg><svg class="icon icon-world"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#world"></use></svg></button>
+
+<section id="xbox-wire-sites" class="xbox-wire-sites dropdown-container collapse dropdown-menu">
+	<div class="dropdown-container__section">
+									<a class="dropdown-item active" href="https://news.xbox.com/en-us">Xbox Wire</a>
+												<a class="dropdown-item" href="https://news.xbox.com/de-de">Xbox Wire DACH</a>
+												<a class="dropdown-item" href="https://news.xbox.com/es-latam">Xbox Wire en Español</a>
+												<a class="dropdown-item" href="https://news.xbox.com/fr-fr">Xbox Wire en Francais</a>
+												<a class="dropdown-item" href="https://news.xbox.com/pt-br">Xbox Wire em Português</a>
+												<a class="dropdown-item" href="https://news.xbox.com/ru-ru">Xbox Wire на русском</a>
+						</div>
+</section>
+			</div>
+
+			<div class="nav-more" aria-hidden="true">
+				<button class="nav-more__button dropdown-toggle" data-toggle="dropdown" aria-controls="more-section">
+					<span class="screen-reader-text">Show More</span>
+					<svg class="icon icon-more"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#more"></use></svg>				</button>
+				<div id="more-section" class="dropdown-container xbox-wire-sites collapse dropdown-menu">
+					<ul id="more-section-items" class="dropdown-container__section">
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section id="search-bar-nav">
+		<div class="navbar__search main-container search-bar-nav dropdown-container collapse dropdown-menu">
+			<div class="main-container">
+				<button class="nav-link dropdown-toggle navbar__search__close dropdown-item" data-toggle="dropdown" data-target="#search-bar-nav"><span class="screen-reader-text">Close</span><svg class="icon icon-close"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#close"></use></svg></button>
+				<form role="search" method="get" class="searchform searchform-nav-assets" action="https://news.xbox.com/en-us/" >
+	<input type="text" class="search-field" value="" title="search" name="s" placeholder="Search for" />
+
+	<button type="submit" class="search__button">
+		<span class="screen-reader-text">Search</span>
+		<svg class="icon icon-search-sharp"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#search-sharp"></use></svg>	</button>
+
+		<div class="search-categories">
+		<label class="screen-reader-text" for="search-category">Category</label>
+		<div class="select-wrapper">
+			<select name="search-category" class="bits-FormControl dropdown-item">
+				<option selected value="news-stories">News Stories</option>
+				<option value="media-assets">Media Assets</option>
+			</select>
+		</div>
+	</div>
+	</form>
+			</div>
+		</div>
+	</section>
+</header>
+
+<main id="main" class="main-container" role="main">
+	<header class="archive-header">
+		<h1 class="page-title"></h1>
+	</header>
+	<section class="archive-container archive-container--no-sidebar">
+		<div class="archive-main feed--image-left">
+			<!--fwp-loop-->
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/31/details-on-vigor-0-9-update-aid/" aria-label="Details on Vigor 0.9 Update: Aid" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Vigor Hero Image" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/vigor_xboxgamepreview_keyart-hero.jpg?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/31/details-on-vigor-0-9-update-aid/">Details on Vigor 0.9 Update: Aid</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-31T11:00:36-07:00">Jul 31, 2019 @ 11:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/31/july-31st-new-preview-alpha-ring-1908-update-1908-190729-1945/" aria-label="July 31st : New Preview Alpha Ring 1908 Update (1908.190729-1945)" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=3840 3840w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=569 569w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=1536 1536w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=2048 2048w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=1776 1776w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=1200 1200w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=518 518w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?w=3000 3000w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Alpha-Ring-1.png?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/insider/">Xbox Insider</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/31/july-31st-new-preview-alpha-ring-1908-update-1908-190729-1945/">July 31st : New Preview Alpha Ring 1908 Update (1908.190729-1945)</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-31T10:34:28-07:00">Jul 31, 2019 @ 10:34am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/31/july-31st-new-preview-1910-ring-alpha-skip-ahead-update-1910-190729-1945/" aria-label="July 31st : New Preview 1910 Ring Alpha Skip Ahead Update (1910.190729-1945)" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="System Update" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Hero_XboxOneUpdatePreview_Hero.png?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/insider/">Xbox Insider</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/31/july-31st-new-preview-1910-ring-alpha-skip-ahead-update-1910-190729-1945/">July 31st : New Preview 1910 Ring Alpha Skip Ahead Update (1910.190729-1945)</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-31T10:32:16-07:00">Jul 31, 2019 @ 10:32am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+				<div class="video-wrapper" data-type="youtube" data-src="https://www.youtube.com/embed/0JjIvU8OSKI?autohide=1&modestbranding=1&origin=news.xbox.com&rel=0&showinfo=0&autoplay=1&enablejsapi"><img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Video For Puzzles and Team Gotham’s Creative Vision in Solo: Islands of the Heart, Available Now on Xbox One" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=1920 1920w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=569 569w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=1536 1536w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=1776 1776w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=1200 1200w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Solo_Xbox_Hero.jpg?resize=800%2C450&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /><button class="video__playbutton" id="video-playbutton-5f8b6f821c546"><span class="screen-reader-text">Play Video</span><span class="video__icon"><svg class="icon icon-play-sharp"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#play-sharp"></use></svg></span></button></div>			</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/31/puzzles-and-team-gothams-creative-vision-in-solo-islands-of-the-heart-available-now-on-xbox-one/">Puzzles and Team Gotham’s Creative Vision in Solo: Islands of the Heart, Available Now on Xbox One</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-31T10:00:13-07:00">Jul 31, 2019 @ 10:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/31/talking-challenge-of-survival-remnant-from-the-ashes/" aria-label="Talking About the Challenge of Survival with Remnant: From the Ashes Development Team" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Remnant: From the Ashes" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/REM_HeroBanner_BuriedCity_940x528.jpg?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/31/talking-challenge-of-survival-remnant-from-the-ashes/">Talking About the Challenge of Survival with Remnant: From the Ashes Development Team</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-31T09:00:10-07:00">Jul 31, 2019 @ 9:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/31/behind-the-scenes-rpg-greedfall/" aria-label="Behind-the-Scenes of the RPG GreedFall, Available for Pre-order Today on Xbox One" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="GreedFall Hero Image" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?w=569 569w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?w=938 938w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GreedFall_Hero.jpg?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/31/behind-the-scenes-rpg-greedfall/">Behind-the-Scenes of the RPG GreedFall, Available for Pre-order Today on Xbox One</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-31T07:00:17-07:00">Jul 31, 2019 @ 7:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/31/xbox-game-pass-august-2019/" aria-label="Coming Soon to Xbox Game Pass: Downwell, Slay the Spire, Pandemic, and More" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Xbox Game Pass - August 2019" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Dash_WIRE_Coming-Soon_7.31_940x528_r1.jpg?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/31/xbox-game-pass-august-2019/">Coming Soon to Xbox Game Pass: Downwell, Slay the Spire, Pandemic, and More</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-31T06:00:56-07:00">Jul 31, 2019 @ 6:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+				<div class="video-wrapper" data-type="youtube" data-src="https://www.youtube.com/embed/fx-HR8W2prY?autohide=1&modestbranding=1&origin=news.xbox.com&rel=0&showinfo=0&autoplay=1&enablejsapi"><img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Video For Summer Spotlight 2019: The Season for Great New Games" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=1920 1920w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=569 569w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=1536 1536w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=1776 1776w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=1200 1200w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Summer-Spotlight_1920-x1080.jpg?resize=800%2C450&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /><button class="video__playbutton" id="video-playbutton-5f8b6f8228d25"><span class="screen-reader-text">Play Video</span><span class="video__icon"><svg class="icon icon-play-sharp"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#play-sharp"></use></svg></span></button></div>			</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/30/summer-spotlight-2019/">Summer Spotlight 2019: The Season for Great New Games</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-30T13:00:21-07:00">Jul 30, 2019 @ 1:00pm</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+				<div class="video-wrapper" data-type="youtube" data-src="https://www.youtube.com/embed/4r7tOlek7hQ?autohide=1&modestbranding=1&origin=news.xbox.com&rel=0&showinfo=0&autoplay=1&enablejsapi"><img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Video For New Games with Gold for August 2019" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?w=569 569w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?w=938 938w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/GWG_AUG_2019_HERO.jpg?resize=800%2C450&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /><button class="video__playbutton" id="video-playbutton-5f8b6f822ada9"><span class="screen-reader-text">Play Video</span><span class="video__icon"><svg class="icon icon-play-sharp"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#play-sharp"></use></svg></span></button></div>			</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/30/games-with-gold-august-2019/">New Games with Gold for August 2019</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-30T12:30:22-07:00">Jul 30, 2019 @ 12:30pm</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/30/july-30th-new-preview-beta-delta-ring-1908-update-1908-190728-1945/" aria-label="July 30th : New Preview Beta &amp; Delta Ring 1908 Update (1908.190728-1945)" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Xbox Insider Hero" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/XboxInsiderBlack_940x528-hero-1-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-2-hero-hero-hero-hero-1-hero-hero-1-hero.jpg?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/insider/">Xbox Insider</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/30/july-30th-new-preview-beta-delta-ring-1908-update-1908-190728-1945/">July 30th : New Preview Beta &amp; Delta Ring 1908 Update (1908.190728-1945)</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-30T10:27:06-07:00">Jul 30, 2019 @ 10:27am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+				<div class="video-wrapper" data-type="youtube" data-src="https://www.youtube.com/embed/90537CmseQg?autohide=1&modestbranding=1&origin=news.xbox.com&rel=0&showinfo=0&autoplay=1&enablejsapi"><img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Video For 5 Reasons to Play Madden NFL 20 Starting Today with Early Access on Xbox One" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?w=569 569w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?w=938 938w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Madden_HERO.jpg?resize=800%2C450&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /><button class="video__playbutton" id="video-playbutton-5f8b6f823024a"><span class="screen-reader-text">Play Video</span><span class="video__icon"><svg class="icon icon-play-sharp"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#play-sharp"></use></svg></span></button></div>			</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/30/5-reasons-play-madden-nfl-20-early-access-xbox-one/">5 Reasons to Play Madden NFL 20 Starting Today with Early Access on Xbox One</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-30T09:00:23-07:00">Jul 30, 2019 @ 9:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/30/buy-an-xbox-one-console-get-free-copy-madden-nfl-20/" aria-label="Feel Like an NFL Superstar: Buy an Xbox One Console, Get a Free Copy of Madden NFL 20" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/XBOX_Madden20_BundleConsoleOffer_WireStatics_940x528.png?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/consoles/">Consoles</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/30/buy-an-xbox-one-console-get-free-copy-madden-nfl-20/">Feel Like an NFL Superstar: Buy an Xbox One Console, Get a Free Copy of Madden NFL 20</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-30T07:00:33-07:00">Jul 30, 2019 @ 7:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/30/play-mutant-year-zero-seed-of-evil/" aria-label="Play as a Boar with Stoneskin, a Duck with Moth Wings, and a Moose with Fire Breath in Mutant Year Zero: Seed of Evil" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Mutant Year Zero: Seed of Evil" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=1920 1920w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=569 569w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=1536 1536w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=1776 1776w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=1200 1200w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2019/07/Seed-of-Evil-image-w-logo.jpg?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/games/">Games</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/30/play-mutant-year-zero-seed-of-evil/">Play as a Boar with Stoneskin, a Duck with Moth Wings, and a Moose with Fire Breath in Mutant Year Zero: Seed of Evil</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-30T06:00:56-07:00">Jul 30, 2019 @ 6:00am</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/29/july-29th-new-preview-alpha-ring-1908-update-1910-190728-1945/" aria-label="July 29th : New Preview Alpha Ring 1908 Update (1910.190728-1945)" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Xbox Insider Art" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider-BG_940x528-hero-1-hero-hero-hero-hero-hero-1-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-hero-1-hero-hero-hero-hero.jpg?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/insider/">Xbox Insider</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/29/july-29th-new-preview-alpha-ring-1908-update-1910-190728-1945/">July 29th : New Preview Alpha Ring 1908 Update (1910.190728-1945)</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-29T14:18:48-07:00">Jul 29, 2019 @ 2:18pm</time></p>
+					</div>
+	</div>
+
+	<div class="media feed">
+					<div class="media-image feed__image">
+						<a href="https://news.xbox.com/en-us/2019/07/29/july-29th-new-preview-alpha-skip-ahead-ring-1910-update-1910-190726-1945/" aria-label="July 29th : New Preview Alpha Skip Ahead Ring 1910 Update (1910.190726-1945)" role="presentation">
+		<img width="800" height="450" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?resize=800%2C450" class="attachment-16x9_medium size-16x9_medium jetpack-lazy-image" alt="Xbox Insider Program Artwork" loading="lazy" role="presentation" data-lazy-srcset="https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?w=940 940w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?w=570 570w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?w=768 768w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?w=800 800w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?w=592 592w, https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?w=518 518w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/Insider_Art-hero-1-hero-hero-1-hero-hero-hero-hero-hero-hero-1.png?resize=800%2C450&amp;is-pending-load=1" />		</a>
+					</div>
+						<div class="media-body feed__body">
+			<p class="feed__type small">
+				<a class="text-primary" href="https://news.xbox.com/en-us/insider/">Xbox Insider</a>			</p>
+			<h3 class="feed__title">
+									<a href="https://news.xbox.com/en-us/2019/07/29/july-29th-new-preview-alpha-skip-ahead-ring-1910-update-1910-190726-1945/">July 29th : New Preview Alpha Skip Ahead Ring 1910 Update (1910.190726-1945)</a>
+							</h3>
+			<p class="feed__date small"><time class="date published updated" datetime="2019-07-29T10:42:22-07:00">Jul 29, 2019 @ 10:42am</time></p>
+					</div>
+	</div>
+
+
+	<nav class="navigation pagination" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current"><span class="screen-reader-text">Page </span>1</span>
+<a class="page-numbers" href="https://news.xbox.com/en-us/2019/07/page/2/"><span class="screen-reader-text">Page </span>2</a>
+<a class="page-numbers" href="https://news.xbox.com/en-us/2019/07/page/3/"><span class="screen-reader-text">Page </span>3</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class="page-numbers" href="https://news.xbox.com/en-us/2019/07/page/7/"><span class="screen-reader-text">Page </span>7</a>
+<a class="page-numbers" href="https://news.xbox.com/en-us/2019/07/page/8/"><span class="screen-reader-text">Page </span>8</a>
+<a class="next page-numbers" href="https://news.xbox.com/en-us/2019/07/page/2/"><span class="screen-reader-text">Next</span><svg class="icon icon-arrow-right"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#arrow-right"></use></svg></a></div>
+	</nav>		</div>
+	</section>
+</main><!-- #main -->
+
+<footer class="footer">
+		<nav class="footer__container main-container">
+											<div class="footer__section">
+				<p class="footer__headline h6">Xbox Game Studios</p>
+				<ul class="footer__link-list">
+														<li class="footer__link h5">
+				<a href="https://www.343industries.com/">343 Industries</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.ageofempires.com/">Age of Empires</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://thecoalitionstudio.com/">The Coalition</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="http://compulsiongames.com/">Compulsion Games</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.doublefine.com/">Double Fine</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://initiativegaming.com/">The Initiative</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.inxile-entertainment.com/">inXile Entertainment</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.minecraft.net/">Minecraft</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://ninjatheory.com/">Ninja Theory Ltd</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.obsidian.net/">Obsidian Entertainment</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.playground-games.com/">Playground Games</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.rare.co.uk/">Rare</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.forzamotorsport.net/en-us/turn10">Turn 10 Studios</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://undeadlabs.com/">Undead Labs</a>
+			</li>
+												</div></ul>
+									<div class="footer__section">
+				<p class="footer__headline h6">Global Sites</p>
+				<ul class="footer__link-list">
+														<li class="footer__link h5">
+				<a href="https://news.xbox.com/en-us">Xbox Wire</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://news.xbox.com/de-de/">Xbox Wire DACH</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://news.xbox.com/es-latam/">Xbox Wire en Español</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://news.xbox.com/fr-fr/">Xbox Wire en Francais</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://news.xbox.com/pt-br/">Xbox Wire em Português</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://news.xbox.com/ru-ru/">Xbox Wire на русском</a>
+			</li>
+												</div></ul>
+									<div class="footer__section">
+				<p class="footer__headline h6">Stay Connected</p>
+				<ul class="footer__link-list">
+														<li class="footer__link h5">
+				<a href="https://www.facebook.com/xbox"><svg class="icon icon-facebook"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#facebook"></use></svg>Facebook</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://twitter.com/xbox"><svg class="icon icon-twitter"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#twitter"></use></svg>Twitter</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="http://pinterest.com/xbox/"><svg class="icon icon-pinterest"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#pinterest"></use></svg>Pinterest</a>
+			</li>
+														<li class="footer__link h5">
+				<a href="https://www.youtube.com/user/xbox"><svg class="icon icon-youtube"><use xlink:href="https://news.xbox.com/en-us/wp-content/themes/microsoft/assets/dist/icons.svg#youtube"></use></svg>YouTube</a>
+			</li>
+							</ul></div>
+	</nav>
+	
+	<div class="footer-bottom cf main-container">
+		<p class="footer__copyright">© 2020 Microsoft</p>
+
+		<div class="footer__secondary"><ul id="menu-secondary-menu" class="footer-secondary"><li id="menu-item-16766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16766"><a href="https://news.xbox.com/en-us/media/">Media Assets</a></li>
+<li id="menu-item-16767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16767"><a href="http://support.xbox.com/en-US/">Support</a></li>
+<li id="menu-item-16768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16768"><a href="http://support.xbox.com/en-US/xbox-one/console/photosensitive-seizure-warning">Photosensitive Seizure Warning</a></li>
+<li id="menu-item-16769" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16769"><a href="http://go.microsoft.com/fwlink/?LinkId=248681">Privacy &#038; Cookies</a></li>
+<li id="menu-item-16770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16770"><a href="http://www.xbox.com/en-US/Legal/XboxComTOU?xr=footnav">Terms of Use</a></li>
+<li id="menu-item-16771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16771"><a href="http://www.xbox.com/en-US/Legal/CodeOfConduct?xr=footnav">Code of Conduct</a></li>
+<li id="menu-item-16772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16772"><a href="/en-us/feed/stories/">RSS</a></li>
+<li id="menu-item-16773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16773"><a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general.aspx">Trademarks</a></li>
+<li id="menu-item-143760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143760"><a href="#cookie-banner">Manage Consent</a></li>
+</ul></div>	</div>
+
+</footer>
+
+<script id='microsoft-script-js-extra'>
+var XboxSettings = {"fill":"Please fill out all required fields","blocked":"You may not view this content","read_more":"Read more","xbox":"Xbox Wire","no_stories":"No stories to show.","more_stories":"Load More Stories","january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December","play_button":"Play Video","not_add_item":"Cannot add items to cart, maximum total size of","exceeded":"exceeded, please make some space","warning":"Your cart is too big, please remove  assets !","item_added":"Items were added to your downloads","cart_empty":"Cart is now empty","item_removed":"Items removed from cart","search_message":"This content isn't available for the current language, continuing will take you to the English website.","infinite_scroll_limit":"3"};
+var XboxCookieAPI = {"culture":"en-US","placeholder":"cookie-banner"};
+</script>
+<script type='text/javascript' src='https://news.xbox.com/en-us/_static/??-eJydkd1OwzAMhV+Izt0kJrhAPApKE9O6JHEUOxvj6UlpmYrEJOiVT3zkzz+Bc2osR8WoEEqTfOkpCoyoydi35nHXwgtFC10h7yANrByXsAsUd6PcwQqhAwYUCGQzC78qGBFUgRNGxxmU4qURTw5/6A2kjllFs0mQOKWK2Fp+VRuGCOyMn90vuUbUo/niavEoUGJdUixn/E8TR6IgNlNS2TCcnPr3IvgdfyPc+PC6S/GVfCbXT0BBk+0wLTKrZjb+SFvGMUU5GFWyV9ebj0tDwfS1l2Q7NVilbh2zPjF06Bb/OTztj+3+eP/QHg7jJxMUDr0='></script>
+<div id="fb-root"></div>
+<script>
+	// Facebook Script.
+	XboxUtils.isCookieClear(function () {
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '451154101753332',
+				xfbml      : true,
+				version    : 'v2.12'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	});
+
+	// Twitter Widget script
+	XboxUtils.isCookieClear(function () {
+		var tag = document.createElement('script');
+			tag.src = "//platform.twitter.com/widgets.js";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	});
+
+	// Bing Translate.
+	XboxUtils.isCookieClear(function () {
+		setTimeout(function(){{var s=document.createElement('script');s.type='text/javascript';s.charset='UTF-8';s.src=((location && location.href && location.href.indexOf('https') == 0)?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=True&ui=true&settings=Manual&from=en';var p=document.getElementsByTagName('head')[0]||document.documentElement;p.insertBefore(s,p.firstChild); }},0);
+	});
+	</script>
+
+	<!-- [Begin] JSLL script includes -->
+	<script src="https://az725175.vo.msecnd.net/scripts/jsll-4.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		// AWA / JSLL setup.
+		var config = {
+				syncMuid: awa.utils.isValueAssigned(awa.cookie.getCookie("MSCC")),
+				userConsentCookieName: "MSCC",
+				autoCapture: {
+					scroll: true,
+					lineage: true,
+					resize: true
+				},
+				coreData: {
+					appId: "XboxWire"
+				},
+			},
+			post_ids = [];
+
+		awa.init(config);
+
+		( function( $ ) {
+			$( 'body' ).on( 'xboxInfiniteScroll.switchToPost', function( e, post_data ) {
+				var post_id = post_data.post_id,
+					overrideValues = {
+						appId: "XboxWire",
+						uri: post_data.post_url
+					},
+					firstPost = $( '#main > .post:first-child' )
+					firstPostId = firstPost.data( 'post-id' );
+
+				if ( $.inArray( post_id, post_ids ) < 0 && post_id !== firstPostId ) {
+					post_ids.push( post_id );
+
+					awa.ct.capturePageView( overrideValues );
+				}
+			} );
+
+			$( '.ms-product-badge a' ).click( function( e ) {
+				var element = $( this ).get(0),
+					overrideValues = {
+						appId: "XboxWire",
+					};
+
+				awa.ct.capturePageAction( element, overrideValues );
+			} );
+		} ) ( jQuery );
+	</script>
+	<!-- [End] JSLL script includes -->
+
+		<script type="text/javascript" src="https://cdn.geni.us/snippet.min.js" defer></script>
+	<script type="text/javascript">
+	( function( $ ) {
+		var tsid = 98119;
+
+		/**
+		 * Scans the page for links that can be converted to affiliate links using geni.us proxy urls.
+		 */
+		function mn_genius() {
+			Genius.itunes.convertLinks(tsid, false, "http:\/\/s.majornelson.com");
+			Genius.amazon.convertLinks(tsid, true, "http:\/\/s.majornelson.com");
+			Genius.microsoft.convertLinks(tsid, "http:\/\/s.majornelson.com");
+		}
+
+		document.addEventListener( "DOMContentLoaded", function() {
+			// First timeout function has a delay of 0 to allow other scripts to execute before this.
+			setTimeout( mn_genius, 0 );
+			// The second timeout function has a delay of 2 seconds to catch any conversion URLs the first scan missed.
+			setTimeout( mn_genius, 2000 );
+		} );
+
+		$( document ).on( "ready page.dt", function() {
+			// First timeout function has a delay of 0 to allow other scripts to execute before this.
+			setTimeout( mn_genius, 0 );
+			// The second timeout function has a delay of 2 seconds to catch any conversion URLs the first scan missed.
+			setTimeout( mn_genius, 2000 );
+		} );
+
+		$( 'body' ).on( 'xboxInfiniteScroll.fetchedPost', function() {
+			// First timeout function has a delay of 0 to allow other scripts to execute before this.
+			setTimeout( mn_genius, 0 );
+			// The second timeout function has a delay of 2 seconds to catch any conversion URLs the first scan missed.
+			setTimeout( mn_genius, 2000 );
+		} );
+
+	} )( jQuery );
+	</script>
+		<script>
+		// Google Tag Manager.
+		dataLayer = [];
+		XboxUtils.isCookieClear(function() {
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5L459RL')
+		});
+	</script>
+	<script type='text/javascript' src='https://stats.wp.com/e-202042.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.0.2',blog:'140703945',post:'0',tz:'-7',srv:'news.xbox.com'} ]);
+	_stq.push([ 'clickTrackerInit', '140703945', '0' ]);
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4defa64537","applicationID":"240539542","transactionName":"MQFQMkEECxJVV0wKXAhLcwVHDAoPG1VKAFsPElc=","queueTime":0,"applicationTime":483,"atts":"HUZHRAkeGE0WVRpZSBsZ","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+https://news.xbox.com/en-us/2019/07/

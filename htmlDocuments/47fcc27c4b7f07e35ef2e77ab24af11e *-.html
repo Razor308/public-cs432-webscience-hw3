@@ -1,0 +1,1259 @@
+<!--
+
+                              _    ____ ___  __  __ ____ _____ ___ ___ ____                        
+                    ___ _   _| |  / ___/ _ \|  \/  |  _ \_   _/ _ \_ _|  _ \                       
+                   / _ \ | | | | | |  | | | | |\/| | |_) || || | | | || |_) |                      
+                  |  __/ |_| | | | |__| |_| | |  | |  __/ | || |_| | ||  _ <                       
+                   \___|\__,_|_|  \____\___/|_|  |_|_|    |_| \___/___|_| \_\                      
+                          __       _ _         _                               _                   
+ __   _____  _   _ ___   / _| __ _(_) |_    __| | ___  ___   _ __   ___  _   _| |_ ___  _   ___  __
+ \ \ / / _ \| | | / __| | |_ / _` | | __|  / _` |/ _ \/ __| | '_ \ / _ \| | | | __/ _ \| | | \ \/ /
+  \ V / (_) | |_| \__ \ |  _| (_| | | |_  | (_| |  __/\__ \ | |_) | (_) | |_| | || (_) | |_| |>  < 
+   \_/ \___/ \__,_|___/ |_|  \__,_|_|\__|  \__,_|\___||___/ | .__/ \___/ \__,_|\__\___/ \__,_/_/\_\
+                                                            |_|                                    
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="fr-fr" 
+      lang="fr-fr" dir="ltr"
+	xmlns:og="https://ogp.me/ns#"
+	xmlns:fb="https://ogp.me/ns/fb#" 
+	xmlns:article="https://ogp.me/ns/article#">
+<head>
+  <base href="//www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="RTX, 3080, Ampere, GA102, Ray Tracing, AI, Tensor Cores, RT Cores, deuxième génération, 2nd Gen" />
+  <meta name="title" content="Test • NVIDIA GeFORCE RTX 3080" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="//www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html" />
+  <meta name="twitter:site" content="@lecomptoir" />
+  <meta name="twitter:domain" content="comptoir-hardware.com" />
+  <meta name="twitter:creator" content="@lecomptoir" />
+  <meta name="twitter:title" content="Test • NVIDIA GeFORCE RTX 3080" />
+  <meta name="twitter:description" content="Test de la nouvelle génération de cartes haut de gamme du caméléon au travers de la GeForce RTX 3080. Au programme, 20 jeux en résterisation, 9 en Ray Tracing, 7 benchmarks, des mesures de consommation, nuisances sonores, températures et imagerie infrarouge.
+" />
+  <meta name="twitter:image" content="https://www.comptoir-hardware.com/images/stories/articles/gpu/ampere/rtx3080/founders_edition/header-rtx3080.jpg" />
+  <meta name="description" content="Test de la nouvelle génération de cartes haut de gamme du caméléon au travers de la GeForce RTX 3080. Au programme, 20 jeux en résterisation, 9 en Ray Tracing, 7 benchmarks, des mesures de consommation, nuisances sonores, températures et imagerie infrarouge.
+" />
+  <meta name="generator" content="un bon gros fut de bière" />
+  <title>Test • NVIDIA GeFORCE RTX 3080 - Le comptoir du hardware</title>
+  <link href="//www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html" rel="canonical"  />
+  <link href="/templates/pac_pho/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/templates/pac_pho/lib/gzip/css.php?id=7838342d7f79279ad0e945ecb974cca4" type="text/css" />
+  <link rel="stylesheet" href="https://www.comptoir-hardware.com/modules/mod_yoo_search/mod_yoo_search.css.php" type="text/css" />
+  <style type="text/css">
+    <!--
+.wrapper { width: 1150px; }
+#main-shift { margin-left: 333px; }
+#left { width: 328px; }
+#menu .dropdown { width: 185px; }
+#menu .columns2 { width: 370px; }
+#menu .columns3 { width: 555px; }
+#menu .columns4 { width: 740px; }
+
+    -->
+  </style>
+  <script type="text/javascript" src="/templates/pac_pho/lib/gzip/js.php?id=9ea2141f8066c2bd9cca502142f130a1"></script>
+  <script type="text/javascript" src="https://www.comptoir-hardware.com/modules/mod_yoo_search/mod_yoo_search.js"></script>
+  <script type="text/javascript">
+var YtSettings = { tplurl: '/templates/pac_pho', color: 'default' };
+  </script>
+  <meta property="fb:admins" content="1488114247" />
+  <meta property="fb:profile_id" content="170879132963757" />
+  <meta property="og:site_name" content="Le Comptoir du Hardware" />
+  <meta property="og:title" content="Test • NVIDIA GeFORCE RTX 3080" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="//www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html" />
+  <meta property="og:locale" content="fr_fr" />
+  <meta property="og:description" content="Test de la nouvelle g&eacute;n&eacute;ration de cartes haut de gamme du cam&eacute;l&eacute;on au travers de la GeForce RTX 3080. Au programme, 20 jeux en r&eacute;sterisation, 9 en Ray Tracing, 7 benchmarks, des mesures de consommation, nuisances sonores, temp&eacute;ratures et imagerie infrarouge.
+" />
+  <meta property="og:image" content="https://www.comptoir-hardware.com/images/stories/articles/gpu/ampere/rtx3080/founders_edition/header-rtx3080.jpg" />
+  <meta property="og:image:secure_url" content="https://www.comptoir-hardware.com/images/stories/articles/gpu/ampere/rtx3080/founders_edition/header-rtx3080.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="591" />
+  <meta property="article:published_time" content="2020-09-16T13:00:00+02:00" />
+  <meta property="article:publisher" content="170879132963757" />
+  <meta property="article:section" content="Cartes graphiques" />
+  <meta property="article:tag" content="RTX" />
+  <meta property="article:tag" content="3080" />
+  <meta property="article:tag" content="Ampere" />
+  <meta property="article:tag" content="GA102" />
+  <meta property="article:tag" content="Ray Tracing" />
+  <meta property="article:tag" content="AI" />
+  <meta property="article:tag" content="Tensor Cores" />
+  <meta property="article:tag" content="RT Cores" />
+  <meta property="article:tag" content="deuxième génération" />
+  <meta property="article:tag" content="2nd Gen" />
+
+<link rel="alternate" type="application/rss+xml" title="Les actus et les articles du Comptoir" href="/home.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Les actus du Comptoir" href="/home.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Les articles du Comptoir" href="/articles.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Les bons plans du Comptoir" href="/bons_plans.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Les ragots du Comptoir" href="/ragots.xml"/>
+ 
+<!-- 42399 --><script src="/includes/js/cdh_v50.js" type="text/javascript"></script>  
+
+
+<script type="text/javascript">
+					  var _gaq = _gaq || [];
+					  
+					  _gaq.push(['_setAccount', 'UA-7029522-2']);
+						_gaq.push(['_trackPageview']);
+					
+					  (function() {
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					  })();
+					</script>
+
+</head>
+<body id="page" 
+  itemscope="itemscope" itemtype="https://schema.org/WebPage" class="yoopage column-left  ">
+
+	<div id="ToolTip"></div>
+		
+	<div id="page-body">
+		<div class="wrapper">
+			<div class="wrapper-bg1">
+				<div class="wrapper-bg2">
+
+					<div id="header">
+		
+						<div id="toolbar">
+						
+														<div id="date">
+								Dimanche, 18 Octobre 2020							</div>
+														
+														
+														
+						</div>
+						
+						<div id="headerbar">
+						
+														
+														
+						</div>
+						
+						<div id="menubar">
+							<div class="menubar-2">
+								<div class="menubar-3"></div>
+							</div>
+						</div>
+		
+												<div id="logo">
+							<div align="center">
+<a href="//www.comptoir-hardware.com" target="_self">
+	<img src="/images/logos-60/cdh_chauseeaucomptoir.png" alt="cdh_chauseeaucomptoir.png" width="800" height="60" /></a>
+</div>
+						</div>
+								
+												<div id="menu">
+							
+<ul class="menu menu-dropdown">
+	<li class="level1 item1 first parent">
+		<a href="https://www.comptoir-hardware.com/" class="level1 item1 first parent">
+			<span class="bg ">
+				<span class="title">Le pilier</span>
+				<span class="subtitle">du comptoir</span>
+			</span>
+		</a>
+		<div class="dropdown columns1" style="width:260px;"><div class="dropdown-1"><div class="dropdown-2"><div class="dropdown-3">
+		<ul class="col1 level2 first last">
+			<li class="level2 item1 first parent separator">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<span class="separator level2 item1 first parent separator">
+					<span class="bg ">
+						<span class="title">Quel comptoir?</span>
+						<span class="subtitle">c'est vous qui choize!</span>
+					</span>
+				</span>
+				</div></div>
+				<div class="sub">
+				<ul class="level3">
+					<li class="level3 item1 first">
+						<a href="/link/nFx2gL" class="level3 item1 first">
+							<span class="bg ">plutôt ensoleillé</span>
+						</a>
+					</li>
+					<li class="level3 item2">
+						<a href="/link/vHx2gL" class="level3 item2">
+							<span class="bg ">plutôt blanc</span>
+						</a>
+					</li>
+					<li class="level3 item3 last">
+						<a href="/link/t8x2gL" class="level3 item3 last">
+							<span class="bg ">quoique bleu...</span>
+						</a>
+					</li>
+				</ul>
+				</div>
+				</div></div>
+			</li>
+			<li class="level2 item2">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/accueil/inscription.html" class="level2 item2">
+					<span class="bg ">
+						<span class="title">Inscription</span>
+						<span class="subtitle">OUI moi aussi j'assume mes ragots !</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/accueil/sondages.html" class="level2 item3">
+					<span class="bg ">Les sondages du  Comptoir</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4 last">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/accueil/contact.html" class="level2 item4 last">
+					<span class="bg ">
+						<span class="title">Contact • Qui sommes-nous ?</span>
+						<span class="subtitle">et du blabla super utile aussi</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+		</ul>
+		</div></div></div></div>
+	</li>
+	<li class="level1 item2 parent">
+		<a href="/actus.html" class="level1 item2 parent">
+			<span class="bg ">
+				<span class="title">Actualités</span>
+				<span class="subtitle">pour rester informé</span>
+			</span>
+		</a>
+		<div class="dropdown columns4"><div class="dropdown-1"><div class="dropdown-2"><div class="dropdown-3">
+		<ul class="col1 level2 first">
+			<li class="level2 item1 first">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/processeurs.html" class="level2 item1 first">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cpu-mb-ram-oc.png);" class="bg icon">
+						<span class="title">Processeurs</span>
+						<span class="subtitle">Intel, AMD, et même Cyrix !</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item2">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/cartes-meres.html" class="level2 item2">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cpu-mb-ram-oc.png);" class="bg icon">
+						<span class="title">Cartes mères</span>
+						<span class="subtitle">2011, 115x, AM2/3(+), FM1...</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/ram.html" class="level2 item3">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cpu-mb-ram-oc.png);" class="bg icon">
+						<span class="title">Mémoires</span>
+						<span class="subtitle">DDR, NAND, HMC...</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4 last">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/oc.html" class="level2 item4 last">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cpu-mb-ram-oc.png);" class="bg icon">
+						<span class="title">Overclocking</span>
+						<span class="subtitle">Pour aller plus viiiite</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+		</ul>
+		<ul class="col2 level2">
+			<li class="level2 item1 first">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/cartes-graphiques.html" class="level2 item1 first">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-vga.png);" class="bg icon">
+						<span class="title">Cartes graphiques</span>
+						<span class="subtitle">AMD, Nvidia, Intel, méplu 3DFX</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item2">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/stockage.html" class="level2 item2">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-stockage.png);" class="bg icon">
+						<span class="title">Stockage</span>
+						<span class="subtitle">Disques durs, SSDs, optiques...</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/peripheriques.html" class="level2 item3">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-stockage.png);" class="bg icon">
+						<span class="title">Periphériques</span>
+						<span class="subtitle">Ca fait beaucoup de choses</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4 last">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/refroidissement.html" class="level2 item4 last">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cooling.png);" class="bg icon">
+						<span class="title">Refroidissement</span>
+						<span class="subtitle">Air, eau, mazout ?</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+		</ul>
+		<ul class="col3 level2">
+			<li class="level2 item1 first">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/software-pilotes.html" class="level2 item1 first">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-soft-jv.png);" class="bg icon">
+						<span class="title">Software • Pilotes</span>
+						<span class="subtitle">Logiciels, pilotes....</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item2">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/jeux-video.html" class="level2 item2">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-soft-jv.png);" class="bg icon">
+						<span class="title">Jeux vidéo</span>
+						<span class="subtitle">Parce qu’on aime bien en parler</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/boitiers-barebones.html" class="level2 item3">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-boite-alim.png);" class="bg icon">
+						<span class="title">Boîtiers • Barebones</span>
+						<span class="subtitle">ITX, ATX, DTCX...</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4 last">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/alimentations.html" class="level2 item4 last">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-boite-alim.png);" class="bg icon">
+						<span class="title">Alimentations</span>
+						<span class="subtitle">ATX, SFX, 80PLUS...</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+		</ul>
+		<ul class="col4 level2 last">
+			<li class="level2 item1 first">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/vr.html" class="level2 item1 first">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-sys-hw-divers.png);" class="bg icon">
+						<span class="title">VR</span>
+						<span class="subtitle">VIVE, Oculus, OSVR &amp; cie</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item2">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/modding-et-systemes.html" class="level2 item2">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-sys-hw-divers.png);" class="bg icon">
+						<span class="title">Modding &amp; Systèmes</span>
+						<span class="subtitle">Des ptis trous, des gros trous...</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/business.html" class="level2 item3">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-sys-hw-divers.png);" class="bg icon">
+						<span class="title">Business &amp; internet</span>
+						<span class="subtitle">Kibouffki, économie, potins...</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4 last">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/actus/divers-a-fonkeries.html" class="level2 item4 last">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-sys-hw-divers.png);" class="bg icon">
+						<span class="title">Give me da f0nk!</span>
+						<span class="subtitle">Les inclassables qui poutrent</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+		</ul>
+		</div></div></div></div>
+	</li>
+	<li class="level1 item3 parent active">
+		<a href="/articles.html" class="level1 item3 parent active">
+			<span class="bg ">
+				<span class="title">Tests &amp; articles</span>
+				<span class="subtitle">pour être incollable</span>
+			</span>
+		</a>
+		<div class="dropdown columns2"><div class="dropdown-1"><div class="dropdown-2"><div class="dropdown-3">
+		<ul class="col1 level2 first">
+			<li class="level2 item1 first">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/articles/cpu-mobo-ram.html" class="level2 item1 first">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cpu-mb-ram-oc.png);" class="bg icon">CPU • Mobo • RAM</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item2 active current">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/articles/cartes-graphiques.html" class="level2 item2 active current">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-vga.png);" class="bg icon">Cartes graphiques</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/articles/stockage-cartes.html" class="level2 item3">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-stockage.png);" class="bg icon">Stockage • Cartes</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4 last">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/articles/software-jeux-video.html" class="level2 item4 last">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-soft-jv.png);" class="bg icon">Software • Jeux video</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+		</ul>
+		<ul class="col2 level2 last">
+			<li class="level2 item1 first">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/articles/boitiers-alimentations.html" class="level2 item1 first">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-boite-alim.png);" class="bg icon">Boitiers • alimentations</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item2">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/articles/refroidissement.html" class="level2 item2">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cooling.png);" class="bg icon">Refroidissement</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/articles/quelques-heures-sur-le-comptoir.html" class="level2 item3">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-sys-hw-divers.png);" class="bg icon">
+						<span class="title">Quelques heures sur CDH</span>
+						<span class="subtitle">périphs &amp; cie</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4 last">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="//www.qwant.com/?q=site:www.comptoir-hardware.com%20hard%20du%20hard" target="_blank" class="level2 item4 last">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-sys-hw-divers.png);" class="bg icon">Hard du hard</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+		</ul>
+		</div></div></div></div>
+	</li>
+	<li class="level1 item4">
+		<a href="/bons-plans-du-comptoir.html" class="level1 item4">
+			<span class="bg ">
+				<span class="title">Les bons plans</span>
+				<span class="subtitle">à ne pas rater !</span>
+			</span>
+		</a>
+	</li>
+	<li class="level1 item5 parent">
+		<a href="/guide-d-achat.html" class="level1 item5 parent">
+			<span class="bg ">
+				<span class="title">Guides d'achats</span>
+				<span class="subtitle">bien choisir vos compos</span>
+			</span>
+		</a>
+		<div class="dropdown columns1" style="width:210px;"><div class="dropdown-1"><div class="dropdown-2"><div class="dropdown-3">
+		<ul class="col1 level2 first last">
+			<li class="level2 item1 first">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/guide-d-achat/39594-comptoir-dachat--les-processeurs-q3-2019-q1-2020.html" class="level2 item1 first">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-cpu-mb-ram-oc.png);" class="bg icon">
+						<span class="title">Processeurs</span>
+						<span class="subtitle">Q3 2019 - Q1 2020</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item2">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/guide-d-achat/38809-comptoir-dachat--le-stockage-q3-2019-q1-2020.html" class="level2 item2">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-stockage.png);" class="bg icon">
+						<span class="title">Stockage</span>
+						<span class="subtitle">Q3 2019 - Q1 2020</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item3">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="/guide-d-achat/39685-comptoir-dachat--les-cartes-graphiques-q3-2019-q1-2020.html" class="level2 item3">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-vga.png);" class="bg icon">
+						<span class="title">Cartes graphiques</span>
+						<span class="subtitle">Q3 2019 - Q1 2020</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item4">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/26923-dans-le-cambouis-connecteurs-video-a-definitions.html" target="_blank" class="level2 item4">
+					<span style="background-image: url(https://www.comptoir-hardware.com/images/stories/_menu-sys-hw-divers.png);" class="bg icon">
+						<span class="title">Guide des connecteurs</span>
+						<span class="subtitle">vidéo &amp; définitions</span>
+					</span>
+				</a>
+				</div></div>
+				</div></div>
+			</li>
+			<li class="level2 item5 last parent separator">
+				<div class="group-box1"><div class="group-box5">
+				<div class="hover-box1"><div class="hover-box4">
+				<span class="separator level2 item5 last parent separator">
+					<span class="bg ">
+						<span class="title">Les récaps'</span>
+						<span class="subtitle">on se saigne aux 4 veines pour vous mettre en un seul endroit l'offre globale du marché. Et vous allez voir dans certains cas, c'est franchement utile !</span>
+					</span>
+				</span>
+				</div></div>
+				<div class="sub">
+				<ul class="level3">
+					<li class="level3 item1 first">
+						<a href="//www.comptoir-hardware.com/articles/cpu-mobo-ram/25143-recap-choisir-sa-carte-mere-z97h97.html" target="_blank" class="level3 item1 first">
+							<span class="bg ">Z97 / H97</span>
+						</a>
+					</li>
+					<li class="level3 item2">
+						<a href="//www.comptoir-hardware.com/articles/cpu-mobo-ram/26232-recap-choisir-sa-carte-mere-x99.html" target="_blank" class="level3 item2">
+							<span class="bg ">X99</span>
+						</a>
+					</li>
+					<li class="level3 item3">
+						<a href="//www.comptoir-hardware.com/articles/cpu-mobo-ram/29387-recap-choisir-sa-mobale-z170.html" target="_blank" class="level3 item3">
+							<span class="bg ">Z170</span>
+						</a>
+					</li>
+					<li class="level3 item4">
+						<a href="//www.comptoir-hardware.com/articles/cpu-mobo-ram/33222-recap-la-jungle-des-z270.html" target="_blank" class="level3 item4">
+							<span class="bg ">Z270</span>
+						</a>
+					</li>
+					<li class="level3 item5">
+						<a href="//www.comptoir-hardware.com/articles/cpu-mobo-ram/33832-recap-le-barnum-x370-b350.html" target="_blank" class="level3 item5">
+							<span class="bg ">X370 / B350</span>
+						</a>
+					</li>
+					<li class="level3 item6">
+						<a href="//www.comptoir-hardware.com/articles/cpu-mobo-ram/34581-recap-lechoppe-des-x399.html" target="_blank" class="level3 item6">
+							<span class="bg ">X399</span>
+						</a>
+					</li>
+					<li class="level3 item7">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/29498-recap-les-gtx-950.html" target="_blank" class="level3 item7">
+							<span class="bg ">GTX 950</span>
+						</a>
+					</li>
+					<li class="level3 item8">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/28932-recap-la-radeon-r300-family.html" target="_blank" class="level3 item8">
+							<span class="bg ">R300</span>
+						</a>
+					</li>
+					<li class="level3 item9">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/28767-recap-les-gtx-980ti.html" target="_blank" class="level3 item9">
+							<span class="bg ">GTX 980 Ti</span>
+						</a>
+					</li>
+					<li class="level3 item10">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/33755-recap-les-gtx-1050-et-1050ti.html" target="_blank" class="level3 item10">
+							<span class="bg ">GTX 1050 / Ti</span>
+						</a>
+					</li>
+					<li class="level3 item11">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/33766-recap-les-gtx-1060.html" target="_blank" class="level3 item11">
+							<span class="bg ">GTX 1060</span>
+						</a>
+					</li>
+					<li class="level3 item12">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/33796-recap-les-gtx-1070.html" target="_blank" class="level3 item12">
+							<span class="bg ">GTX 1070</span>
+						</a>
+					</li>
+					<li class="level3 item13">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/35924-recap-les-gtx-1070-ti.html" target="_blank" class="level3 item13">
+							<span class="bg ">GTX 1070 Ti</span>
+						</a>
+					</li>
+					<li class="level3 item14">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/33799-recap-les-gtx-1080.html" target="_blank" class="level3 item14">
+							<span class="bg ">GTX 1080</span>
+						</a>
+					</li>
+					<li class="level3 item15">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/33837-recap-les-gtx-1080ti.html" target="_blank" class="level3 item15">
+							<span class="bg ">GTX 1080 Ti</span>
+						</a>
+					</li>
+					<li class="level3 item16">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/38188-recap-les-rtx-2060.html" target="_blank" class="level3 item16">
+							<span class="bg ">RTX 2060</span>
+						</a>
+					</li>
+					<li class="level3 item17">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/38119-recap-les-rtx-2070.html" target="_blank" class="level3 item17">
+							<span class="bg ">RTX 2070</span>
+						</a>
+					</li>
+					<li class="level3 item18">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/38065-recap-les-rtx-2080.html" target="_blank" class="level3 item18">
+							<span class="bg ">RTX 2080</span>
+						</a>
+					</li>
+					<li class="level3 item19 last">
+						<a href="//www.comptoir-hardware.com/articles/cartes-graphiques/38013-recap-les-rtx-2080-ti.html" target="_blank" class="level3 item19 last">
+							<span class="bg ">RTX 2080 Ti</span>
+						</a>
+					</li>
+				</ul>
+				</div>
+				</div></div>
+			</li>
+		</ul>
+		</div></div></div></div>
+	</li>
+	<li class="level1 item6">
+		<a href="/job-de-comptoir.html" class="level1 item6">
+			<span class="bg ">
+				<span class="title">Jobs@CDH</span>
+				<span class="subtitle">Deviendre pilier ?</span>
+			</span>
+		</a>
+	</li>
+	<li class="level1 item7 last">
+		<a href="/concours.html" class="level1 item7 last">
+			<span class="bg ">
+				<span class="title">Concours</span>
+				<span class="subtitle">il court, il court...</span>
+			</span>
+		</a>
+	</li>
+</ul>
+						</div>
+								
+												<div id="search">
+							<div class="default">
+	<div id="yoo-search-1" class="yoo-search">
+	
+		<form action="index.php" method="post">
+			<div class="searchbox">
+				<button class="search-magnifier" type="submit" value="Search"></button>
+				<input class="searchfield" type="text" onfocus="if(this.value=='Rechercher...') this.value='';" onblur="if(this.value=='') this.value='Rechercher...';" value="Rechercher..." size="20" alt="Rechercher..." maxlength="20" name="searchword" />
+				<button class="search-close" type="reset" value="Reset"></button>
+			</div>	
+			<input type="hidden" name="task"   value="search" />
+			<input type="hidden" name="option" value="com_search" />
+		</form>		
+
+		<div class="resultbox" style="width: 450px;"></div>
+
+	</div>
+</div><script type="text/javascript">
+// <!--
+window.addEvent('domready', function(){ new YOOsearch('yoo-search-1', { 'url': 'https://www.comptoir-hardware.com/index.php?option=com_search&tmpl=raw&type=json&ordering=&searchphrase=all&Itemid=67', 'fieldText': 'Rechercher...', 'msgResults': 'Réponses pour la recherche', 'msgCategories': 'Rechercher dans les catégories', 'msgNoResults': 'Aucune réponse', 'msgMoreResults': 'Plus de réponses' }); });
+// -->
+</script>
+
+						</div>
+									
+								
+					</div>
+					<!-- header end -->
+		
+										<div id="top">
+				
+												<div class="topblock width100 float-left">
+							<div class="module mod-blank   first last">
+
+	
+		
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td class="member_pubdemerde">
+	<iframe id="framepub55" framespacing="0" width="728" height="90" src="/dfp/dfp.php?format=lb&var23316=value835120&zoneid=1&top=0&left=0&template=default" frameborder="0" scrolling="no"></iframe>
+	</td>
+	<td class="member_zone"><table cellspacing="0" cellpadding="0" border="0" width="250px">
+	<tr>
+		<td rowspan="3" class="member_register">
+			<a title="Inscription" href="/component/comprofiler/registers.html"><img src="/images/0.gif" class="member_register" alt="" /></a>
+		</td>
+		<td colspan="2" class="member_text">
+			<table cellspacing="0" cellpadding="0" border="0">
+				<form action="https://www.comptoir-hardware.com/component/comprofiler/login.html" method="post" id="mod_loginformwhite poeple" style="margin:0px;">
+					<tr><td colspan="2"><div class="member_user"><input type="text" name="username" id="mod_login_usernamewhite poeple" size="16" alt="Identifiant" value="Identifiant" onfocus="if (this.value=='Identifiant') this.value=''" onblur="if(this.value=='') { this.value='Identifiant'; return false; }" title="Identifiant anonymement anonyme" /></div></td></tr>
+					<tr><td><div class="member_pass"><input type="password" name="passwd" id="mod_login_passwordwhite poeple" class="inputboxwhite poeple" size="12" alt="Mot de passe" value="paswww" onfocus="if (this.value=='paswww') this.value=''" onblur="if(this.value=='') { this.value='paswww'; return false; }" title="Mot de passe top secret" /><input type="hidden" name="op2" value="login" /></div></td>
+					<td align="right">
+					<div class="member_submit">
+						<input type="hidden" name="lang" value="french" /> 
+						<input type="hidden" name="force_session" value="1" /> 
+						<input type="hidden" name="return" value="B:Ly93d3cuY29tcHRvaXItaGFyZHdhcmUuY29tL2FydGljbGVzL2NhcnRlcy1ncmFwaGlxdWVzLzQyMzk5LXRlc3QtbnZpZGlhLWdlZm9yY2UtcnR4LTMwODAuaHRtbA==" />
+						<input type="hidden" name="message" value="0" /> 
+						<input type="hidden" name="loginfrom" value="loginmodule" />
+						<input type="hidden" name="remember" value="yes" /><input type="submit" name="Submit" value="      " />
+						<input type="hidden" name="cbsecuritym3" value="cbm_5fbeccf6_0300b2e9_8fd7bdff166ee16275de8dbcb1332797" />
+					</div>
+					</td></tr>
+				</form>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="member_text" align="center"><a href="/component/comprofiler/lostpassword.html">Mot de passe perdu ?</a></td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+<input type="button" style="display:none;" id="reloadpub55" onclick="document.getElementById('framepub55').contentWindow.location.reload(true);" />		
+</div>
+						</div>
+									
+						
+					</div>
+					<!-- top end -->
+										
+					<div id="middle">
+						<div id="middle-expand">
+						
+							<div id="main">
+								<div id="main-shift">
+								
+											
+
+												<div class="contentleft-bg">
+													<div class="contentright-bg"></div>
+												</div>
+
+		
+									<div class="mainmiddle-wrapper-m">
+										<div class="contentleft-bg">
+											<div class="contentright-bg">
+				
+												<div id="mainmiddle">
+													<div id="mainmiddle-expand">
+													
+														<div id="content">
+															<div id="content-shift">
+															
+																									
+																																<div id="breadcrumbs">
+																	<center>
+<span class="breadcrumbs" xmlns:v="https://rdf.data-vocabulary.org/#" >
+<span  typeof="v:Breadcrumb" >
+	<a rel="v:url" href="https://www.comptoir-hardware.com/"><span property="v:title" >La réception</span></a>
+<span rel="v:child" typeof="v:Breadcrumb" >
+	<a rel="v:url" href="/articles.html"><span property="v:title" >Tests &amp; articles</span></a>
+<span rel="v:child" typeof="v:Breadcrumb" >
+	<a rel="v:url" href="/articles/cartes-graphiques.html"><span property="v:title" >Cartes graphiques</span></a>
+</span>
+</span>
+</span>
+</span></center>
+																</div>
+																									
+																<div class="floatbox">
+																	
+																	<div class="joomla " itemscope="itemscope" itemid="cdh:42399" itemtype="http://schema.org/Article" >
+<div class="article" >
+
+<meta itemprop="discussionUrl" content="//www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html#ragots" />
+<meta itemprop="description" content="Test de la nouvelle g&Atilde;&copy;n&Atilde;&copy;ration de cartes haut de gamme du cam&Atilde;&copy;l&Atilde;&copy;on au travers de la GeForce RTX 3080. Au programme, 20 jeux en r&Atilde;&copy;sterisation, 9 en Ray Tracing, 7 benchmarks, des mesures de consommation, nuisances sonores, temp&Atilde;&copy;ratures et imagerie infrarouge.
+" />
+<meta itemprop="keywords" content="RTX, 3080, Ampere, GA102, Ray Tracing, AI, Tensor Cores, RT Cores, deuxième génération, 2nd Gen" />
+<meta itemprop="inLanguage" content="fr" />
+<table width="100%" cellspacing="1"><tr>
+<td width="100%"><h1 class="title" ><a itemprop="url" href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html"><span itemprop="name">Test • NVIDIA GeFORCE RTX 3080</span></a></h1></td><script type="text/javascript">
+function addBookmark() {
+var title="Test • NVIDIA GeFORCE RTX 3080";
+var url="//www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html";
+if (window.sidebar) { // firefox
+window.sidebar.addPanel(title, url,"");
+} else if( document.all ) { //MSIE
+window.external.AddFavorite( url, title);
+} else { alert("Appuyer sur les touches CTRL+D pour ajouter le favori"); }}
+</script>
+<td><div id="ragots_big" class="bull_cartes-graphiques"><a href="#ragots" title="Comment ça pas de ragots, WTF ?"><div style=font-size:13px;line-height:13px;>pinut's</div></a></div></td>
+<td>
+<table cellpadding="0" cellspacing="0" border="0"><tbody>
+<tr>
+<td><center>
+<style type="text/css">
+.bt-facebook {
+	background: none repeat scroll 0 0 #ECEEF5;
+    border: 1px solid #CAD4E7;
+    border-radius: 2px 2px 2px 2px;
+    color: #3B5998;
+    cursor: pointer;
+    padding: 2px 2px 2px 2px;
+    white-space: nowrap;	
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+	width: 65px;	
+}
+</style>
+<div class="bt-facebook" style="color: #4a6b82;">
+<a href="#" 
+  onclick="
+	window.open(
+	  'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+	  'facebook-share-dialog', 
+	  'width=626,height=436'); 
+	return false;" style="color: #4a6b82;" >
+  <img src="/images/facebook.png" style="vertical-align:middle; " />
+  <span style="padding-left:1px">Trökoul</span>
+</a>
+</div>
+
+
+    </center></td></tr>
+  <tr>
+  <td><center><div style="width:75px;overflow:hidden"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="fr"></a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script></center></div></td>
+  </tr>
+</tbody>
+</table>
+</tr></table>
+
+
+<div style="margin-bottom:5px; padding:5px 12px">		<p class="articleinfo" >
+		
+						<span class="author" >Écrit par <span itemprop="author" itemscope 
+itemtype="http://schema.org/Person" ><!-- 2073 -->
+<span itemprop="name" >Eric B.</span></span></span>
+						|			<span class="created" itemprop="datePublished" content="2020-09-16T13:00:00+0200" >16 Septembre 2020</span>		</p>
+	</div></div>
+	
+				
+			
+
+		
+							
+		<meta itemprop="image" content="//www.comptoir-hardware.com//images/stories/articles/gpu/images_communes/borderlands3_t.jpg" />
+
+<script  type="text/javascript">
+function popup(img,title,width,height) {
+	if (width+50>screen.width) width=screen.width-50;
+	if (height+100>screen.height) height=screen.height-100;
+	options="location=no, directories=no, toolbar=no, menubar=no, status=no, scrollbars=yes, menubar=no, width="+width+", height="+height;
+	window.open("/images/popup.php/?"+title+"/"+img,'image',options);
+	}
+</script>
+
+<span itemprop="text" class="prout" >
+<div class="pagenavcounter"></div>
+<h3>• Borderlands 3</h3>
+<p style="text-align: justify;">Borderlands 3 est jeu développé par Gearbox, qui a la particularité d’utiliser le <em>cell shading</em> afin de proposer un rendu type cartoon, qui sied à merveille à l'ambiance du jeu. Il s'appuie sur l'Unreal Engine 4 et propose la prise en charge de DX11 et DX12 pour contenter le plus grand nombre. Nous utilisons la séquence de test avec le profil brutal, que nous mesurons à l'aide de Frameview. Nous reportons ensuite les scores du mode le plus performant dans les graphiques.&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><iframe src="https://www.youtube-nocookie.com/embed/aWRFmtseYxI?rel=0" width="325" height="180" frameborder="0" allowfullscreen="allowfullscreen"></iframe> <iframe src="https://www.youtube-nocookie.com/embed/m-CPIeJSpfk?rel=0" width="325" height="180" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>Deux <strong>comptoiroscopes</strong> : à droite, nous comparons 16:9 vs 21:9 et à gauche DX11 vs DX12</em></span></p>
+<p><img src="/images/stories/articles/gpu/images_communes/borderlands3_t.jpg" alt="borderlands3 t [cliquer pour agrandir]" width="650" height="183" style="margin: 5px auto; display: block;;cursor:pointer" itemprop="image" title="Ultra bouzotron HD max def" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/images_communes/borderlands3.jpg","borderlands3_t",3480,1180)></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>J'appelle pas ça un accueil moooaah !</em> </span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;">Une fois n'est pas coutume, ce jeu basé sur l'Unreal Engine 4 préfère étonnamment les Radeon. Quoiqu'il en soit, la RTX 2080 Ti dominait déjà largement les débats, la RTX 3080 FE les survole totalement cette fois, avec des gains compris entre 28 et 35% par rapport à la précédente championne.</p>
+<p>&nbsp;</p>
+<p><iframe src="https://graphs.comptoir.co/public/chart-group/752" width="650px" height="479px" style="width: 650px; height: 479px; margin-right: auto; margin-left: auto; display: block;" frameborder="0" scrolling="no"></iframe></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="/images/stories/articles/gpu/ampere/rtx3080/founders_edition/borderlands3_qhd_t.png" alt="Borderlands 3 en QHD [cliquer pour agrandir]" width="325" height="208" style="margin: 5px;;cursor:pointer" itemprop="image" title="La magie de la loupe, sans loupe" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/ampere/rtx3080/founders_edition/borderlands3_qhd.png","Borderlands_3_en_QHD",861,737)><img src="/images/stories/articles/gpu/ampere/rtx3080/founders_edition/borderlands3_uhd_t.png" alt="Borderlands 3 en UHD [cliquer pour agrandir]" width="325" height="208" style="margin: 5px;;cursor:pointer" itemprop="image" title="Ultra bouzotron HD max def" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/ampere/rtx3080/founders_edition/borderlands3_uhd.png","Borderlands_3_en_UHD",861,737)></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>Evolution du taux d'images par seconde durant la séquence de test</em></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>• Call of Duty : Modern Warfare</h3>
+<p style="text-align: justify;">Call of Duty est la licence phare de l'éditeur Activision, qui propose un opus tous les ans en alternance entre plusieurs studios de développement. C'est Infinity Ward qui s'est chargé du <em>remake/reboot&nbsp; </em>2019&nbsp;de leur version datant de 2007, assisté de 3 autres studios. Il s'appuie sur l'<em>IW Engine</em>&nbsp;dans sa version 8.0, inaugurée justement avec ce titre. Nous poussons les détails au maximum, couplés au SMAA 2TX Filmique, avant de procéder aux mesures via Frameview, d'une séquence reproductible.&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><iframe src="https://www.youtube.com/embed/LMzcvL0RNsk?rel=0" width="650" height="180" style="display: block; margin-left: auto; margin-right: auto;" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><img src="/images/stories/articles/gpu/images_communes/cod_mf_t.jpg" alt="cod mf t [cliquer pour agrandir]" width="650" height="254" style="margin: 5px auto; display: block;;cursor:pointer" itemprop="image" title="Visionner en grand sur un magnifique pop-up" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/images_communes/cod_mf.jpg","cod_mf_t",1960,1292)></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>Je pointe ou je tire ?</em></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;">Le jeu n'est pas excessivement gourmand tous détails activés, puisqu'une GTX 1080 FE parvient dans ces conditions à dépasser les 60 i/s en QHD. La nouvelle venue continue sa ballade de santé, avec 22 et 24 % de mieux que la RTX 2080 Ti FE.</p>
+<p>&nbsp;</p>
+<p><iframe src="https://graphs.comptoir.co/public/chart-group/753" width="650px" height="479px" style="width: 650px; height: 479px; margin-right: auto; margin-left: auto; display: block;" frameborder="0" scrolling="no"></iframe></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="/images/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_qhd_t.png" alt="Call of Duty Modern Warfare en QHD [cliquer pour agrandir]" width="325" height="208" style="margin: 5px;;cursor:pointer" itemprop="image" title="Cliquédélique !" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_qhd.png","Call_of_Duty_Modern_Warfare_en_QHD",861,737)><img src="/images/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_uhd_t.png" alt="Call of Duty Modern Warfare en UHD [cliquer pour agrandir]" width="325" height="208" style="margin: 5px;;cursor:pointer" itemprop="image" title="La magie de la loupe, sans loupe" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_uhd.png","Call_of_Duty_Modern_Warfare_en_UHD",861,737)></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>Evolution du taux d'images par seconde durant la séquence de test</em></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;">Le jeu propose également une prise en charge du Ray Tracing, bien que visuellement plutôt discrète. La RTX 3080 FE propose cette fois entre 26 et 32% de mieux que la RTX 2080 Ti FE, de quoi dépasser nettement les 60 i/s en UHD, ce qu'elle est la seule à pouvoir faire à ce niveau de détail.&nbsp;</p>
+<p>&nbsp;</p>
+<p><iframe src="https://graphs.comptoir.co/public/chart-group/772" width="650px" height="382px" style="width: 650px; height: 382px; margin-right: auto; margin-left: auto; display: block;" frameborder="0" scrolling="no"></iframe></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="/images/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_qhd_rtx_t.png" alt="Call of Duty Modern Warfare en QHD avec RTX [cliquer pour agrandir]" width="325" height="208" style="margin: 5px;;cursor:pointer" itemprop="image" title="Ultra bouzotron HD max def" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_qhd_rtx.png","Call_of_Duty_Modern_Warfare_en_QHD_avec_RTX",861,737)><img src="/images/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_uhd_rtx_t.png" alt="Call of Duty Modern Warfare en UHD avec RTX [cliquer pour agrandir]" width="325" height="208" style="margin: 5px;;cursor:pointer" itemprop="image" title="Même pas cap' de cliquer" class="zoum" style="cursor:pointer" onclick=popup("/stories/articles/gpu/ampere/rtx3080/founders_edition/cod_uhd_rtx.png","Call_of_Duty_Modern_Warfare_en_UHD_avec_RTX",861,737)></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>Evolution du taux d'images par seconde durant la séquence de test</em></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;">Que diriez-vous d'expérimenter quelques pouvoirs psychokinétiques page suivante ?</p>
+<br /><div class="pagenavbar"></div><br /></span>
+</div>
+
+<table width="100%" cellspacing="0">
+  <tr><td align=right><script>
+function nomPageErase(){
+	document.getElementById('nomPageArticle').innerHTML="";
+}
+function nomPageDraw(id){
+	title=["<h4 class=meta>Préambule</h4>"];
+	title[1]="<h4 class=meta>Ampere</h4>";title[2]="<h4 class=meta>GA102 et fonctionnalités</h4>";title[3]="<h4 class=meta>Un écosystème logiciel très poussé </h4>";title[4]="<h4 class=meta>GeForce RTX 3080 Founders Edition</h4>";title[5]="<h4 class=meta>Spécifications &amp; tests synthétiques</h4>";title[6]="<h4 class=meta>Protocole de test</h4>";title[7]="<h4 class=meta>Anno 1800 / Battlefield V</h4>";title[8]="<h4 class=meta>Borderlands 3 / Call of Duty M.W.</h4>";title[9]="<h4 class=meta>Control / Detroit Become Human</h4>";title[10]="<h4 class=meta>DiRT Rally 2.0 / Doom Eternal</h4>";title[11]="<h4 class=meta>Flight Simulator / Ghost Recon B.P.</h4>";title[12]="<h4 class=meta>Hitman 2 / Horizon Zero Dawn</h4>";title[13]="<h4 class=meta>Maid of Sker / Metro Exodus</h4>";title[14]="<h4 class=meta>Project CARS 3 / Red Dead Redemption 2</h4>";title[15]="<h4 class=meta>Shadow o.t. Tomb Raider / The Division 2</h4>";title[16]="<h4 class=meta>The Witcher 3 / Total War SAGA : Troy</h4>";title[17]="<h4 class=meta>RT : BMI / Minecraft / QII / Youngblood</h4>";title[18]="<h4 class=meta>Indices / 3DMark / Superposition / VRMark</h4>";title[19]="<h4 class=meta>Fréquences et Overclocking</h4>";title[20]="<h4 class=meta>Nuisances sonores / Températures / IR</h4>";title[21]="<h4 class=meta>Consommation et efficacité énergétique</h4>";title[22]="<h4 class=meta>Verdict</h4>";	document.getElementById('nomPageArticle').innerHTML=title[id-1];
+}
+</script>
+<div id=nomPageArticle></div></td><td align="right" style="width:400px!important;">
+  <table cellspacing="0">
+    <tr><td align="right">
+    <ul id=pagination-digg>
+ <li class="page"><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=7">◄</a></li><li onmouseover=nomPageDraw(1); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=0">1</a></li><li onmouseover=nomPageDraw(2); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=1">2</a></li><li onmouseover=nomPageDraw(3); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=2">3</a></li><li onmouseover=nomPageDraw(4); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=3">4</a></li><li onmouseover=nomPageDraw(5); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=4">5</a></li><li onmouseover=nomPageDraw(6); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=5">6</a></li><li onmouseover=nomPageDraw(7); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=6">7</a></li><li onmouseover=nomPageDraw(8); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=7">8</a></li><li onmouseover=nomPageDraw(9); onmouseout=nomPageErase(); class="active">9</li><li onmouseover=nomPageDraw(10); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=9">10</a></li><li style=opacity:0; class="page "><a href=#>0</a></li></ul><ul id=pagination-digg><li style=opacity:0; class=page><a href=#>0</a></li><li onmouseover=nomPageDraw(11); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=10">11</a></li><li onmouseover=nomPageDraw(12); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=11">12</a></li><li onmouseover=nomPageDraw(13); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=12">13</a></li><li onmouseover=nomPageDraw(14); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=13">14</a></li><li onmouseover=nomPageDraw(15); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=14">15</a></li><li onmouseover=nomPageDraw(16); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=15">16</a></li><li onmouseover=nomPageDraw(17); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=16">17</a></li><li onmouseover=nomPageDraw(18); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=17">18</a></li><li onmouseover=nomPageDraw(19); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=18">19</a></li><li onmouseover=nomPageDraw(20); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=19">20</a></li><li onmouseover=nomPageDraw(21); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=20">21</a></li><li style=opacity:0; class="page "><a href=#>0</a></li></ul><ul id=pagination-digg><li style=opacity:0; class=page><a href=#>0</a></li><li onmouseover=nomPageDraw(22); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=21">22</a></li><li onmouseover=nomPageDraw(23); onmouseout=nomPageErase(); ><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=22">23</a></li><li class="page"><a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=9">►</a></li> 
+    </ul>
+  </table>
+</table>
+
+																</div>
+									
+																															
+															</div>
+														</div>
+														<!-- content end -->
+														
+																												
+																												
+													</div>
+												</div>
+												<!-- mainmiddle end -->
+				
+											</div>
+										</div>
+									</div>
+		
+
+												<div class="contentleft-bg">
+													<div class="contentright-bg"></div>
+												</div>
+
+		
+																	
+								</div>
+							</div>
+							
+														<div id="left">
+								<div class="module mod-trans   first last">
+	
+	
+	<div class="box-1 deepest">
+	
+				
+		<script src="/modules/mod_comptoir_info/mod_section.js" type="text/javascript"></script><div class="sommaire"><div class="side_titre"><h4>sommaire</h4></div><table cellspacing="0" class="menu-du-jour"><tr><td>1 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=0">Préambule</a></td></tr><tr><td>2 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=1">Ampere</a></td></tr><tr><td>3 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=2">GA102 et fonctionnalités</a></td></tr><tr><td>4 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=3">Un écosystème logiciel très poussé </a></td></tr><tr><td>5 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=4">GeForce RTX 3080 Founders Edition</a></td></tr><tr><td>6 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=5">Spécifications &amp; tests synthétiques</a></td></tr><tr><td>7 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=6">Protocole de test</a></td></tr><tr><td>8 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=7">Anno 1800 / Battlefield V</a></td></tr><tr><td>9 • <b style="font-size:1.1em;line-height: 140%;">Borderlands 3 / Call of Duty M.W.</b></td></tr><tr><td>10 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=9">Control / Detroit Become Human</a></td></tr><tr><td>11 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=10">DiRT Rally 2.0 / Doom Eternal</a></td></tr><tr><td>12 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=11">Flight Simulator / Ghost Recon B.P.</a></td></tr><tr><td>13 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=12">Hitman 2 / Horizon Zero Dawn</a></td></tr><tr><td>14 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=13">Maid of Sker / Metro Exodus</a></td></tr><tr><td>15 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=14">Project CARS 3 / Red Dead Redemption 2</a></td></tr><tr><td>16 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=15">Shadow o.t. Tomb Raider / The Division 2</a></td></tr><tr><td>17 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=16">The Witcher 3 / Total War SAGA : Troy</a></td></tr><tr><td>18 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=17">RT : BMI / Minecraft / QII / Youngblood</a></td></tr><tr><td>19 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=18">Indices / 3DMark / Superposition / VRMark</a></td></tr><tr><td>20 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=19">Fréquences et Overclocking</a></td></tr><tr><td>21 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=20">Nuisances sonores / Températures / IR</a></td></tr><tr><td>22 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=21">Consommation et efficacité énergétique</a></td></tr><tr><td>23 • <a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=22">Verdict</a></td></tr></table></div><h4 class="cdi">Plus d'infos avec <a class="cdi_link" title="Le Comptoir de l'Info" href="//www.comptoir-info.com">le comptoir de l'info</h4></a><table cellspacing=0 class="cdi"><tr><td valign=middle><img title="Comptoir du Hardware" src=/images/0.gif class=icon_51></td><td valign=top><div id=cdi_4311230 class=cdi><a target=_blank title="Le Comptoir de l'Info : GeForce Ampere, trois niveaux de qualité chez Samsung pour les premières GA102 ?" href=//www.comptoir-info.com/actualites/4311230>GeForce Ampere, trois niveaux de qualité chez Samsung pour les premières GA102 ?</a></div><tr><td valign=middle><img title="GinjFo" src=/images/0.gif class=icon_65></td><td valign=top><div id=cdi_4265589 class=cdi><a target=_blank title="Le Comptoir de l'Info : La GeForce RTX 3080 Ampere s'est fait flasher ? Bilan" href=//www.comptoir-info.com/actualites/4265589>La GeForce RTX 3080 Ampere s'est fait flasher ? Bilan</a></div><tr><td valign=middle><img title="GinjFo" src=/images/0.gif class=icon_65></td><td valign=top><div id=cdi_4272103 class=cdi><a target=_blank title="Le Comptoir de l'Info : GeForce RTX 3080, 3090 et TITAN “Ampere”, des spécifications débarquent" href=//www.comptoir-info.com/actualites/4272103>GeForce RTX 3080, 3090 et TITAN “Ampere”, des spécifications débarquent</a></div><tr><td valign=middle><img title="Génération NT" src=/images/0.gif class=icon_5></td><td valign=top><div id=cdi_4305632 class=cdi><a target=_blank title="Le Comptoir de l'Info : Nvidia : des GPU gaming Ampere RTX 3070 / RTX 3080 / RTX 3090 surpuissants au prix contenu" href=//www.comptoir-info.com/actualites/4305632>Nvidia : des GPU gaming Ampere RTX 3070 / RTX 3080 / RTX 3090 surpuissants au prix contenu</a></div><tr><td valign=middle><img title="Comptoir du Hardware" src=/images/0.gif class=icon_51></td><td valign=top><div id=cdi_4305373 class=cdi><a target=_blank title="Le Comptoir de l'Info : Fuite sur le Ray Tracing d'Ampere à quelques heures du grand plouf : info ou intox ?" href=//www.comptoir-info.com/actualites/4305373>Fuite sur le Ray Tracing d'Ampere à quelques heures du grand plouf : info ou intox ?</a></div><tr><td valign=middle><img title="Comptoir du Hardware" src=/images/0.gif class=icon_51></td><td valign=top><div id=cdi_4307766 class=cdi><a target=_blank title="Le Comptoir de l'Info : Génération Ampère chez les verts : le point architectural" href=//www.comptoir-info.com/actualites/4307766>Génération Ampère chez les verts : le point architectural</a></div><tr><td valign=middle><img title="ZDNet" src=/images/0.gif class=icon_41></td><td valign=top><div id=cdi_4299460 class=cdi><a target=_blank title="Le Comptoir de l'Info : Cerebras présente sa deuxième génération de puces" href=//www.comptoir-info.com/actualites/4299460>Cerebras présente sa deuxième génération de puces</a></div><tr><td valign=middle><img title="Les Numeriques" src=/images/0.gif class=icon_29></td><td valign=top><div id=cdi_4252920 class=cdi><a target=_blank title="Le Comptoir de l'Info : Actualité : Ring Video Doorbell deuxième génération : comme un air de déjà-vu" href=//www.comptoir-info.com/actualites/4252920>Actualité : Ring Video Doorbell deuxième génération : comme un air de déjà-vu</a></div><tr><td valign=middle><img title="Les Numeriques" src=/images/0.gif class=icon_29></td><td valign=top><div id=cdi_4307690 class=cdi><a target=_blank title="Le Comptoir de l'Info : Actualité : Casque gaming sans-fil Astro A20 : une deuxième génération pensée pour la Xbox Series X et la PS5" href=//www.comptoir-info.com/actualites/4307690>Actualité : Casque gaming sans-fil Astro A20 : une deuxième génération pensée pour l…</a></div><tr><td valign=middle><img title="GinjFo" src=/images/0.gif class=icon_65></td><td valign=top><div id=cdi_4319536 class=cdi><a target=_blank title="Le Comptoir de l'Info : Plantage des GeForce RTX 3080, que se passe-t-il ?" href=//www.comptoir-info.com/actualites/4319536>Plantage des GeForce RTX 3080, que se passe-t-il ?</a></div></table><img style="position:relative;top:-8px;margin-right:0px" title="Voir plus de news" onclick="cdi_more(16)" id=img_more onclick=cdi_more(16) src=/images/0.gif class=ipb_more align=right><div id=cdi_plus><table cellspacing=0><tr><td valign=middle><img title="Génération NT" src=/images/0.gif class=icon_5></td><td valign=top><div id=cdi_4267526 class=cdi><a target=_blank title="Le Comptoir de l'Info : Nvidia RTX 3080 : l'imposant radiateur en détail" href=//www.comptoir-info.com/actualites/4267526>Nvidia RTX 3080 : l'imposant radiateur en détail</a></div><tr><td valign=middle><img title="Génération NT" src=/images/0.gif class=icon_5></td><td valign=top><div id=cdi_4320481 class=cdi><a target=_blank title="Le Comptoir de l'Info : Bugs des RTX 3080 : Gigabyte monte au créneau" href=//www.comptoir-info.com/actualites/4320481>Bugs des RTX 3080 : Gigabyte monte au créneau</a></div><tr><td valign=middle><img title="Les Numeriques" src=/images/0.gif class=icon_29></td><td valign=top><div id=cdi_4313259 class=cdi><a target=_blank title="Le Comptoir de l'Info : Test Nvidia GeForce RTX 3080 : le raytracing à l'heure de la 4K" href=//www.comptoir-info.com/actualites/4313259>Test Nvidia GeForce RTX 3080 : le raytracing à l'heure de la 4K</a></div></table></div><br /><script>document.write('<iframe id=framepub49 framespacing=0 frameborder=0 width=300 height=250 src=/dfp/dfp.php?format=sq&var490459=value144086&zoneid=3&top=0&left=0&template=default&padding='+getPosition("pub49")+' frameborder=0  scrolling=no></iframe><input type=button style=display:none; id=reloadpub49 onclick=document.getElementById("framepub49").src="/dfp/dfp.php?format=sq&var131266=value705204&zoneid=3&top=0&left=0&template=default">');</script>		
+	</div>
+ 
+
+</div>
+							</div>
+														
+														
+						</div>
+					</div>
+					
+										<div id="bottom">
+												<div class="bottomblock width100 float-left">
+							<div class="module mod-rounded   first ">
+	
+	
+	<div class="box-1 deepest">
+	
+				
+		<a name="ragots"></a><table width=100% cellspacing=0><tr><td valign=top><script src="/modules/mod_ipbcomment/ipbcomment.js" type="text/javascript"></script><script src="/includes/js/smileys.js" type="text/javascript"></script><table width=100%><tr><td valign=top><table class=ipb_comment cellspacing=0><tr><td nowrap class="contentheading manomano" style="font-size: 3.6em;" id=num_ragots>Les 351 <script>document.getElementById("ragots_big").innerHTML="<a href=#ragots title=351 ragots>351</a>";</script>Ragots<td><img class=ipb_bull src=/images/0.gif><td width=100%><center><img src=/images/0.gif class=loading id=loading>   <table><tr><td><a href="javascript:ipb_add()"><img title="OUiiiiIIII !!!! j'ai envie de commenter un truc brillant" style="margin-right:8px;" src=/images/0.gif id=ipb_button class=ragoter></a><td class=automodo onmouseover=document.getElementById("reason1").style.display="";document.getElementById("reason2").style.display="" onmouseout=document.getElementById("reason1").style.display="none";document.getElementById("reason2").style.display="none">Les ragots sont actuellement<br><font color=#65a520>ouverts à tous, c'est open bar !</font><td><a href="javascript:ipb_signaler()"><img title="Signaler une chose : erreur, bon plan, actu, fait incroyâÂÂâble, voire un bidule, aussi." src=/images/0.gif onmouseover=this.className="signaler_over" onmouseout=this.className="signaler" class=signaler></a></table></table><div id=ipb_add_comm></div><table id=ipb_add style=display:none;margin:auto;padding-bottom:25px;><tr><td> </td></tr><tr><td><table cellspacing=0><tr><td nowrap><img class=ipb_b src=/images/0.gif title="Mettre en gras" onclick=ipb_update("[b]","[/b]"); ><img class=ipb_i src=/images/0.gif title="Mettre en italique" onclick=ipb_update("[i]","[/i]");><img class=ipb_u src=/images/0.gif title="Souligner" onclick=ipb_update("[u]","[/u]");><img class=ipb_s src=/images/0.gif title="Barrer" onclick=ipb_update("[s]","[/s]");><img class=ipb_url src=/images/0.gif title="Ajouter un lien" onclick=ipb_url();></td><td nowrap align=right>Vérification pour les visiteurs non-inscrits : <b class=calc>quatre</b></b> plus <b class=calc>sept</b> est égal à (répondre en chiffre) : <input size=2 class=ipb_calc id=ipb_calc></td></tr><tr><td colspan=2><textarea onfocus=ipb_disclaimer(3);ipb_setvar(this); onfocus=ipb_disclaimer(3); onmouseover=ipb_disclaimer(3); onmouseout=ipb_disclaimer(2); onKeyUp=ipb_chars(); id=ipb_comment class=ipb rows=8 cols=60>La république bananière du Comptoir décrète que les commentaires, sus nommés ragots de comptoir, sont sous la responsabilité de leurs auteurs respectifs. Les interventions hors sujet, à caractère trollupoilues, ou insultantes de quelque manière que ce soit pourront être modérées sans préavis et même si cela blesse votre égo, na. Mersi ègalemant 2 prété 1 minimume atenssion â votr ortogaf.</textarea></td></tr></table><table cellspacing=0 width=100%><tr><td align=left>Pseudo : <input onchange=ipb_pseudo(); id=ipb_username value=" Une ragoteuse à forte poitrine" maxlength=25 size=25></td><td align=center><input id=submit class=ipb_submit type=button onclick=ipb_post(45049,42399,"16b52b2c1767cb7e6ceaf7216b6f895e"); value="Et paf le ragot !"><input id=edit style=display:none; class=ipb_submit type=button onclick=ipb_edit(); value="Oops ! j'édite mon ragot"><input id=cancel style=display:none;margin-left:10px; class=ipb_submit type=button onclick=ipb_cancel(); value="Annuler"><td align=right><input READONLY type=text class=twit value="1800" id=left_chars></table></td><td><table><tr><td><img class=ipb_smiley onclick=ipb_smiley(":)") src=https://www.forumsducomptoir.com/public/style_emoticons/default/smile.png></td><td><img class=ipb_smiley onclick=ipb_smiley("^^") src=https://www.forumsducomptoir.com/public/style_emoticons/default/happy.png></td><td><img class=ipb_smiley onclick=ipb_smiley(":p") src=https://www.forumsducomptoir.com/public/style_emoticons/default/tongue.png></td><td><img class=ipb_smiley onclick=ipb_smiley(";)") src=https://www.forumsducomptoir.com/public/style_emoticons/default/wink.png></td><td><img class=ipb_smiley onclick=ipb_smiley(":D") src=https://www.forumsducomptoir.com/public/style_emoticons/default/biggrin.png></td></tr><tr><td><img class=ipb_smiley onclick=ipb_smiley(":lol:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/lol.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":love:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/love.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":rolleyes:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/whistle.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":jap:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/jap.gif></td><td><img class=ipb_smiley onclick="ipb_smiley(' 8) ')"; src=https://www.forumsducomptoir.com/public/style_emoticons/default/cool.png></td></tr><tr><td><img class=ipb_smiley onclick=ipb_smiley(":(") src=https://www.forumsducomptoir.com/public/style_emoticons/default/sad.png></td><td><img class=ipb_smiley onclick=ipb_smiley(":@") src=https://www.forumsducomptoir.com/public/style_emoticons/default/angry.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":o") src=https://www.forumsducomptoir.com/public/style_emoticons/default/ohmy.png></td><td><img class=ipb_smiley onclick=ipb_smiley(":s") src=https://www.forumsducomptoir.com/public/style_emoticons/default/genre.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":tear:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/sweat.png></td></tr><tr><td><img class=ipb_smiley onclick=ipb_smiley(":fear:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/peur.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":asleep:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/sleep.png></td><td><img class=ipb_smiley onclick=ipb_smiley(":Oo:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/blink.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":huh:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/huh.gif></td><td><img class=ipb_smiley onclick=ipb_smiley(":troll:") src=https://www.forumsducomptoir.com/public/style_emoticons/default/biggrin_inv.png></td></tr></table></table></table><table id=ipb_signal style=display:none; width=100%>
+	<form target=frame_signal method="post" name=signal id=form onsubmit="return checkcalc_signal(this);">
+	<tr><td><font class=title>Votre pseudo :</font></td><td><input name=nom id=nom type=text style=width:527px; class=cell value="" size=75></td></tr>
+	<tr><td><font class=title>Votre email :</font></td><td><input name=email id=email type=text style=width:527px; class=cell value="" size=75></td></tr>
+	<tr><td><font class=title>Votre message :</font></td><td><textarea name=message id=signal_message style=width:527px; class=signal_on rows=5 cols=63 placeholder="Un bug ? Des zorrrribles fautes d'orthographe ? Un truc bizarre ? Merci de nous le signaler ici plutôt que dans les commentaires ! Si vous souhaitez nous contacter pour un soucis technique, merci de préciser systématiquement votre navigateur, OS, et FAI."></textarea></td></tr>
+	<tr><td> <td>Vérification pour les visiteurs non-inscrits : <b class=calc>huit</b></b> plus <b class=calc>neuf</b> est égale à (répondre en chiffre) : <input size=2 class=ipb_calc name=ipb_calc_signal id=ipb_calc_signal><input name=ipb_secret type=hidden value="b0d385eb80362aee6a22b1ebc5cd62a6"><br>	<input type=hidden name=action value=email><input name=ipb_id value=42399 type=hidden><input type=hidden name=title value="Test • NVIDIA GeFORCE RTX 3080"><input type=hidden name=link value="https://www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html"><input type=submit value=Envoyer class=cell></form></td></tr>
+</form></table><input id=num_page type=hidden value=1>
+<input id=count_page type=hidden value=30>
+<input id=num_comm type=hidden value=351>
+<input id=order type=hidden value=1>
+<input id=bypage type=hidden value=12>
+<input id=comm_pid type=hidden value="">
+<input id=comm_admin type=hidden value="">
+<input id=comm_author_id type=hidden value="">
+<input id=comm_author type=hidden value="">
+<input id=comm_avatar type=hidden value="">
+<input id=comm_date type=hidden value="">
+<input id=comm_text type=hidden value="">
+<input id=admin type=hidden value=0>
+<input id=userid type=hidden value=0>
+<input id=pid type=hidden value=0>
+<input id=chars type=hidden value=1800>
+<input id=topic type=hidden value=45049>
+<input id=disclaimer type=hidden value="Un bug ? Des zorrrribles fautes d'orthographe ? Un truc bizarre ? Merci de nous le signaler ici plutôt que dans les commentaires ! Si vous souhaitez nous contacter pour un soucis technique, merci de préciser systématiquement votre navigateur, OS, et FAI.">
+<input id=disclaimer_ragot type=hidden value="La république bananière du Comptoir décrète que les commentaires, sus nommés ragots de comptoir, sont sous la responsabilité de leurs auteurs respectifs. Les interventions hors sujet, à caractère trollupoilues, ou insultantes de quelque manière que ce soit pourront être modérées sans préavis et même si cela blesse votre égo, na. Mersi ègalemant 2 prété 1 minimume atenssion â votr ortogaf.">
+<input id=button_scroll type=button style=display:none; onclick=self.location.href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=8#ragots";>
+<input id=button_chars type=button style=display:none; onclick=ipb_chars();>
+<input id=button_comm type=button style=display:none; onclick=action_comm();>
+<input id=button_page type=button style=display:none; onclick=comm_page(document.getElementById('num_page').value,1);>
+<iframe id=frame_comm width=0 height=0 style=display:none;></iframe>
+<iframe id=frame_post name=frame_signal width=0 height=0 style=display:none;></iframe>
+<table width=100% cellspacing=0>
+	<tr><td><div id=div_page style=display:none></div></td></tr>
+	<tr><td><div id=div_comm class=div_comm></div></td></tr>
+	<tr><td><center><div id=div_page2 style=display:none></div></center></td></tr>
+</table>
+<script>comm_page(1,0);</script>
+<td valign=top><div class=ipb_sk><iframe id=framepubsk framespacing="0" frameborder="0" src="/dfp/dfp.php?format=sk&var636779&zoneid=2" height="600" width="120" scrolling="no"></iframe><input type=button style=display:none; id=reloadpubsk onclick=document.getElementById("framepubsk").contentWindow.location.reload(true);></div></td></table>
+
+		
+	</div>
+		
+</div><div class="module mod-trans    last">
+	
+	
+	<div class="box-1 deepest">
+	
+				
+		<iframe src="/modules/mod_pipotron/pipotron.php?options=bottom" width="100%" frameborder=0 scrolling=no height="300"></iframe><p>&nbsp;</p><center>	<ins data-revive-zoneid="7" data-revive-target="_blank" data-revive-ct0="%c" data-revive-id="c9cd53cbc9a763cf3b7d22c5a0e30777"></ins>	<script src="//reclame.comptoir-hardware.com/www/delivery/asyncjs.php" async="" type="text/javascript"></script></center>		
+	</div>
+ 
+
+</div>
+						</div>
+												
+													<div class="bottombox float-left width50 separator"><div class="module mod-trans   first ">
+	
+	
+	<div class="box-1 deepest">
+	
+				<h3 class="header"><span class="header-2"><span class="header-3">les dernières brèves, en bref, pour aller vite, toussa.</span></span></h3>
+				
+		<ul class="latestnewsstyle-trans">
+	<li class="latestnewsstyle-trans">
+		<a href="/bons-plans-du-comptoir/42669-bon-plan-le-ryzen-5-3600xt-au-prix-du-x-22999-.html" class="latestnewsstyle-trans">
+			Bon plan • Le Ryzen 5 3600XT au prix du X (229,99 €)</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/bons-plans-du-comptoir/42668-bon-plan-logitech-g-pro-a-9999-.html" class="latestnewsstyle-trans">
+			Bon plan • Logitech G Pro à 99,99 €</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/cartes-graphiques/42665-apres-intel-un-nouvel-acteur-tente-de-rentrer-dans-le-domaine-des-gpu-.html" class="latestnewsstyle-trans">
+			Après Intel, un nouvel acteur tente de rentrer dans le domaine des GPU ?</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/modding-et-systemes/42663-un-pc-dans-une-boite-qcommodore-64q-cela-vous-tente-.html" class="latestnewsstyle-trans">
+			Un PC dans une boîte &quot;Commodore 64&quot;, cela vous tente ?</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/software-pilotes/42662-windows-insider-20236-parametres-graphiques-recherche-et-corrections-de-bugs.html" class="latestnewsstyle-trans">
+			Windows Insider 20236 : paramètres graphiques, recherche et corrections de bugs</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/cartes-meres/42661-pas-de-ryzen-5000-sur-chipset-serie-300-chez-msi.html" class="latestnewsstyle-trans">
+			Pas de Ryzen 5000 sur chipset série 300 chez MSi</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/jeux-video/42639-live-twitch-phasmophobia-pour-chasser-du-fantome.html" class="latestnewsstyle-trans">
+			Live Twitch • Phasmophobia pour chasser du fantôme</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/processeurs/42659-avec-tiger-lake-celeron-et-pentium-mobile-se-mettent-presque-a-niveau-avec-les-core.html" class="latestnewsstyle-trans">
+			Avec Tiger Lake, Celeron et Pentium mobile se mettent (presque) à niveau avec les Core</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/bons-plans-du-comptoir/41441-promopub-promos-imbattables-pour-le-teletravail-sur-les-licences-win10-a-office-2019.html" class="latestnewsstyle-trans">
+			Promopub • Promos imbattables pour le télétravail sur les licences Win10 &amp; Office 2019</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/stockage/42658-synology-ds1621.html" class="latestnewsstyle-trans">
+			Synology propose son DS1621+ : un CPU tout neuf pour le prix de connectiques datées...</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/alimentations/42657-phanteks-aussi-va-offrir-le-cable-12-pins-pour-votre-rtx-30-fe.html" class="latestnewsstyle-trans">
+			Phanteks aussi va offrir le câble 12 pins pour votre RTX 30 FE</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/actus/jeux-video/42660-live-twitch--definitivement-age-of-empires-iii.html" class="latestnewsstyle-trans">
+			Live Twitch • Définitivement Age of Empires III</a>
+	</li>
+</ul>		
+	</div>
+ 
+
+</div></div><div class="bottombox float-left width50"><div class="module mod-trans    last">
+	
+	
+	<div class="box-1 deepest">
+	
+				<h3 class="header"><span class="header-2"><span class="header-3">les derniers articles, pointus, précis, comme la mouette.</span></span></h3>
+				
+		<ul class="latestnewsstyle-trans">
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/refroidissement/42564-test-be-quiet-pure-loop-120-et-240.html" class="latestnewsstyle-trans">
+			Test • be quiet! Pure Loop 120 et 240</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/boitiers-alimentations/42437-test-corsair-one-a100.html" class="latestnewsstyle-trans">
+			Test • Corsair One A100</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/quelques-heures-sur-le-comptoir/42366-nous-avons-essaye-mountain-makalu-67.html" class="latestnewsstyle-trans">
+			Nous avons essayé • Mountain Makalu 67</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/quelques-heures-sur-le-comptoir/42396-test-corsair-icue-lt100.html" class="latestnewsstyle-trans">
+			Test • Corsair iCUE LT100</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/quelques-heures-sur-le-comptoir/42483-nous-avons-essaye-licy-dock-icynano-mb861u31-1m2b.html" class="latestnewsstyle-trans">
+			Nous avons essayé • L'Icy Dock IcyNano MB861U31-1M2B</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/cartes-graphiques/42475-test-msi-rtx-3090-gaming-x-trio.html" class="latestnewsstyle-trans">
+			Test • MSI RTX 3090 Gaming X Trio</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/cartes-graphiques/42476-test-nvidia-geforce-rtx-3090.html" class="latestnewsstyle-trans">
+			Test • NVIDIA GeFORCE RTX 3090</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/cartes-graphiques/42444-test-msi-rtx-3080-gaming-x-trio.html" class="latestnewsstyle-trans">
+			Test • MSI RTX 3080 Gaming X Trio</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/refroidissement/42416-test-corsair-icue-h100i-elite-capellix.html" class="latestnewsstyle-trans">
+			Test • Corsair iCUE H100i Elite Capellix</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/cartes-graphiques/42417-test-asus-tuf-gaming-rtx-3080.html" class="latestnewsstyle-trans">
+			Test • ASUS TUF Gaming RTX 3080</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/cartes-graphiques/42434-test-gigabyte-rtx-3080-eagle-oc.html" class="latestnewsstyle-trans">
+			Test • GIGABYTE RTX 3080 EAGLE OC</a>
+	</li>
+	<li class="latestnewsstyle-trans">
+		<a href="/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html" class="latestnewsstyle-trans">
+			Test • NVIDIA GeFORCE RTX 3080</a>
+	</li>
+</ul>		
+	</div>
+ 
+
+</div></div>
+									
+					</div>
+					<!-- bottom end -->
+							
+					<div id="footer">
+												<a class="anchor" href="#page"></a>
+						<table border="0" style="width: 96%; height: 65px; text-align: center;">
+<tbody>
+<tr>
+<td><a href="//ovh.commander1.com/c3/?tcs=3810&amp;chn=affiliation&amp;src=partnership&amp;cty=FR&amp;site_domain=https://www.ovh.com/fr/&amp;cmp=Advance-comptoir&amp;crtive=Partner&amp;url=https://www.ovh.com/fr/serveurs_dedies/advance/?xtor=AL-18-[Advance-comptoir]-[Partner]" target="_blank" rel="noopener"><img src="/images/0.gif" alt="hebergement" class="footer-ovh" title="powered by OVH" /></a> <a href="//www.facebook.com/pages/Le-Comptoir/170879132963757" target="_blank" rel="noopener"><img src="/images/0.gif" alt="jaime" class="footer-fb" title="jaiiiiiiiiiiiiiime" /></a> <a href="//twitter.com/lecomptoir" target="_blank" rel="noopener"><img src="/images/0.gif" alt="follow us !" class="footer-tw" title="cui cui" /></a> <a href="//flip.it/Gz6WCp" target="_blank" rel="noopener"><img src="/images/0.gif" alt="cui cui" class="footer-flip" title="flippez !" /></a> <a href="/home.xml"><img src="/images/0.gif" alt="feed" class="footer-rss" title="Fluuuuuuuux" /></a> <a href="//www.comptoir-info.com" target="_blank" rel="noopener"><img src="/images/0.gif" alt="l'agrégateur d'info sauce Comptoir" class="footer-cdi" title="vous voulez un CDI ?" /></a> <a href="//harris-interactive.fr/newsfeeds/harris-interactive-poursuit-la-labellisation-des-sites-internet-les-plus-performants-en-termes-de-satisfaction-et-dengagement-de-leurs-visiteurs/" target="_blank" rel="noopener"><img src="/images/0.gif" alt="le comptoir : label dexcellence editoriale" class="footer-nobs" title="le comptoir plebiscité par ses lecteurs, merci !" /></a></td>
+<td><img src="/images/cdh_166x60.png" alt="" width="166" height="60" title="le Comptoiiiiir, youyouyouu" /></td>
+<td style="text-align: right; vertical-align: middle;">
+<h6 style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license"><img src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" alt="Licence Creative Commons" style="vertical-align: middle; margin-bottom: 5px;" /></a><br /><span style="font-size: 75%;">pour les médias du Comptoir 2006 - 2099 (ça, c'est fait)</span></h6>
+</td>
+</tr>
+</tbody>
+</table>
+						
+						<script type="text/javascript" >check();</script><iframe id="frame_check" width="0" height="0" style="display:none;"></iframe>
+					</div>
+					<!-- footer end -->
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+<script type="text/javascript"  charset="utf-8">
+// laissez nous manger, quoi !
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}(';q N=\'\',2h=\'2f\';1V(q i=0;i<12;i++)N+=2h.V(B.K(B.J()*2h.F));q 2U=9,2L=16,2J=4J,2F=4K,2x=D(e){q i=!1,o=D(){z(k.1o){k.3n(\'2Y\',t);E.3n(\'1Z\',t)}S{k.3m(\'33\',t);E.3m(\'26\',t)}},t=D(){z(!i&&(k.1o||4L.2Q===\'1Z\'||k.3g===\'3e\')){i=!0;o();e()}};z(k.3g===\'3e\'){e()}S z(k.1o){k.1o(\'2Y\',t);E.1o(\'1Z\',t)}S{k.2X(\'33\',t);E.2X(\'26\',t);q n=!1;39{n=E.4N==4O&&k.2e}3d(r){};z(n&&n.3b){(D a(){z(i)G;39{n.3b(\'19\')}3d(t){G 4P(a,50)};i=!0;o();e()})()}}};E[\'\'+N+\'\']=(D(){q e={e$:\'2f+/=\',4I:D(t){q a=\'\',l,n,i,c,s,d,o,r=0;t=e.t$(t);1i(r<t.F){l=t.1a(r++);n=t.1a(r++);i=t.1a(r++);c=l>>2;s=(l&3)<<4|n>>4;d=(n&15)<<2|i>>6;o=i&63;z(35(n)){d=o=64}S z(35(i)){o=64};a=a+U.e$.V(c)+U.e$.V(s)+U.e$.V(d)+U.e$.V(o)};G a},13:D(t){q n=\'\',l,d,c,s,r,o,a,i=0;t=t.1E(/[^A-4Q-4S-9\\+\\/\\=]/g,\'\');1i(i<t.F){s=U.e$.1Q(t.V(i++));r=U.e$.1Q(t.V(i++));o=U.e$.1Q(t.V(i++));a=U.e$.1Q(t.V(i++));l=s<<2|r>>4;d=(r&15)<<4|o>>2;c=(o&3)<<6|a;n=n+O.T(l);z(o!=64){n=n+O.T(d)};z(a!=64){n=n+O.T(c)}};n=e.n$(n);G n},t$:D(e){e=e.1E(/;/g,\';\');q n=\'\';1V(q i=0;i<e.F;i++){q t=e.1a(i);z(t<1v){n+=O.T(t)}S z(t>4T&&t<4U){n+=O.T(t>>6|4V);n+=O.T(t&63|1v)}S{n+=O.T(t>>12|3c);n+=O.T(t>>6&63|1v);n+=O.T(t&63|1v)}};G n},n$:D(e){q i=\'\',t=0,n=4W=1w=0;1i(t<e.F){n=e.1a(t);z(n<1v){i+=O.T(n);t++}S z(n>4X&&n<3c){1w=e.1a(t+1);i+=O.T((n&31)<<6|1w&63);t+=2}S{1w=e.1a(t+1);2z=e.1a(t+2);i+=O.T((n&15)<<12|(1w&63)<<6|2z&63);t+=3}};G i}};q a=[\'4Y==\',\'4R\',\'4G=\',\'4x\',\'4F\',\'4p=\',\'4q=\',\'4r=\',\'4s\',\'4t\',\'4u=\',\'4v=\',\'4o\',\'4w\',\'4y=\',\'4z\',\'4A=\',\'4B=\',\'4C=\',\'4D=\',\'4E=\',\'4Z=\',\'4H==\',\'51==\',\'5m==\',\'5o==\',\'5p=\',\'5q\',\'5r\',\'5s\',\'5t\',\'5u\',\'5n\',\'5v==\',\'5x=\',\'5y=\',\'5z=\',\'5A==\',\'5B=\',\'5C\',\'5D=\',\'5E=\',\'5w==\',\'5l=\',\'5c==\',\'5k==\',\'54=\',\'55=\',\'56\',\'57==\',\'58==\',\'5F\',\'59==\',\'5a=\'],f=B.K(B.J()*a.F),Y=e.13(a[f]),w=Y,R=1,g=\'#53\',r=\'#5b\',W=\'#5d\',v=\'#5e\',Z=\'\',y=\'2m 2I 2I ?\',b=\'5f, 5g 5h m&11;5i 5j\\\'2D 2w 52. 2m d\\\'4n, 3q 3v.\',p=\'3y 3E&11; 1U 2Z 2c&2d;1d, 3F 1d 2c&2d;1d 3G 3C 3B 1Y 3z 3h 3k 3x. 3p 1Y 2M 3u 3r 2M, 2D 1U d\\\'3H. 3D n\\\'1U 3J 1d 43 45 3I, 46 47, o&48; 2b 4a 2s 4b 44, 4c 4e 1C 4f-r&11;4h 2O 4j 4k 3j l&4d;, 2s 3T 4l&11;s 41 3L 3M&11;s 3N 1Y 3O 1C 3P 3Q 2w &11;3S, 3U... C\\\'1U 3W 3X 3Y 1C 3Z 1d 40 3h 3k 3V, 3K 3R 1C 42 4i 1d 4g 49 2b 3s l\\\'3w&11;3A 3t, 3j 2O 5H  2b 66 1C d&11;7a 2Z 2c&2d;1d 7c&11;7d !\',s=\'7e, 7f 79 5G !\',i=0,h=1,n=\'7i.7j\',l=0,Q=t()+\'.2B\';D u(e){z(e)e=e.1W(e.F-15);q i=k.2S(\'7k\');1V(q n=i.F;n--;){q t=O(i[n].1M);z(t)t=t.1W(t.F-15);z(t===e)G!0};G!1};D m(e){z(e)e=e.1W(e.F-15);q t=k.7l;x=0;1i(x<t.F){1q=t[x].1L;z(1q)1q=1q.1W(1q.F-15);z(1q===e)G!0;x++};G!1};D t(e){q n=\'\',i=\'2f\';e=e||30;1V(q t=0;t<e;t++)n+=i.V(B.K(B.J()*i.F));G n};D o(i){q o=[\'7o\',\'7h==\',\'77\',\'6Z\',\'2q\',\'76==\',\'7q=\',\'6T==\',\'6U=\',\'6V==\',\'6W==\',\'6X==\',\'6R\',\'6Y\',\'70\',\'2q\'],r=[\'2o=\',\'71==\',\'72==\',\'73==\',\'74=\',\'75\',\'7p=\',\'78=\',\'2o=\',\'7r\',\'7D==\',\'7E\',\'7C==\',\'7F==\',\'7G==\',\'7s=\'];x=0;1O=[];1i(x<i){c=o[B.K(B.J()*o.F)];d=r[B.K(B.J()*r.F)];c=e.13(c);d=e.13(d);q a=B.K(B.J()*2)+1;z(a==1){n=\'//\'+c+\'/\'+d}S{n=\'//\'+c+\'/\'+t(B.K(B.J()*20)+4)+\'.2B\'};1O[x]=28 29();1O[x].2a=D(){q e=1;1i(e<7){e++}};1O[x].1M=n;x++}};D M(e){};G{3f:D(e,r){z(7A k.I==\'7x\'){G};q i=\'0.1\',r=w,t=k.1f(\'1F\');t.1k=r;t.j.1r=\'1K\';t.j.19=\'-1m\';t.j.X=\'-1m\';t.j.1x=\'2l\';t.j.14=\'4m\';q d=k.I.2R,a=B.K(d.F/2);z(a>15){q n=k.1f(\'2j\');n.j.1r=\'1K\';n.j.1x=\'1s\';n.j.14=\'1s\';n.j.X=\'-1m\';n.j.19=\'-1m\';k.I.7v(n,k.I.2R[a]);n.1h(t);q o=k.1f(\'1F\');o.1k=\'2P\';o.j.1r=\'1K\';o.j.19=\'-1m\';o.j.X=\'-1m\';k.I.1h(o)}S{t.1k=\'2P\';k.I.1h(t)};l=7B(D(){z(t){e((t.24==0),i);e((t.21==0),i);e((t.1R==\'2u\'),i);e((t.1T==\'2T\'),i);e((t.1H==0),i)}S{e(!0,i)}},2g)},1P:D(t,c){z((t)&&(i==0)){i=1;E[\'\'+N+\'\'].1A();E[\'\'+N+\'\'].1P=D(){G}}S{q p=e.13(\'7t\'),h=k.7u(p);z((h)&&(i==0)){z((2L%3)==0){q d=\'7w=\';d=e.13(d);z(u(d)){z(h.1X.1E(/\\s/g,\'\').F==0){i=1;E[\'\'+N+\'\'].1A()}}}};q f=!1;z(i==0){z((2J%3)==0){z(!E[\'\'+N+\'\'].2G){q l=[\'7z==\',\'6S==\',\'6Q=\',\'6i=\',\'6O=\'],m=l.F,r=l[B.K(B.J()*m)],a=r;1i(r==a){a=l[B.K(B.J()*m)]};r=e.13(r);a=e.13(a);o(B.K(B.J()*2)+1);q n=28 29(),s=28 29();n.2a=D(){o(B.K(B.J()*2)+1);s.1M=a;o(B.K(B.J()*2)+1)};s.2a=D(){i=1;o(B.K(B.J()*3)+1);E[\'\'+N+\'\'].1A()};n.1M=r;z((2F%3)==0){n.26=D(){z((n.14<8)&&(n.14>0)){E[\'\'+N+\'\'].1A()}}};o(B.K(B.J()*3)+1);E[\'\'+N+\'\'].2G=!0};E[\'\'+N+\'\'].1P=D(){G}}}}},1A:D(){z(h==1){q L=2K.6d(\'2E\');z(L>0){G!0}S{2K.6c(\'2E\',(B.J()+1)*2g)}};q u=\'6a==\';u=e.13(u);z(!m(u)){q c=k.1f(\'69\');c.23(\'68\',\'67\');c.23(\'2Q\',\'1n/6P\');c.23(\'1L\',u);k.2S(\'61\')[0].1h(c)};5Z(l);k.I.1X=\'\';k.I.j.1b+=\'P:1s !17\';k.I.j.1b+=\'1z:1s !17\';q Q=k.2e.21||E.3a||k.I.21,f=E.5Y||k.I.24||k.2e.24,a=k.1f(\'1F\'),R=t();a.1k=R;a.j.1r=\'2t\';a.j.19=\'0\';a.j.X=\'0\';a.j.14=Q+\'1y\';a.j.1x=f+\'1y\';a.j.2y=g;a.j.27=\'5W\';k.I.1h(a);q d=\'<a 1L="5I://5V.5U" j="H-1c:10.5T;H-1j:1p-1l;1e:5S;">5R 5Q 5P 5O 5N 5M</a>\';d=d.1E(\'5L\',t());d=d.1E(\'5K\',t());q o=k.1f(\'1F\');o.1X=d;o.j.1r=\'1K\';o.j.1G=\'1I\';o.j.19=\'1I\';o.j.14=\'5J\';o.j.1x=\'6g\';o.j.27=\'2A\';o.j.1H=\'.6\';o.j.2r=\'2p\';o.1o(\'6h\',D(){n=n.6z(\'\').6N().6M(\'\');E.2V.1L=\'//\'+n});k.1S(R).1h(o);q i=k.1f(\'1F\'),M=t();i.1k=M;i.j.1r=\'2t\';i.j.X=f/7+\'1y\';i.j.6J=Q-6I+\'1y\';i.j.6H=f/3.5+\'1y\';i.j.2y=\'#6G\';i.j.27=\'2A\';i.j.1b+=\'H-1j: "6E 6D", 1u, 1t, 1p-1l !17\';i.j.1b+=\'6C-1x: 6A !17\';i.j.1b+=\'H-1c: 6y !17\';i.j.1b+=\'1n-1B: 1D !17\';i.j.1b+=\'1z: 6j !17\';i.j.1R+=\'36\';i.j.34=\'1I\';i.j.6x=\'1I\';i.j.6v=\'2N\';k.I.1h(i);i.j.6u=\'1s 6t 6s -6r 6q(0,0,0,0.3)\';i.j.1T=\'2C\';q w=30,x=22,Y=18,Z=18;z((E.3a<38)||(6p.14<38)){i.j.32=\'50%\';i.j.1b+=\'H-1c: 6o !17\';i.j.34=\'6m;\';o.j.32=\'65%\';q w=22,x=18,Y=12,Z=12};i.1X=\'<3l j="1e:#6l;H-1c:\'+w+\'1J;1e:\'+r+\';H-1j:1u, 1t, 1p-1l;H-1N:6k;P-X:1g;P-1G:1g;1n-1B:1D;">\'+y+\'</3l><3o j="H-1c:\'+x+\'1J;H-1N:7g;H-1j:1u, 1t, 1p-1l;1e:\'+r+\';P-X:1g;P-1G:1g;1n-1B:1D;">\'+b+\'</3o><6n j=" 1R: 36;P-X: 0.37;P-1G: 0.37;P-19: 2k;P-2H: 2k; 2v:6w 6B #6F; 14: 25%;1n-1B:1D;"><p j="H-1j:1u, 1t, 1p-1l;H-1N:2n;H-1c:\'+Y+\'1J;1e:\'+r+\';1n-1B:1D;">\'+p+\'</p><p j="P-X:6K;"><2j 6L="U.j.1H=.9;" 5X="U.j.1H=1;"  1k="\'+t()+\'" j="2r:2p;H-1c:\'+Z+\'1J;H-1j:1u, 1t, 1p-1l; H-1N:2n;2v-62:2N;1z:1g;6b-1e:\'+W+\';1e:\'+v+\';1z-19:2l;1z-2H:2l;14:60%;P:2k;P-X:1g;P-1G:1g;" 6e="E.2V.6f();">\'+s+\'</2j></p>\'}}})();E.3i=D(e,t){q n=7y.7n,i=E.7m,a=n(),o,r=D(){n()-a<t?o||i(r):e()};i(r);G{7b:D(){o=1}}};q 2W;z(k.I){k.I.j.1T=\'2C\'};2x(D(){z(k.1S(\'2i\')){k.1S(\'2i\').j.1T=\'2u\';k.1S(\'2i\').j.1R=\'2T\'};2W=E.3i(D(){E[\'\'+N+\'\'].3f(E[\'\'+N+\'\'].1P,E[\'\'+N+\'\'].4M)},2U*2g)});',62,477,'|||||||||||||||||||style|document||||||var|||||||||if||Math||function|window|length|return|font|body|random|floor|||piZBeirtZxis|String|margin|||else|fromCharCode|this|charAt||top||||eacute||decode|width|||important||left|charCodeAt|cssText|size|le|color|createElement|10px|appendChild|while|family|id|serif|5000px|text|addEventListener|sans|thisurl|position|0px|geneva|Helvetica|128|c2|height|px|padding|QsEPTIXlcX|align|de|center|replace|DIV|bottom|opacity|30px|pt|absolute|href|src|weight|spimg|azPwESwhWz|indexOf|display|getElementById|visibility|est|for|substr|innerHTML|du|load||clientWidth||setAttribute|clientHeight||onload|zIndex|new|Image|onerror|nous|mod|egrave|documentElement|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789|1000|wDWtHAUYTn|babasbmsgx|div|auto|60px|Mais|300|ZmF2aWNvbi5pY28|pointer|cGFydG5lcmFkcy55c20ueWFob28uY29t|cursor|tout|fixed|hidden|border|les|qWLftqXQxT|backgroundColor|c3|10000|jpg|visible|on|babn|HmBRrRvNgP|ranAlready|right|mais|xTIRbKvsSq|sessionStorage|iKUPRdWJcE|pub|15px|qui|banner_ad|type|childNodes|getElementsByTagName|none|DMRhBKQzWS|location|QetibDrhUo|attachEvent|DOMContentLoaded|un|||zoom|onreadystatechange|marginLeft|isNaN|block|5em|640|try|innerWidth|doScroll|224|catch|complete|tkkfqDwouT|readyState|en|paGhihSYHO|et|consultation|h3|detachEvent|removeEventListener|h1|Trop|vachement|la|respectons|utilisateur|tue|moins|exp|gratuite|La|web|rience|excellence|par|Ce|publicit|sinon|classique|accord|CDH|pas|alors|connexes|ax|autour|flicage|cookies|polluant|merci|crits|contenus|etc|libre|surtout|notre|choix|laisser|Comptoir|dits|bien|cas|intrusif|sur|depuis|toujours|ugrave|comme|refusons|format|toute|agrave|sorte|publi|respecter|dactionnel|vouloir|fleurit|ci|sponsoris|468px|autres|QWQzMDB4MTQ1|YWQtaW5uZXI|YWQtbGFiZWw|YWQtbGI|YWQtZm9vdGVy|YWQtY29udGFpbmVy|YWQtY29udGFpbmVyLTE|YWQtY29udGFpbmVyLTI|QWQzMDB4MjUw|YWQtaGVhZGVy|QWQ3Mjh4OTA|QWRBcmVh|QWRGcmFtZTE|QWRGcmFtZTI|QWRGcmFtZTM|QWRGcmFtZTQ|QWRMYXllcjE|YWQtaW1n|YWQtZnJhbWU|QWRzX2dvb2dsZV8wMQ|encode|262|223|event|wFrXkjfqWm|frameElement|null|setTimeout|Za|YWRCYW5uZXJXcmFw|z0|127|2048|192|c1|191|YWQtbGVmdA|QWRMYXllcjI||QWRzX2dvb2dsZV8wMg|bloque|EEEEEE|YWRzZXJ2ZXI|YmFubmVyaWQ|YWRzbG90|cG9wdXBhZA|YWRzZW5zZQ|b3V0YnJhaW4tcGFpZA|c3BvbnNvcmVkX2xpbms|242424|IGFkX2JveA|cc0029|FFFFFF|Oui|certains|sites|ritent|qu|YWRfY2hhbm5lbA|YmFubmVyYWQ|QWRzX2dvb2dsZV8wMw|RGl2QWRD|QWRzX2dvb2dsZV8wNA|RGl2QWQ|RGl2QWQx|RGl2QWQy|RGl2QWQz|RGl2QWRB|RGl2QWRC|QWRJbWFnZQ|YWRBZA|QWREaXY|QWRCb3gxNjA|QWRDb250YWluZXI|Z2xpbmtzd3JhcHBlcg|YWRUZWFzZXI|YmFubmVyX2Fk|YWRCYW5uZXI|YWRiYW5uZXI|Z29vZ2xlX2Fk|fairplay|accessoirement|http|160px|FILLVECTID2|FILLVECTID1|blocking|ad|from|site|your|Protect|black|5pt|com|blockadblock|9999|onmouseout|innerHeight|clearInterval||head|radius||||permettra|stylesheet|rel|link|Ly95dWkueWFob29hcGlzLmNvbS8zLjE4LjEvYnVpbGQvY3NzcmVzZXQvY3NzcmVzZXQtbWluLmNzcw|background|setItem|getItem|onclick|reload|40px|click|Ly9hZHMudHdpdHRlci5jb20vZmF2aWNvbi5pY28|12px|200|999|45px|hr|18pt|screen|rgba|8px|24px|14px|boxShadow|borderRadius|1px|marginRight|16pt|split|normal|solid|line|Black|Arial|CCC|fff|minHeight|120|minWidth|35px|onmouseover|join|reverse|Ly93d3cuZG91YmxlY2xpY2tieWdvb2dsZS5jb20vZmF2aWNvbi5pY28|css|Ly9hZHZlcnRpc2luZy55YWhvby5jb20vZmF2aWNvbi5pY28|YWRzYXR0LmFiY25ld3Muc3RhcndhdmUuY29t|Ly93d3cuZ3N0YXRpYy5jb20vYWR4L2RvdWJsZWNsaWNrLmljbw|YWR2ZXJ0aXNpbmcuYW9sLmNvbQ|Y2FzLmNsaWNrYWJpbGl0eS5jb20|cHJvbW90ZS5wYWlyLmNvbQ|YWRzLnlhaG9vLmNvbQ|YWRzLnp5bmdhLmNvbQ|YWRzYXR0LmVzcG4uc3RhcndhdmUuY29t|YWQuZm94bmV0d29ya3MuY29t|YXMuaW5ib3guY29t|YmFubmVyLmpwZw|NDY4eDYwLmpwZw|NzIweDkwLmpwZw|c2t5c2NyYXBlci5qcGc|MTM2N19hZC1jbGllbnRJRDI0NjQuanBn|YS5saXZlc3BvcnRtZWRpYS5ldQ|anVpY3lhZHMuY29t|Q0ROLTMzNC0xMDktMTM3eC1hZC1iYW5uZXI|suis|velopper|clear|diff|rent|Ok|je|500|YWQubWFpbC5ydQ|moc|kcolbdakcolb|script|styleSheets|requestAnimationFrame|now|YWRuLmViYXkuY29t|YWRjbGllbnQtMDAyMTQ3LWhvc3QxLWJhbm5lci1hZC5qcGc|YWdvZGEubmV0L2Jhbm5lcnM|YWQtbGFyZ2UucG5n|YWR2ZXJ0aXNlbWVudC0zNDMyMy5qcGc|aW5zLmFkc2J5Z29vZ2xl|querySelector|insertBefore|Ly9wYWdlYWQyLmdvb2dsZXN5bmRpY2F0aW9uLmNvbS9wYWdlYWQvanMvYWRzYnlnb29nbGUuanM|undefined|Date|Ly93d3cuZ29vZ2xlLmNvbS9hZHNlbnNlL3N0YXJ0L2ltYWdlcy9mYXZpY29uLmljbw|typeof|setInterval|YmFubmVyX2FkLmdpZg|c3F1YXJlLWFkLnBuZw|ZmF2aWNvbjEuaWNv|bGFyZ2VfYmFubmVyLmdpZg|d2lkZV9za3lzY3JhcGVyLmpwZw'.split('|'),0,{}));
+</script>
+</body>
+</html>
+</html>https://www.comptoir-hardware.com/articles/cartes-graphiques/42399-test-nvidia-geforce-rtx-3080.html?start=8

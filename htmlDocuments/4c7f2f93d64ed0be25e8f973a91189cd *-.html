@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQABUFdTDRAGVVdWBQQGVlE=",licenseKey:"9bb400200b",applicationID:"616425105"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(23),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(24),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(24),a=t(23);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(20),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(23),c=t(24),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(25);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(22),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],20:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],21:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],22:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?s(t,c,o):o()}function n(n,r,i,o){if(!l.aborted||o){t&&t(n,r,i);for(var a=e(i),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||i(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function o(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(23),u={},d={},l=e.exports=i();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(18),c=t("handle"),s=t(23),f=t("ee"),u=t(21),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},y=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:v,features:{},xhrWrappable:y,userAgent:u};t(15),t(19),l[p]?(l[p]("DOMContentLoaded",o,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",i),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var i=t("ee"),o=t(24),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,i){function nrWrapper(){var r,a,c,s;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,i],c])}u(e+"start",[r,a,i],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,i,o){i||(i="");var a,c,s,f="-"===i.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+i:i,o,c))}function u(n,r,i){if(!s||e){var o=s;s=!0;try{t.emit(n,r,i,e)}catch(a){l([a,n,r,i])}s=o}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var i in t)c.call(t,i)&&(e[i]=t[i]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=i),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:site_name" content="Media Matters for America" />
+<link rel="canonical" href="https://www.mediamatters.org/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel" />
+<meta name="twitter:title" content="The persistent anti-science propaganda of Fox&#039;s &quot;medical correspondent&quot; Marc Siegel" />
+<meta name="twitter:site" content="@mmfa" />
+<meta property="og:title" content="The persistent anti-science propaganda of Fox&#039;s &quot;medical correspondent&quot; Marc Siegel" />
+<meta name="generator" content="Drupal 8" />
+<meta name="twitter:url" content="https://www.mediamatters.org/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel" />
+<meta name="twitter:image" content="https://cloudfront.mediamatters.org/static/D8Audio/2020/09/29/9.29.20_marc_siegel.png" />
+<meta property="og:image" content="https://cloudfront.mediamatters.org/static/D8Audio/2020/09/29/9.29.20_marc_siegel.png" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/mmfa_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.mediamatters.org/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qid24t" defer></script>
+
+      <title>The persistent anti-science propaganda of Fox&#039;s &quot;medical correspondent&quot; Marc Siegel | Media Matters for America</title>
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_gruZ9Nsaffqe7kgc465dXUO-8G_qAe2nU-nKGwqQwbc.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Barlow:400,400i,600,600i,700,700i" />
+<link rel="stylesheet" media="all" href="//use.typekit.net/jqh3ujo.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_1IMwIaDTrFi_e-UH1Wxp9RETCsIXef93-gw6aGhep9g.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_oGZ7OLJDM4FApNs8xyoZMUIkjUZCXrNP16OA9NXAcMA.css" />
+
+        
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+</head>
+        <body class="path-node page-node-type-article">
+          <a href="#main-content" class="visually-hidden focusable skip-link">
+            Skip to main content
+          </a>
+          <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZKQJ2S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container">
+  
+
+<header class="header" role="banner">
+  
+
+  <div class="header--upper">
+    <nav role="navigation" aria-labelledby="block-trending-menu-menu" id="block-trending-menu" class="trending-menu header--upper--covered">
+      
+  <h2 class="trending-menu--title" id="block-trending-menu-menu">Trending</h2>
+  
+
+        
+          <ul  class="menu menu--trending" data-depth="0">
+          <li  class="menu__item">
+        <a href="/coronavirus-covid-19" class="menu__link" data-drupal-link-system-path="node/2843621">COVID-19</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/white-nationalism/proud-boys-and-far-right-figures-cheered-trumps-debate-call-them-stand" class="menu__link" data-drupal-link-system-path="node/2854251">Proud Boys</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel" class="menu__link is-active" data-drupal-link-system-path="node/2854146">Marc Siegel</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/qanon-conspiracy-theory/here-are-qanon-supporters-running-congress-2020" class="menu__link" data-drupal-link-system-path="node/2841126">QAnon</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    <nav role="navigation" aria-labelledby="block-social-media-menu-header-menu" id="block-social-media-menu-header" class="header--upper--spacer">
+            
+  <h2 class="visually-hidden" id="block-social-media-menu-header-menu">Social Media Menu</h2>
+  
+
+        
+          <ul  class="menu menu--social-media" data-depth="0">
+              <li  class="menu__item">
+          <a href="https://www.facebook.com/Mediamatters/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--facebook"  aria-labelledby="icon-label--facebook" >
+          <title id="icon-label--facebook">Facebook</title>
+    
+    <use xlink:href="#facebook"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://www.instagram.com/mediamattersforamerica/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--instagram"  aria-labelledby="icon-label--instagram" >
+          <title id="icon-label--instagram">Instagram</title>
+    
+    <use xlink:href="#instagram"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://mediamattersforamerica.tumblr.com/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--tumblr"  aria-labelledby="icon-label--tumblr" >
+          <title id="icon-label--tumblr">Tumblr</title>
+    
+    <use xlink:href="#tumblr"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://twitter.com/mmfa" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--twitter"  aria-labelledby="icon-label--twitter" >
+          <title id="icon-label--twitter">Twitter</title>
+    
+    <use xlink:href="#twitter"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://www.youtube.com/channel/UC_70iWZ6ym2cglS_kv5YfmA" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--youtube"  aria-labelledby="icon-label--youtube" >
+          <title id="icon-label--youtube">YouTube</title>
+    
+    <use xlink:href="#youtube"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+    <nav role="navigation" aria-labelledby="block-utility-navigation-menu" id="block-utility-navigation">
+            
+  <h2 class="visually-hidden" id="block-utility-navigation-menu">Utility Navigation</h2>
+  
+
+        
+          <ul  class="menu menu--utility-navigation" data-depth="0">
+          <li  class="menu__item">
+        <a href="/take-action" class="menu__link" data-drupal-link-system-path="node/2827306">Take Action</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/search" class="menu__link" data-drupal-link-system-path="search">Search</a>
+              </li>
+          <li  class="menu__item">
+        <a href="https://action.mediamatters.org/secure/donate" class="menu__link">Donate</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+<div class="header--search hidden"><div class="views-exposed-form search-box" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-search">
+  
+    
+      <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search form-no-label">
+      <label for="edit-search" class="visually-hidden">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" placeholder="Search..." class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><button  data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" class="button js-form-submit form-submit">
+    <svg viewbox="0 0 24 24" class="icon icon--search"  aria-labelledby="icon-label--search" >
+          <title id="icon-label--search">Search</title>
+    
+    <use xlink:href="#search"></use>
+  </svg>
+
+</button>
+</div>
+
+
+</form>
+
+  </div>
+</div>
+  <div class="header--lower">
+    <div class="header--inner l--constrained-narrow">
+      <div id="block-mmfa-theme-branding" class="header--logo">
+  
+    
+    
+
+<h1     
+  
+  
+  
+  
+ class="site-logo"
+>
+  <a
+    href="/"
+    title="Home"
+    rel="home"
+    class="site-logo--link"
+  >
+    <img
+      src="/themes/custom/mmfa_theme/logo.svg"
+      alt="Media Matters for America"
+      class="site-logo--image"
+    />
+  </a>
+</h1>
+</div>
+
+      <nav role="navigation" aria-labelledby="block-mmfa-theme-main-menu-menu" id="block-mmfa-theme-main-menu" class="header--navigation">
+            
+  <h2 class="visually-hidden" id="block-mmfa-theme-main-menu-menu">Main navigation</h2>
+  
+
+        
+          <ul  class="menu menu--main" data-depth="0">
+          <li  class="menu__item">
+        <a href="/news-analysis" class="menu__link" data-drupal-link-system-path="node/2833406">News &amp; Analysis</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/studies" class="menu__link" data-drupal-link-system-path="node/2833411">Research &amp; Studies</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/audio-video" class="menu__link" data-drupal-link-system-path="node/2833416">Audio &amp; Video</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/archives" class="menu__link" data-drupal-link-system-path="archives">Archives</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    </div>
+  </div>
+</header>
+
+  
+
+<header class="header--mobile nav-down" role="banner">
+  
+
+  <div class="header--upper">
+    <div id="block-mmfa-theme-branding" class="header--logo">
+  
+    
+    
+
+<h1     
+  
+  
+  
+  
+ class="site-logo"
+>
+  <a
+    href="/"
+    title="Home"
+    rel="home"
+    class="site-logo--link"
+  >
+    <img
+      src="/themes/custom/mmfa_theme/logo.svg"
+      alt="Media Matters for America"
+      class="site-logo--image"
+    />
+  </a>
+</h1>
+</div>
+
+
+    <ul class="menu menu--mobile-nav">
+      <li class="menu__item"><a href="#" class="menu__link mobile-nav">Nav</a></li>
+      <li class="menu__item"><a href="#" class="menu__link mobile-search">Search</a></li>
+    </ul>
+  </div>
+  <div class="header--search hidden"><div class="views-exposed-form search-box" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-search">
+  
+    
+      <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search form-no-label">
+      <label for="edit-search" class="visually-hidden">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" placeholder="Search..." class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><button  data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" class="button js-form-submit form-submit">
+    <svg viewbox="0 0 24 24" class="icon icon--search"  aria-labelledby="icon-label--search" >
+          <title id="icon-label--search">Search</title>
+    
+    <use xlink:href="#search"></use>
+  </svg>
+
+</button>
+</div>
+
+
+</form>
+
+  </div>
+</div>
+  <div class="header--mobile-menu hidden">
+    <nav role="navigation" aria-labelledby="block-mmfa-theme-main-menu-menu" id="block-mmfa-theme-main-menu" class="header--navigation">
+            
+  <h2 class="visually-hidden" id="block-mmfa-theme-main-menu-menu">Main navigation</h2>
+  
+
+        
+          <ul  class="menu menu--main" data-depth="0">
+          <li  class="menu__item">
+        <a href="/news-analysis" class="menu__link" data-drupal-link-system-path="node/2833406">News &amp; Analysis</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/studies" class="menu__link" data-drupal-link-system-path="node/2833411">Research &amp; Studies</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/audio-video" class="menu__link" data-drupal-link-system-path="node/2833416">Audio &amp; Video</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/archives" class="menu__link" data-drupal-link-system-path="archives">Archives</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    <div class="header--inner l--constrained-narrow header--lower-bottom">
+      <nav role="navigation" aria-labelledby="block-trending-menu-menu" id="block-trending-menu" class="trending-menu header--upper--covered">
+      
+  <h2 class="trending-menu--title" id="block-trending-menu-menu">Trending</h2>
+  
+
+        
+          <ul  class="menu menu--trending" data-depth="0">
+          <li  class="menu__item">
+        <a href="/coronavirus-covid-19" class="menu__link" data-drupal-link-system-path="node/2843621">COVID-19</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/white-nationalism/proud-boys-and-far-right-figures-cheered-trumps-debate-call-them-stand" class="menu__link" data-drupal-link-system-path="node/2854251">Proud Boys</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel" class="menu__link is-active" data-drupal-link-system-path="node/2854146">Marc Siegel</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/qanon-conspiracy-theory/here-are-qanon-supporters-running-congress-2020" class="menu__link" data-drupal-link-system-path="node/2841126">QAnon</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    </div>
+
+    <div class="header--inner l--constrained-narrow">
+      <nav role="navigation" aria-labelledby="block-utility-navigation-menu" id="block-utility-navigation">
+            
+  <h2 class="visually-hidden" id="block-utility-navigation-menu">Utility Navigation</h2>
+  
+
+        
+          <ul  class="menu menu--utility-navigation" data-depth="0">
+          <li  class="menu__item">
+        <a href="/take-action" class="menu__link" data-drupal-link-system-path="node/2827306">Take Action</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/search" class="menu__link" data-drupal-link-system-path="search">Search</a>
+              </li>
+          <li  class="menu__item">
+        <a href="https://action.mediamatters.org/secure/donate" class="menu__link">Donate</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+      <nav role="navigation" aria-labelledby="block-social-media-menu-header-menu" id="block-social-media-menu-header" class="header--upper--spacer">
+            
+  <h2 class="visually-hidden" id="block-social-media-menu-header-menu">Social Media Menu</h2>
+  
+
+        
+          <ul  class="menu menu--social-media" data-depth="0">
+              <li  class="menu__item">
+          <a href="https://www.facebook.com/Mediamatters/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--facebook"  aria-labelledby="icon-label--facebook" >
+          <title id="icon-label--facebook">Facebook</title>
+    
+    <use xlink:href="#facebook"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://www.instagram.com/mediamattersforamerica/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--instagram"  aria-labelledby="icon-label--instagram" >
+          <title id="icon-label--instagram">Instagram</title>
+    
+    <use xlink:href="#instagram"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://mediamattersforamerica.tumblr.com/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--tumblr"  aria-labelledby="icon-label--tumblr" >
+          <title id="icon-label--tumblr">Tumblr</title>
+    
+    <use xlink:href="#tumblr"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://twitter.com/mmfa" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--twitter"  aria-labelledby="icon-label--twitter" >
+          <title id="icon-label--twitter">Twitter</title>
+    
+    <use xlink:href="#twitter"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://www.youtube.com/channel/UC_70iWZ6ym2cglS_kv5YfmA" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--youtube"  aria-labelledby="icon-label--youtube" >
+          <title id="icon-label--youtube">YouTube</title>
+    
+    <use xlink:href="#youtube"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+    </div>
+  </div>
+</header>
+
+  
+
+  
+
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div class="views-element-container" id="block-editorial-banners">
+  
+    
+      <div><div class="js-view-dom-id-ddb0821afe84f234ddb46a2ab58cd30c3e2c0707552bb3353ee848d9e433c80c">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+            <div class="field field--name-field-primary-media field--type-entity-reference field--label-hidden field__item">
+
+<figure class="media media--image editorial-banner">
+    <img src="https://cloudfront.mediamatters.org/styles/crop_1620x600/s3/static/D8Audio/2020/09/29/9.29.20_marc_siegel.png?itok=OB5Ewl_q" width="1620" height="600" alt="Marc Sigel" typeof="foaf:Image" />
+
+
+
+  <figcaption  class="editorial-banner__citation">
+      <cite>Molly Butler / Media Matters</cite>
+  </figcaption>
+
+</figure>
+</div>
+      
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+
+
+  <main role="main" class="l--constrained-wide l--main-grid">
+        <a id="main-content" class="anchor-target" tabindex="-1"></a>
+
+    <div     
+  
+                  
+  
+                  
+ class="banner-overlap--content layout-content layout-content--main"
+>
+    <div id="block-mmfa-theme-content">
+  
+    
+      
+
+<article  role="article" about="/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel" typeof="schema:Article" class="editorial-full">
+  <header class="editorial-full__header">
+    
+    
+<h1     
+  
+                  
+  
+  
+ class="editorial-full__title page-title--barred page-title"
+><span property="schema:name">The persistent anti-science propaganda of Fox&#039;s  “medical correspondent”  Marc Siegel</span>
+</h1>
+      <span property="schema:name" content="The persistent anti-science propaganda of Fox&#039;s  “medical correspondent”  Marc Siegel" class="hidden"></span>
+
+
+    
+
+    
+
+    
+
+  <p class="byline"><span class="byline__label">Written by</span> <a href="/author/madeline-peltz" hreflang="en">Madeline Peltz</a></p>
+
+
+
+    
+    
+
+<div class="dateline--group">
+      
+    <p class="dateline">
+      <span class="dateline__label">Published</span>
+      <time datetime="2020-09-29T13:27:40-0400">09/29/20 1:27 PM EDT</time>
+    </p>
+            <div class="dateline__divider"></div>
+    
+    <p class="dateline">
+      <span class="dateline__label">Updated</span>
+      <time datetime="2020-10-09T10:05:28-0400">10/09/20 10:05 AM EDT</time>
+    </p>
+  </div>
+
+    
+
+<aside class="social-share">
+  <div class="social-share__services">
+    <p class="social-share__title">Share</p>
+
+    <ul class="social-share__items">
+              <li class="social-share__item"><a
+  href="http://api.addthis.com/oexchange/0.8/forward/email/offer?url=https%3A%2F%2Fwww.mediamatters.org%2Fcoronavirus-covid-19%2Fpersistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel&amp;pubid=ra-5c12cfc37af14d90&amp;title=The%20persistent%20anti-science%20propaganda%20of%20Fox%27s%20%22medical%20correspondent%22%20Marc%20Siegel"
+  class="social-share__link"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+    <svg viewbox="0 0 24 24" class="icon icon--email"  aria-labelledby="icon-label--email" >
+          <title id="icon-label--email">Email</title>
+    
+    <use xlink:href="#email"></use>
+  </svg>
+
+</a>
+</li>
+              <li class="social-share__item"><a
+  href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=https%3A%2F%2Fwww.mediamatters.org%2Fcoronavirus-covid-19%2Fpersistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel&amp;pubid=ra-5c12cfc37af14d90&amp;title=The%20persistent%20anti-science%20propaganda%20of%20Fox%27s%20%22medical%20correspondent%22%20Marc%20Siegel"
+  class="social-share__link"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+    <svg viewbox="0 0 24 24" class="icon icon--twitter"  aria-labelledby="icon-label--twitter" >
+          <title id="icon-label--twitter">Twitter</title>
+    
+    <use xlink:href="#twitter"></use>
+  </svg>
+
+</a>
+</li>
+              <li class="social-share__item"><a
+  href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=https%3A%2F%2Fwww.mediamatters.org%2Fcoronavirus-covid-19%2Fpersistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel&amp;pubid=ra-5c12cfc37af14d90&amp;title=The%20persistent%20anti-science%20propaganda%20of%20Fox%27s%20%22medical%20correspondent%22%20Marc%20Siegel&amp;screenshot=https%3A%2F%2Fcloudfront.mediamatters.org%2Fstatic%2FD8Audio%2F2020%2F09%2F29%2F9.29.20_marc_siegel.png"
+  class="social-share__link"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+    <svg viewbox="0 0 24 24" class="icon icon--facebook"  aria-labelledby="icon-label--facebook" >
+          <title id="icon-label--facebook">Facebook</title>
+    
+    <use xlink:href="#facebook"></use>
+  </svg>
+
+</a>
+</li>
+      
+      <li class="social-share__item">
+        <a href="javascript:window.print();" class="social-share__link">
+            <svg viewbox="0 0 24 24" class="icon icon--printer"  aria-labelledby="icon-label--printer" >
+          <title id="icon-label--printer">Print</title>
+    
+    <use xlink:href="#printer"></use>
+  </svg>
+
+        </a>
+      </li>
+    </ul>
+  </div>
+
+      <div class="social-share__comments">
+      <p class="social-share__title">Comment</p>
+
+      <ul class="social-share__items">
+        <li class="social-share__item">
+          <a href="#comments" class="social-share__link">
+              <svg viewbox="0 0 24 24" class="icon icon--comments"  aria-labelledby="icon-label--comments" >
+          <title id="icon-label--comments">Comments</title>
+    
+    <use xlink:href="#comments"></use>
+  </svg>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  </header>
+
+  
+  <div class="editorial-full__article">
+    
+    
+<div  class="field field--name-field-stories-content field--type-entity-reference-revisions field--label-hidden">
+  
+        <div class="paragraph paragraph--type--stories-text paragraph--view-mode--editorial">
+          
+            <div class="fancy-elems-wrapper field field--name-field-stories-text-formatted field--type-text-long field--label-hidden field__item"><p>Fox News medical contributor Dr. Marc Siegel has been a constant presence on Fox’s coronavirus coverage since the beginning of the crisis. During these many, many appearances -- 318 since January 20 -- Siegel regularly pushes coronavirus misinformation, downplays the severity of the crisis, and discards science in favor of right-wing talking points.</p>
+<p>During the critical early days of the pandemic in March, Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/fox-news-dr-marc-siegel-attacks-who-warning-about-coronavirus-claims-its-no">repeatedly</a> <a href="https://www.mediamatters.org/sean-hannity/foxs-dr-marc-siegel-says-worse-case-scenario-coronavirus-it-could-be-flu">compared</a> COVID-19 to the flu and <a href="https://www.mediamatters.org/coronavirus-covid-19/foxs-dr-marc-siegel-claims-coronavirus-concerns-are-being-intentionally">said</a> concern about the pandemic was being exaggerated to attack President Donald Trump politically, then he became among the first Fox personalities to <a href="https://www.mediamatters.org/coronavirus-covid-19/comprehensive-guide-foxs-promotion-hydroxychloroquine-and-chloroquine">push hydroxychloroquine</a> as a supposed miracle treatment. <a href="https://www.washingtonpost.com/business/2020/06/25/fox-news-hannity-coronavirus-misinformation/">Studies have shown</a> that Fox’s misleading coverage of the pandemic at this time may have worsened its spread in the United States, and experts have singled out Siegel’s comments as prime examples of the network’s COVID-19 misinformation.</p>
+<p>Siegel’s misinformation and pro-Trump sycophancy have not abated. He has been more than happy to spin away the serious implications of the president’s COVID-19 diagnosis. On September 25, Siegel downplayed the threat of the virus to young people, <a href="https://www.mediamatters.org/fox-news/foxs-dr-marc-siegel-if-youre-under-70-its-almost-impossible-you-are-going-die-covid">saying</a> that if you're “under 70, it's almost impossible you are going to die" from COVID-19. This statement is reckless and false: not only does COVID-19 pose <a href="https://www.theatlantic.com/ideas/archive/2020/09/what-young-healthy-people-have-fear-covid-19/616087/">long-term risks even for young, healthy people</a>, but increased spread of the disease among young people this past summer <a href="https://www.nytimes.com/2020/09/24/health/coronavirus-young-adults.html">eventually reached older and more vulnerable populations</a>. Despite his dubious commentary on the pandemic, which has been <a href="https://www.mediamatters.org/marc-siegel/cnn-anchor-slams-fox-news-doctor-some-worst-medical-advice-money-can-buy">repeatedly</a> <a href="https://www.nytimes.com/2020/09/10/books/review/brian-stelter-hoax.html?searchResultPosition=1">criticized</a> by members of the mainstream media, Siegel has a new book titled <em>COVID: The Politics of Fear and the Power of Science</em> <a href="https://www.prnewswire.com/news-releases/dr-marc-siegel-announces-groundbreaking-new-book-covid-the-politics-of-fear-and-the-power-of-science-301121650.html">set to be released next month</a>.</p>
+</div>
+      
+      </div>
+
+        <div class="l--gutter-pull paragraph paragraph--type--stories-web-video paragraph--view-mode--editorial">
+          
+            <div class="erd-list--editorial-embed field field--name-field-stories-web-video field--type-entity-reference field--label-hidden field__item"><figure class="media-player media-player--web-video" role="group">
+  
+            <div class="field field--name-field-media-video-embed-field field--type-video-embed-field field--label-hidden field__item"><div class="video-embed-field-provider-youtube video-embed-field-responsive-video"><iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/V3teF0nwg2A?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+</div>
+</div>
+      
+
+  
+
+<figcaption     
+  
+                  
+  
+                  
+ class="media-player__caption block-quote block-quote--minor"
+>
+  
+  </figcaption>
+</figure>
+</div>
+      
+      </div>
+
+        <div class="paragraph paragraph--type--stories-text paragraph--view-mode--editorial">
+          
+            <div class="fancy-elems-wrapper field field--name-field-stories-text-formatted field--type-text-long field--label-hidden field__item"><h2>Siegel downplayed the president’s diagnosis</h2>
+<ul><li>On October 2, Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/pro-trump-media-tout-hydroxychloroquine-treatment-trumps-case-coronavirus">promoted</a> hydroxychloroquine following the news of Trump’s coronavirus infection, saying that “research has not really backed” up the efficacy of the drug, but “I don’t think it’s ever been ruled out.” </li>
+<li>Siegel, who has engaged in <a href="https://www.mediamatters.org/tucker-carlson/fox-medical-correspondent-suggests-joe-biden-has-had-silent-stroke-and-has-been">unsubstantiated speculation</a> about the health of former Vice President Joe Biden, <a href="https://www.mediamatters.org/coronavirus-covid-19/trumps-diagnosis-covid-19-fox-news-struggles-realize-actually-serious">downplayed</a> Trump’s positive diagnosis for COVID-19, telling <em>Fox &amp; Friends</em> co-host Brian Kilmeade, “There is no question in my mind by the way, Brian, he can perform his duties 100%. No symptoms, that’s not even an issue here.” </li>
+<li>On October 7, less than a week after the president announced he had contracted the novel coronavirus, Siegel <a href="https://www.mediamatters.org/fox-news/fox-medical-contributor-dr-marc-siegel-says-theres-no-concern-over-trump-working-oval">said</a> there's no concern over Trump working in the West Wing while still contagious despite the threat it poses to White House staff. He also noted that “the ventilation system and the air purification system in the Oval Office is excellent.”</li>
+</ul><h2>Siegel has downplayed the threat of the novel coronavirus since the earliest days of the pandemic</h2>
+<ul><li>On March 6, Siegel <a href="https://www.mediamatters.org/sean-hannity/foxs-dr-marc-siegel-says-worse-case-scenario-coronavirus-it-could-be-flu">said</a> the “worst-case scenario” for coronavirus is “it could be the flu.”</li>
+<li>That same day, he <a href="https://www.mediamatters.org/coronavirus-covid-19/foxs-dr-marc-siegel-claims-coronavirus-concerns-are-being-intentionally">claimed</a> coronavirus concerns are being intentionally overblown to hurt Trump politically.</li>
+<li>He <a href="https://www.mediamatters.org/coronavirus-covid-19/fox-news-dr-marc-siegel-attacks-who-warning-about-coronavirus-claims-its-no">attacked</a> the World Health Organization as “a bunch of alarmists” and “saber rattlers” for warning about coronavirus, claiming, “There's no reason to believe that it's actually more problematic or deadly than influenza.” (About a month later, Siegel <a href="https://twitter.com/LisPower1/status/1250458012009009153">attacked</a> the WHO for “underreacting.”)</li>
+<li>On March 8, Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/fox-news-pete-hegseth-coronavirus-i-feel-more-i-learn-about-less-there-worry">agreed</a> with <em>Fox &amp; Friends Weekend</em> co-host Pete Hegseth after he said, “I feel like the more I learn about this, the less there is to worry about.” Siegel responded, “I was about to say the same thing.”</li>
+<li>On March 10, he <a href="https://www.mediamatters.org/media/3864951">called</a> concern about coronavirus “paranoia” and suggested it was caused by a “fear of going outdoors. It’s agoraphobia, they have testing for that.”</li>
+<li>On April 20, Siegel cited <a href="https://www.businessinsider.com/cdc-says-antibody-test-results-wrong-half-the-time-2020-5">unreliable antibody testing data</a> to <a href="https://www.mediamatters.org/media/3899911">claim</a>: “The death rate is much, much lower than we’ve been talking about if you think about all these asymptomatic cases versus the tragic 600 that passed away. … We’re talking about a virus that for most cases is dramatically mild, we’re talking about a lower fatality rate than we thought.”</li>
+<li>On April 24, Siegel again used antibody data to <a href="https://www.mediamatters.org/media/3867256">claim</a> that “the hospitalization rate and the death rate, especially, is way much lower than what we thought it was. Much lower.”</li>
+<li>On May 13, he <a href="https://www.mediamatters.org/marc-siegel/foxs-dr-marc-siegel-predicts-no-big-second-wave-coronavirus-america">said</a> there will be no “big second wave” of coronavirus in America and pushed to reopen schools in person, adding: “Politically, if you think the Democrats are going to let the liberal colleges stay closed, think again. Those are their future voters.”</li>
+<li>On July 5, Siegel <a href="https://www.mediamatters.org/media/3881686">downplayed</a> the surge of summer cases as “manageable” and claimed “overall it’s milder cases,” even as the daily <a href="https://covidtracking.com/data/charts/us-daily-deaths">death toll</a> began to rise again.</li>
+<li>On <a href="https://www.mediamatters.org/media/3888401">July 7</a>, he said schools need to reopen because “the risk to teachers is so much lower than it is to doctors.”</li>
+<li>On the same day, Siegel <a href="https://www.mediamatters.org/media/3881771">said</a>, “The spread among the young is not what is leading to the deaths or hospitalizations.” Recent research has shown <a href="https://www.nytimes.com/2020/09/24/health/coronavirus-young-adults.html">this is false</a>: During the time period Siegel made this remark, young people were catching and spreading the disease and may have later passed it on to older, more vulnerable populations.</li>
+<li>Siegel <a href="https://www.mediamatters.org/media/3881851">on</a> Dr. Anthony Fauci’s assessment that the U.S. is “knee-deep” in the coronavirus crisis: “Notice he didn't say ‘thigh-deep.’ … We’re not seeing in the West and the South as many sick patients, as many patients on ventilators.”</li>
+<li>Siegel <a href="https://www.mediamatters.org/fox-business/fox-medical-contributor-marc-siegel-criticizes-states-covid-surges-rolling-back">praised</a> Texas Republican Gov. Greg Abbott for his handling of the coronavirus on July 13, even as new cases, hospitalizations, and deaths from COVID-19 were all going up in the state.</li>
+</ul><h2>Siegel was among the first on Fox News to promote hydroxychloroquine as a treatment for COVID-19</h2>
+<ul><li>On March 12, Siegel was <a href="https://www.mediamatters.org/media/3860931">among the first</a> Fox personalities to promote hydroxychloroquine as a potential treatment for COVID-19.</li>
+<li>Two days later, Siegel <a href="https://www.mediamatters.org/media/3860936">called</a> the use of the drug in other countries as a COVID-19 treatment “promising.”</li>
+<li>On March 21, Fox host Jeanine Pirro <a href="https://www.mediamatters.org/media/3863766">praised</a> Siegel in an interview for being “among the first to tell us about a critical drug that’s being looked at to fight the coronavirus.”</li>
+<li>On March 23, Siegel <a href="https://www.mediamatters.org/media/3863646">said</a> that “a lot of early evidence looks good” regarding hydroxychloroquine as a treatment for COVID-19.</li>
+<li>The next day Siegel said he <a href="https://www.mediamatters.org/media/3864146">agreed</a> “completely” with host Tucker Carlson that “the media are saying” hydroxychloroquine is “a conspiracy theory just because Trump mentioned it.”</li>
+<li>On March 24, Siegel <a href="https://www.mediamatters.org/media/3863781">said</a> hydroxychloroquine “may very well be” a treatment for COVID-19.</li>
+<li>Siegel <a href="https://www.mediamatters.org/media/3864176">promoted</a> the use of hydroxychloroquine as a “very promising” prophylactic for COVID-19, even as he admitted the lack of “substantial clinical trials” studying the drug on March 27’s <em>Tucker Carlson Tonight</em>.</li>
+<li>On March 30, he <a href="https://www.mediamatters.org/media/3864136">praised</a> Carlson for focusing on hydroxychloroquine and partly attributed the network’s coverage to the FDA’s emergency use authorization.</li>
+<li>On April 3, Siegel <a href="https://www.mediamatters.org/media/3863866">said</a>: “I can't prove to you that [hydroxychloroquine] works at this point, but it's extremely promising. And there's a lot of evidence that it does work.”</li>
+<li>Siegel <a href="https://www.mediamatters.org/media/3863921">promoted</a> hydroxychloroquine as a coronavirus treatment by citing his own father's experience using the drug to treat an unspecified illness.</li>
+<li>On July 6, Carlson and Siegel <a href="https://www.mediamatters.org/media/3886891">cited</a> a <a href="https://www.statnews.com/2020/07/08/a-flawed-covid-19-study-gets-the-white-houses-attention-and-the-fda-may-pay-the-price/">flawed study</a> in order to continue pushing hydroxychloroquine as a treatment for COVID-19 weeks after the FDA had revoked its emergency use authorization.</li>
+</ul><h2>Siegel has discarded science in favor of pro-Trump sycophancy, partisan commentary, and racism</h2>
+<ul><li>After Carlson made a series of racist statements blaming Chinese people and culture for the spread of coronavirus in January, Siegel <a href="https://www.mediamatters.org/media/3857291">responded</a>, “That’s an extremely important scientific point,” and said, “I think you’re absolutely right that it starts with the culture over there.”</li>
+<li>On February 17, Siegel <a href="https://www.mediamatters.org/media/3854141">said</a> he “can't believe how well” the Trump administration is handling the coronavirus response, adding: “The proof is in the pudding. We have 15 people in the United States with it. That's it. No one has died.”</li>
+<li>Three days later, Siegel <a href="https://www.mediamatters.org/media/3854156">described</a> Trump’s leadership on the coronavirus as “tremendous” and said the administration is “spreading confidence.”</li>
+<li>After <a href="https://www.thedailybeast.com/cdc-warned-against-flying-coronavirus-infected-americans-back-to-the-us-report-says">reports</a> came out that the administration flew home infected Americans together with uninfected passengers, Siegel <a href="https://www.mediamatters.org/media/3854161">praised</a> Trump’s response: “I think the task force appointed by the president is doing a very good job.”</li>
+<li>On February 27, Siegel <a href="https://www.mediamatters.org/media/3855526">complained</a> Trump “is getting no credit for” putting together “an incredibly competent task force that has a lot of experience with emerging contagions and they are quite right to say the risk, right now, to Americans is low.”</li>
+<li>Siegel <a href="https://www.mediamatters.org/media/3858301">described</a> Trump’s European travel ban as “bold” and said, “It’s very presidential and it’s leadership,” in a March 11 appearance on <em>Hannity</em>.</li>
+<li>On March 12, Siegel <a href="https://www.mediamatters.org/media/3858296">said</a> he would “absolutely applaud” Trump’s “bold move” to ban travel from Europe. (In a recent interview on <em>Fox News Sunday</em>, global health philanthropist Bill Gates <a href="https://thehill.com/policy/healthcare/517106-gates-says-travel-ban-made-covid-19-worse-in-us">told</a> anchor Chris Wallace the ban likely worsened the spread of the pandemic.)</li>
+<li>On May 14, Siegel <a href="https://www.mediamatters.org/lou-dobbs/foxs-medical-correspondent-says-dr-faucis-job-agree-donald-trump">said</a> Dr. Anthony Fauci’s job is to agree with Trump: “He’s there to serve the president.”</li>
+<li>The day after Trump’s June 20 indoor rally in Tulsa, Oklahoma, Siegel <a href="https://www.mediamatters.org/media/3900051">said</a>, “I don’t see any difference between having a rally and having protests from a purely public health point of view. Very disappointing to see all the politicizing going on.” (Former Republican presidential candidate Herman Cain <a href="https://www.nytimes.com/2020/07/30/us/politics/herman-cain-dead.html">died</a> from complications due to the coronavirus shortly after attending the rally in support of Trump.)</li>
+<li>On June 24, Siegel <a href="https://www.mediamatters.org/media/3900081">blamed</a> the media for misrepresenting <a href="https://www.statnews.com/2020/06/23/fauci-never-ordered-to-slow-down-testing/">Trump’s comments about purposely slowing testing</a> for COVID-19, saying his own words were “one of those media hit jobs” and claiming, “The president was joking there.”</li>
+<li>In the middle of the <a href="https://covidtracking.com/data/state/florida">summer surge of cases in Florida</a>, Siegel <a href="https://twitter.com/revrrlewis/status/1280456525014843393">praised</a> Republican Florida Gov. Ron DeSantis’ approach during a segment about DeSantis’ refusal to roll back statewide reopening measures, calling him “inspiring.”</li>
+<li>Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/fox-straight-news-shows-attack-kamala-harris-refusing-trust-trumps-word-covid">pushed</a> Trump campaign talking points falsely labeling Democratic vice presidential nominee Kamala Harris as “anti-vaxx,” ignoring that the Trump administration has been undermining scientists in the federal government while promising a viable vaccine by Election Day, which is fueling <a href="https://www.politico.com/news/2020/09/24/trump-undermining-vaccine-race-421487">skepticism</a> toward the president’s claims.</li>
+<li>On August 6, Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/fox-news-medical-expert-i-cant-interpret-what-trump-meant-when-he-said">spun</a> Trump’s falsehoods on the risk of coronavirus to children on one of Fox’s “straight news” shows: “I can’t interpret” what Trump meant when he said children are “almost immune” from coronavirus.</li>
+<li>A week later, Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/right-wing-media-freak-out-over-tyrannical-biden-proposal-nationwide-mask">described</a> Biden’s proposed mask mandate as “the politics of fear: big government edition.”</li>
+</ul><h2>Siegel’s punditry has contradicted and undermined health experts</h2>
+<ul><li>Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/fox-news-dr-marc-siegel-attacks-new-york-gov-andrew-cuomo-using-mathematical">attacked</a> New York City Mayor Bill de Blasio for using mathematical models to plan for coronavirus needs.</li>
+<li>Siegel <a href="https://twitter.com/revrrlewis/status/1260520602261127168">claimed</a> that because COVID tests are not 100% reliable, “If you test people in areas where there are not a lot of virus, Brian, you’re going to get a false result. You’re going to think it’s negative and it really may not be. So testing can be part of the strategy, but it can’t be the whole strategy. ... There’s huge collateral damage -- huge collateral damage in terms of suffering and death -- if we don’t consider the economy here.”</li>
+<li>On May 19, Siegel <a href="https://twitter.com/MattGertz/status/1262738967130185728">made a direct appeal</a> to Trump to refuse funding to the World Health Organization during the pandemic unless there is a “huge overhaul” at the public health institution.</li>
+<li>Siegel <a href="https://www.mediamatters.org/coronavirus-covid-19/fox-news-host-weve-shut-down-entire-country-03-those-who-get-it-lose-their">said</a> epidemiological modeling is “guesswork” and should not be used to make decisions about mitigating the spread of the virus, claiming, “They're not based on real numbers.” Siegel’s comment set <em>Fox &amp; Friends</em> co-host Brian Kilmeade up to spread even more coronavirus misinformation, saying, “We've shut down an entire country for 0.3% of those who get it lose their lives. “</li>
+<li>After Siegel <a href="https://news.yahoo.com/dr-marc-siegel-responds-chinese-005221334.html">praised</a> a <a href="https://www.thedailybeast.com/steve-bannon-linked-groups-push-study-claiming-china-manufactured-covid">discredited Chinese virologist</a>’s “great credentials” and said he is “very willing to listen very carefully,” President Trump <a href="https://www.mediaite.com/trump/trump-retweets-fox-news-doctor-raging-against-fauci-on-tucker-carlsons-show/">retweeted</a> a QAnon account which posted the interview along with the caption: “Dr Siegel is so pissed off he threw Fauci under the bus with the Chinese! Holy crap! #TheMoreYouKnow”</li>
+</ul><p><em><strong>Update (10/9/20): </strong>This piece has been updated with additional examples.</em></p>
+</div>
+      
+      </div>
+
+  </div>
+
+  </div>
+
+  
+</article>
+
+  </div>
+
+
+</div>
+      <aside class="layout-sidebar-first spotted-cap spotted-cap--right" role="complementary">
+      
+
+  <section  class="views-element-container aside-block--tint aside-block" id="block-editorial-lists-the-latest">
+    
+          <h3  class="aside-block__title">The Latest</h3>
+        
+
+    <div class="aside-block__body">
+              <div><div class="js-view-dom-id-906f928ad6ce319e3cf20c9e1a491ce2d67f35237564568049aaba15c6313ba5">
+  
+  
+  
+
+  
+  
+  
+
+  <div>
+  
+  <ol class="editorial-list">
+
+          <li class="editorial-list__item">
+
+<article role="article" about="/cbs/election-coverage-cbs-falling-same-trap-it-did-four-years-ago" typeof="schema:Article" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/cbs/election-coverage-cbs-falling-same-trap-it-did-four-years-ago"><span property="schema:name">On election coverage, CBS is falling for the same trap it did four years ago</span>
+</a>
+  </h3>
+    <span property="schema:name" content="On election coverage, CBS is falling for the same trap it did four years ago" class="hidden"></span>
+
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--article"  aria-labelledby="icon-label--article" >
+          <title id="icon-label--article">Article</title>
+    
+    <use xlink:href="#article"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-17T16:19:17-0400">10/17/20 4:19 PM EDT</time>
+</p>
+</article>
+</li>
+          <li class="editorial-list__item">
+
+<article role="article" about="/facebook/right-leaning-pages-dominated-conversation-facebook-during-supreme-court-confirmation" typeof="schema:Article" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/facebook/right-leaning-pages-dominated-conversation-facebook-during-supreme-court-confirmation"><span property="schema:name">Right-leaning pages dominated the conversation on Facebook during the Supreme Court confirmation hearings</span>
+</a>
+  </h3>
+    <span property="schema:name" content="Right-leaning pages dominated the conversation on Facebook during the Supreme Court confirmation hearings" class="hidden"></span>
+
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--article"  aria-labelledby="icon-label--article" >
+          <title id="icon-label--article">Article</title>
+    
+    <use xlink:href="#article"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-17T09:52:15-0400">10/17/20 9:52 AM EDT</time>
+</p>
+</article>
+</li>
+          <li class="editorial-list__item">
+
+<article role="article" about="/fox-news/laura-ingraham-attacks-dr-fauci-im-shocked-hes-still-heading-coronavirus-task-force" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/fox-news/laura-ingraham-attacks-dr-fauci-im-shocked-hes-still-heading-coronavirus-task-force"><span>Laura Ingraham attacks Dr. Fauci:  “I&#039;m shocked that he&#039;s still heading the coronavirus task force” </span>
+</a>
+  </h3>
+  
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--video"  aria-labelledby="icon-label--video" >
+          <title id="icon-label--video">Video &amp; Audio</title>
+    
+    <use xlink:href="#video"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-16T22:58:48-0400">10/16/20 10:58 PM EDT</time>
+</p>
+</article>
+</li>
+          <li class="editorial-list__item">
+
+<article role="article" about="/fox-news/tucker-carlson-and-osama-bin-ladens-niece-talk-about-how-hard-it-be-pro-trump" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/fox-news/tucker-carlson-and-osama-bin-ladens-niece-talk-about-how-hard-it-be-pro-trump"><span> Tucker Carlson and Osama Bin Laden&#039;s niece talk about how hard it is to be pro-Trump</span>
+</a>
+  </h3>
+  
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--video"  aria-labelledby="icon-label--video" >
+          <title id="icon-label--video">Video &amp; Audio</title>
+    
+    <use xlink:href="#video"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-16T21:19:40-0400">10/16/20 9:19 PM EDT</time>
+</p>
+</article>
+</li>
+          <li class="editorial-list__item">
+
+<article role="article" about="/qanon-conspiracy-theory/following-youtubes-ban-qanon-followers-are-jumping-these-other-major" typeof="schema:Article" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/qanon-conspiracy-theory/following-youtubes-ban-qanon-followers-are-jumping-these-other-major"><span property="schema:name">Following YouTube&#039;s ban, QAnon followers are jumping to these other major platforms</span>
+</a>
+  </h3>
+    <span property="schema:name" content="Following YouTube&#039;s ban, QAnon followers are jumping to these other major platforms" class="hidden"></span>
+
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--article"  aria-labelledby="icon-label--article" >
+          <title id="icon-label--article">Article</title>
+    
+    <use xlink:href="#article"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-16T17:26:22-0400">10/16/20 5:26 PM EDT</time>
+</p>
+</article>
+</li>
+    
+  </ol>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+          </div>
+  </section>
+
+
+  <section  class="views-element-container aside-block" id="block-editorial-public-tags">
+    
+          <h3  class="aside-block__title">In This Article</h3>
+        
+
+    <div class="aside-block__body">
+              <div><div class="js-view-dom-id-f7139594a36620a912c0face1c702ded8ccc32382d328befd8842585f0db8a75">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+<ul  class="field field--name-field-public-tags field--label-hidden editorial-list editorial-list--collapse field__items" data-editorial-list-collapse="3">
+      <li  class="field__item editorial-list__item">
+      
+
+<article  role="article" about="/coronavirus-covid-19" class="public-tag public-tag--compact public-tag-compact">
+  
+  
+  <a href="/coronavirus-covid-19" class="public-tag-compact__link">
+    <h3 class="public-tag-compact__title">
+      <span>Coronavirus (COVID-19)</span>
+
+    </h3>
+
+    
+            <div class="public-tag-compact__figure field field--name-field-primary-media field--type-entity-reference field--label-hidden field__item"><figure class="media media--image" role="group">
+  
+    <img src="https://cloudfront.mediamatters.org/styles/scale_180px/s3/static/D8Audio/2020/02/26/coronavirus-covid19-tag.png?itok=YZLqGMLq" width="180" height="127" alt="Covid-19 / Coronavirus" typeof="foaf:Image" />
+
+
+
+
+
+  </figure>
+</div>
+      
+  </a>
+</article>
+
+    </li>
+      <li  class="field__item editorial-list__item">
+      
+
+<article  role="article" about="/marc-siegel" class="public-tag public-tag--compact public-tag-compact">
+  
+  
+  <a href="/marc-siegel" class="public-tag-compact__link">
+    <h3 class="public-tag-compact__title">
+      <span>Marc Siegel</span>
+
+    </h3>
+
+    
+            <div class="public-tag-compact__figure field field--name-field-primary-media field--type-entity-reference field--label-hidden field__item"><figure class="media media--image" role="group">
+  
+    <img src="https://cloudfront.mediamatters.org/styles/scale_180px/s3/static/D8Audio/2020/04/29/marc-siegal-mmfa-tag.png?itok=c8HRmeua" width="180" height="127" alt="Marc Siegel" typeof="foaf:Image" />
+
+
+
+
+
+  </figure>
+</div>
+      
+  </a>
+</article>
+
+    </li>
+      <li  class="field__item editorial-list__item">
+      
+
+<article  role="article" about="/fox-news" class="public-tag public-tag--compact public-tag-compact">
+  
+  
+  <a href="/fox-news" class="public-tag-compact__link">
+    <h3 class="public-tag-compact__title">
+      <span>Fox News</span>
+
+    </h3>
+
+    
+            <div class="public-tag-compact__figure field field--name-field-primary-media field--type-entity-reference field--label-hidden field__item"><figure class="media media--image" role="group">
+  
+    <img src="https://cloudfront.mediamatters.org/styles/scale_180px/s3/static/d8PublicTagsImages/Networks-Outlets/Fox-News-MMFA-Tag.png?itok=W1UnGnOw" width="180" height="127" alt="Fox-News-MMFA-Tag.png" title="Fox-News-MMFA-Tag" typeof="foaf:Image" />
+
+
+
+
+
+  </figure>
+</div>
+      
+  </a>
+</article>
+
+    </li>
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+          </div>
+  </section>
+
+
+  <section  id="block-mmfa-share-count-block" class="aside-block--tint aside-block">
+    
+        
+
+    <div class="aside-block__body">
+              
+
+
+<div
+  class="social-share-counter"
+  data-share-url="https://www.mediamatters.org/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel"
+  data-share-services="facebook"
+>
+  <div class="social-share-counter__comments">
+    <div class="icon">
+          <svg viewbox="0 0 24 24" class="icon icon--comments"  aria-labelledby="icon-label--comments" >
+          <title id="icon-label--comments">Comments</title>
+    
+    <use xlink:href="#comments"></use>
+  </svg>
+
+    </div>
+
+    <div class="text">
+      <span class="talk_comment_count">0 Comments</span>
+
+              <script src="https://talk.mmfa.io/static/embed/count.js?notext"></script>
+          </div>
+  </div>
+
+  <div class="social-share-counter__shares">
+    <div class="icon">
+        <svg viewbox="0 0 24 24" class="icon icon--share-count"  aria-labelledby="icon-label--share-count" >
+          <title id="icon-label--share-count">Share Count</title>
+    
+    <use xlink:href="#share-count"></use>
+  </svg>
+
+    </div>
+
+    <div class="text">
+      <span class="count">0</span> <span class="label">Shares</span>
+    </div>
+  </div>
+</div>
+
+          </div>
+  </section>
+
+
+  </aside>
+
+    
+    <div     
+  
+  
+  
+                            
+ class="layout-content layout-content--main layout-content--main-lower"
+>
+    <div class="views-element-container" id="block-editorial-post-content">
+  
+    
+      <div><div class="js-view-dom-id-53d17337756442fa8cd632c84e70b683ccc008225184ce84c66865d1f6f66cee">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="editorial-full__post">
+  
+<aside  class="editorial-full__related field field--name-field-related field--label-above spotted-cap">
+      
+
+<h2     
+  
+        
+  
+  
+ class="section-title"
+>
+      Related
+          </h2>
+  
+  <div class="aside-block aside-block--tint aside-block--wide l--gutter-pull">
+    <ol class="editorial-list editorial-list--inline field__items">
+              <li  class="field__item editorial-list__item">
+          
+
+<article role="article" about="/fox-news/laura-ingraham-attacks-dr-fauci-im-shocked-hes-still-heading-coronavirus-task-force" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/fox-news/laura-ingraham-attacks-dr-fauci-im-shocked-hes-still-heading-coronavirus-task-force"><span>Laura Ingraham attacks Dr. Fauci:  “I&#039;m shocked that he&#039;s still heading the coronavirus task force” </span>
+</a>
+  </h3>
+  
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--video"  aria-labelledby="icon-label--video" >
+          <title id="icon-label--video">Video &amp; Audio</title>
+    
+    <use xlink:href="#video"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-16T22:58:48-0400">10/16/20 10:58 PM EDT</time>
+</p>
+</article>
+
+        </li>
+              <li  class="field__item editorial-list__item">
+          
+
+<article role="article" about="/fox-news/tucker-carlson-and-osama-bin-ladens-niece-talk-about-how-hard-it-be-pro-trump" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/fox-news/tucker-carlson-and-osama-bin-ladens-niece-talk-about-how-hard-it-be-pro-trump"><span> Tucker Carlson and Osama Bin Laden&#039;s niece talk about how hard it is to be pro-Trump</span>
+</a>
+  </h3>
+  
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--video"  aria-labelledby="icon-label--video" >
+          <title id="icon-label--video">Video &amp; Audio</title>
+    
+    <use xlink:href="#video"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-16T21:19:40-0400">10/16/20 9:19 PM EDT</time>
+</p>
+</article>
+
+        </li>
+              <li  class="field__item editorial-list__item">
+          
+
+<article role="article" about="/coronavirus-covid-19/fox-news-has-covered-hunter-biden-three-times-much-covid-19-wednesday" class="article article--compact editorial-compact">
+  
+  <h3 class="editorial-compact__title">
+    <a href="/coronavirus-covid-19/fox-news-has-covered-hunter-biden-three-times-much-covid-19-wednesday"><span>Fox News has covered Hunter Biden three times as much as COVID-19 since Wednesday</span>
+</a>
+  </h3>
+  
+
+  
+
+<p class="dateline-compact">
+      <span class="dateline-compact__type">
+        <svg viewbox="0 0 24 24" class="icon icon--study"  aria-labelledby="icon-label--study" >
+          <title id="icon-label--study">Research/Study</title>
+    
+    <use xlink:href="#study"></use>
+  </svg>
+
+    </span>
+  
+  <time datetime="2020-10-16T17:22:01-0400">10/16/20 5:22 PM EDT</time>
+</p>
+</article>
+
+        </li>
+          </ol>
+  </div>
+</aside>
+<aside id="coral_talk_stream"></aside>
+<script
+  src="https://talk.mmfa.io/static/embed.js"
+  async
+  onload="
+  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+    talk: 'https://talk.mmfa.io'
+  });"
+></script>
+
+</div>
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+
+</div>  </main>
+
+  
+
+<footer class="footer" role="contentinfo">
+  <div class="footer--upper">
+    <div class="footer--inner l--constrained-narrow">
+      <div id="block-mmfa-footer-branding" class="footer--branding">
+  
+    
+    
+
+<h1     
+  
+  
+  
+  
+ class="site-logo"
+>
+  <a
+    href="/"
+    title="Home"
+    rel="home"
+    class="site-logo--link"
+  >
+    <img
+      src="/themes/custom/mmfa_theme/logo.svg"
+      alt="Media Matters for America"
+      class="site-logo--image"
+    />
+  </a>
+</h1>
+</div>
+
+      <div class="email-update-form email-signup" data-drupal-selector="email-update-form" id="block-email-updates">
+  
+    
+      <form action="/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel" method="post" id="email-update-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-email form-item-mail js-form-item-mail">
+      <label for="edit-mail" class="js-form-required form-required">Sign up for email updates</label>
+        <input data-drupal-selector="edit-mail" type="email" id="edit-mail" name="mail" value="" size="60" maxlength="254" placeholder="Email" class="form-email required" required="required" aria-required="true" />
+
+        </div>
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-sb-form-id" type="hidden" name="sb_form_id" value="611" />
+<input data-drupal-selector="edit-campaign-id" type="hidden" name="campaign_id" value="701f40000002nyIAAQ" />
+<input data-drupal-selector="edit-submission-text" type="hidden" name="submission_text" value="Thanks for signing up for email updates! You&#039;ll be hearing from us soon." />
+<input autocomplete="off" data-drupal-selector="form-h9sw8frbbiuul9kjdvqhi0ugf2kndzhmcq7brwc5vba" type="hidden" name="form_build_id" value="form-H9SW8frbbiUul9kjDVqhI0UGF2kNdzHMcQ7bRwC5vbA" />
+<input data-drupal-selector="edit-email-update-form" type="hidden" name="form_id" value="email_update_form" />
+
+</form>
+
+  </div>
+
+    </div>
+  </div>
+
+  <div class="footer--lower">
+    <div class="footer--inner l--constrained-narrow">
+      <nav role="navigation" aria-labelledby="block-mmfa-theme-footer-menu" id="block-mmfa-theme-footer" class="footer--menu">
+            
+  <h2 class="visually-hidden" id="block-mmfa-theme-footer-menu">Footer menu</h2>
+  
+
+        
+          <ul  class="menu menu--footer" data-depth="0">
+          <li  class="menu__item">
+        <a href="/about" class="menu__link">About</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/contact-us" class="menu__link" data-drupal-link-system-path="node/2827236">Contact</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/corrections" class="menu__link" data-drupal-link-system-path="node/2827511">Corrections</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/submissions" class="menu__link" data-drupal-link-system-path="node/2827201">Submissions</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/job-openings" class="menu__link" data-drupal-link-system-path="node/1983981">Jobs</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/privacy" class="menu__link" data-drupal-link-system-path="node/2827211">Privacy Policy</a>
+              </li>
+          <li  class="menu__item">
+        <a href="/terms-conditions" class="menu__link" data-drupal-link-system-path="node/2827216">Terms &amp; Conditions</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+      <nav role="navigation" aria-labelledby="block-social-media-menu-menu" id="block-social-media-menu" class="footer--social">
+            
+  <h2 class="visually-hidden" id="block-social-media-menu-menu">Social Media Menu</h2>
+  
+
+        
+          <ul  class="menu menu--social-media" data-depth="0">
+              <li  class="menu__item">
+          <a href="https://www.facebook.com/Mediamatters/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--facebook"  aria-labelledby="icon-label--facebook" >
+          <title id="icon-label--facebook">Facebook</title>
+    
+    <use xlink:href="#facebook"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://www.instagram.com/mediamattersforamerica/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--instagram"  aria-labelledby="icon-label--instagram" >
+          <title id="icon-label--instagram">Instagram</title>
+    
+    <use xlink:href="#instagram"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://mediamattersforamerica.tumblr.com/" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--tumblr"  aria-labelledby="icon-label--tumblr" >
+          <title id="icon-label--tumblr">Tumblr</title>
+    
+    <use xlink:href="#tumblr"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://twitter.com/mmfa" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--twitter"  aria-labelledby="icon-label--twitter" >
+          <title id="icon-label--twitter">Twitter</title>
+    
+    <use xlink:href="#twitter"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+              <li  class="menu__item">
+          <a href="https://www.youtube.com/channel/UC_70iWZ6ym2cglS_kv5YfmA" class="menu__link">
+              <svg viewbox="0 0 24 24" class="icon icon--youtube"  aria-labelledby="icon-label--youtube" >
+          <title id="icon-label--youtube">YouTube</title>
+    
+    <use xlink:href="#youtube"></use>
+  </svg>
+
+          </a>
+
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+      <div id="block-mmfa-copyright" class="footer--copyright">
+  
+    
+      <p class="mmfa-copyright">&copy; 2020 Media Matters for America</p>
+
+  </div>
+
+    </div>
+  </div>
+</footer>
+</div>
+
+  </div>
+
+          
+          <div class="visually-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg"><symbol id="arrow-down" viewBox="0 0 25 24"><path d="M18 10l-6 6-6-6z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="arrow" viewBox="0 0 25 24"><path d="M16 11V8l4 4-4 4v-3H6v-2z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="article" viewBox="0 0 24 24"><path d="M0 1h24v4H0zm0 6h24v4H0zm0 6h24v4H0zm0 6h18v4H0z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="audio" viewBox="0 0 25 24"><path d="M12 16a4 4 0 0 1-4-4V4a4 4 0 0 1 8 0v8a4 4 0 0 1-4 4zm10-4c0 4.829-3.441 8.869-8 9.798V24h-4v-2.202C5.441 20.869 2 16.829 2 12h4c0 3.309 2.691 6 6 6s6-2.691 6-6z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="close-blue" viewBox="0 0 25 24"><path d="M10.586 12L2.808 4.222l1.414-1.414 7.779 7.778 7.778-7.778 1.414 1.414L13.415 12l7.778 7.778-1.414 1.414L12 13.414l-7.779 7.778-1.414-1.414z" fill="#1976D2" fill-rule="evenodd"/></symbol><symbol id="close-white" viewBox="0 0 25 24"><path d="M10.586 12L2.808 4.222l1.414-1.414 7.779 7.778 7.778-7.778 1.414 1.414L13.415 12l7.778 7.778-1.414 1.414L12 13.414l-7.779 7.778-1.414-1.414z" fill="#fff" fill-rule="evenodd"/></symbol><symbol id="close" viewBox="0 0 25 24"><path d="M10.586 12L2.808 4.222l1.414-1.414 7.779 7.778 7.778-7.778 1.414 1.414L13.415 12l7.778 7.778-1.414 1.414L12 13.414l-7.779 7.778-1.414-1.414z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="comments" viewBox="0 0 28 24"><path fill="inherit" fill-rule="evenodd" d="M16 6.667h-2.667a2.667 2.667 0 0 0-2.666 2.666V12H8l-4 4v-4H1.333A1.333 1.333 0 0 1 0 10.667V1.333C0 .597.597 0 1.333 0h13.334C15.403 0 16 .597 16 1.333v5.334zM24 20v4l-4-4h-6.667A1.333 1.333 0 0 1 12 18.667V9.333C12 8.597 12.597 8 13.333 8h13.334C27.403 8 28 8.597 28 9.333v9.334c0 .736-.597 1.333-1.333 1.333H24z"/></symbol><symbol id="date" viewBox="0 0 24 24"><path d="M18 11h3V8h-3zm0 5h3v-3h-3zm0 5h3v-3h-3zm-5-10h3V8h-3zm0 5h3v-3h-3zm0 5h3v-3h-3zM8 11h3V8H8zm0 5h3v-3H8zm0 5h3v-3H8zM3 11h3V8H3zm0 5h3v-3H3zm0 5h3v-3H3zM22 2h-2a2 2 0 0 0-4 0H8a2 2 0 0 0-4 0H2a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="email" viewBox="0 0 25 24"><path d="M17.73 12l6.586-6.587v13.172zm-3.293.464c-1.134 1.134-3.109 1.134-4.243 0L1.73 4h21.172zM.316 5.414L6.902 12 .316 18.586zm16 8L22.902 20H1.73l6.586-6.586.464.464c.945.945 2.2 1.465 3.536 1.465s2.59-.52 3.536-1.465z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="facebook" viewBox="0 0 25 24"><path d="M13.994 24H9.64V13.053H6V8.786h3.64V5.64C9.64 1.988 11.844 0 15.063 0c1.541 0 2.867.116 3.253.168v3.816l-2.233.001c-1.75 0-2.09.842-2.09 2.077v2.724h4.176l-.544 4.267h-3.631z" fill="inherit"/></symbol><symbol id="instagram" viewBox="0 0 24 24"><path fill="inherit" d="M12 0C8.741 0 8.332.014 7.052.072 5.775.13 4.902.333 4.14.63a5.882 5.882 0 0 0-2.126 1.384A5.882 5.882 0 0 0 .63 4.14c-.297.763-.5 1.635-.558 2.912C.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.058 1.277.261 2.15.558 2.912.307.79.717 1.459 1.384 2.126A5.882 5.882 0 0 0 4.14 23.37c.763.297 1.635.5 2.912.558C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 1.277-.058 2.15-.261 2.912-.558a5.883 5.883 0 0 0 2.126-1.384 5.883 5.883 0 0 0 1.384-2.126c.297-.763.5-1.635.558-2.912.058-1.28.072-1.689.072-4.948 0-3.259-.014-3.668-.072-4.948-.058-1.277-.261-2.15-.558-2.912a5.882 5.882 0 0 0-1.384-2.126A5.883 5.883 0 0 0 19.86.63c-.763-.297-1.635-.5-2.912-.558C15.668.014 15.259 0 12 0zm0 2.162c3.204 0 3.584.012 4.849.07 1.17.053 1.805.249 2.228.413.56.218.96.478 1.38.898.42.42.68.82.898 1.38.164.423.36 1.058.413 2.228.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.053 1.17-.249 1.805-.413 2.228-.218.56-.478.96-.898 1.38-.42.42-.82.68-1.38.898-.423.164-1.058.36-2.228.413-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.17-.053-1.805-.249-2.228-.413a3.717 3.717 0 0 1-1.38-.898c-.42-.42-.68-.82-.898-1.38-.164-.423-.36-1.058-.413-2.228-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.054-1.17.249-1.805.413-2.228.218-.56.478-.96.898-1.38.42-.42.82-.68 1.38-.898.423-.164 1.058-.36 2.228-.413 1.265-.058 1.645-.07 4.849-.07zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-10.162a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm7.846-.244a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></symbol><symbol id="menu-white" viewBox="0 0 25 24"><path d="M0 5h24v2H0zm0 6h24v2H0zm0 6h24v2H0z" fill="#fff" fill-rule="evenodd"/></symbol><symbol id="menu" viewBox="0 0 25 24"><path d="M0 5h24v2H0zm0 6h24v2H0zm0 6h24v2H0z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="minus" viewBox="0 0 25 24"><path d="M6 11h12v2H6z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="more" viewBox="0 0 25 24"><path d="M4 13.998a1.998 1.998 0 0 1-2-2c0-.53.21-1.04.58-1.42a2.044 2.044 0 0 1 2.18-.43c.13.05.24.11.35.19.11.07.21.15.3.24.38.38.59.89.59 1.42s-.21 1.04-.59 1.41c-.09.1-.19.18-.3.25s-.22.14-.35.19c-.12.05-.24.08-.37.11s-.26.04-.39.04zm8 0c-.13 0-.26-.01-.39-.04s-.25-.06-.37-.11c-.13-.05-.24-.12-.35-.19s-.21-.15-.3-.25c-.38-.37-.59-.88-.59-1.41s.21-1.04.59-1.42c.09-.09.19-.17.3-.24.11-.08.22-.14.35-.19a2.044 2.044 0 0 1 2.18.43c.37.38.58.89.58 1.42a1.998 1.998 0 0 1-2 2zm8 0a1.998 1.998 0 0 1-2-2c0-.53.21-1.04.58-1.42.75-.74 2.09-.74 2.83 0 .38.38.59.89.59 1.42s-.21 1.04-.59 1.41c-.37.38-.88.59-1.41.59z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="narrative"><path d="M0 1h6v4H0V1zm0 6h6v4H0V7zm8-6h16v4H8V1zm0 6h16v4H8V7zm-8 6h6v4H0v-4zm8 0h16v4H8v-4zm-8 6h6v4H0v-4zm8 0h16v4H8v-4z" fill="inherit"/></symbol><symbol id="plus" viewBox="0 0 25 24"><path d="M11 11V6h2v5h5v2h-5v5h-2v-5H6v-2z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="printer" viewBox="0 0 24 22"><path fill="inherit" fill-rule="evenodd" d="M20 0v6a4 4 0 0 1 4 4v8h-4v4H4v-4H0v-8a4 4 0 0 1 4-4V0h16zm-2 14H6v6h12v-6zm-2 2v2H8v-2h8zM8 8H6v2h2V8zm10-6H6v4h12V2z"/></symbol><symbol id="search-blue" viewBox="0 0 25 24"><path d="M3 9a6 6 0 1 1 10.243 4.242l-.001.001A6 6 0 0 1 3 9m20.707 12.586l-7.376-7.377A8.951 8.951 0 0 0 18 9c0-4.971-4.029-9-9-9S0 4.029 0 9s4.029 9 9 9a8.951 8.951 0 0 0 5.209-1.669l7.377 7.376a.999.999 0 0 0 1.414 0l.707-.707a.999.999 0 0 0 0-1.414" fill="#1976D2" fill-rule="evenodd"/></symbol><symbol id="search" viewBox="0 0 25 24"><path d="M3 9a6 6 0 1 1 10.243 4.242l-.001.001A6 6 0 0 1 3 9m20.707 12.586l-7.376-7.377A8.951 8.951 0 0 0 18 9c0-4.971-4.029-9-9-9S0 4.029 0 9s4.029 9 9 9a8.951 8.951 0 0 0 5.209-1.669l7.377 7.376a.999.999 0 0 0 1.414 0l.707-.707a.999.999 0 0 0 0-1.414" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="share-count" viewBox="0 0 48 48"><path fill="inherit" d="M10 24a5 5 0 1 1-.1-1h8.183a6.006 6.006 0 0 1 4.771-4.89L20.713 7.936a4 4 0 1 1 .958-.301l2.182 10.366L24 18c1.853 0 3.51.84 4.61 2.16l8.909-5.94a5 5 0 1 1 .532.847l-8.867 5.91c.519.888.816 1.921.816 3.023 0 .901-.199 1.756-.555 2.523l11.731 8.644a4 4 0 1 1-.615.789l-11.615-8.559A5.993 5.993 0 0 1 24 30c-.925 0-1.8-.21-2.583-.583l-3.127 7.036A6.002 6.002 0 0 1 16 48a6 6 0 1 1 1.331-11.852l3.218-7.24A5.993 5.993 0 0 1 18 24h-8z"/></symbol><symbol id="study" viewBox="0 0 24 24"><path d="M7 12h4v12H7zm6-12h4v24h-4zM1 6h4v18H1zm18 12h4v6h-4z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="tumblr" viewBox="0 0 25 24"><path d="M19.5 22.694S17.5 24 14 24c-4.5 0-6.5-2-6.5-6v-7.5H4V7c3-1 5-2.5 5.5-7H13v6h5.5v4.5H13v6c0 2.5.5 3.5 3 3.5 1.5 0 3.5-1 3.5-1z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="twitter" viewBox="0 0 25 24"><path d="M21.558 7.491c0-.213 0-.425-.015-.636A10.019 10.019 0 0 0 24 4.305a9.828 9.828 0 0 1-2.828.776 4.941 4.941 0 0 0 2.165-2.724 9.868 9.868 0 0 1-3.127 1.195 4.929 4.929 0 0 0-8.391 4.491A13.98 13.98 0 0 1 1.67 2.9a4.928 4.928 0 0 0 1.525 6.573A4.887 4.887 0 0 1 .96 8.855v.063a4.926 4.926 0 0 0 3.95 4.827 4.916 4.916 0 0 1-2.223.084 4.93 4.93 0 0 0 4.6 3.42A9.88 9.88 0 0 1 0 19.289a13.94 13.94 0 0 0 7.548 2.209c9.056.003 14.01-7.5 14.01-14.007z" fill="inherit"/></symbol><symbol id="video" viewBox="0 0 25 24"><path d="M0 24h24V0H0zM9 7l8 5-8 5z" fill="inherit" fill-rule="evenodd"/></symbol><symbol id="youtube" viewBox="0 0 25 24"><path d="M12 3.5c12 0 12 0 12 8.5s0 8.5-12 8.5-12 0-12-8.5 0-8.5 12-8.5zm-3 13l7.5-4.5L9 7.5z" fill="inherit" fill-rule="evenodd"/></symbol></svg>          </div>
+          <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2854146","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/search":true},"mediaelement":{"attachSitewide":1,"setDimensions":false,"defaultAudioWidth":"-1","defaultAudioHeight":"-1","shareUrl":"https:\/\/www.mediamatters.org\/coronavirus-covid-19\/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel","audioVolume":"vertical","videoVolume":"vertical","hideVideoControlsOnLoad":true,"hideVideoControlsOnPause":true,"features":["playpause","current","progress","duration","tracks","volume","fullscreen","share","rightclick"]},"user":{"uid":0,"permissionsHash":"b1e2123a5125e2411ecda1d54e81a014618187df1bde0e4e78ae55a1e25187a9"}}</script>
+<script src="/sites/default/files/js/js_FGOCD50cOJCAQgXE5LWVS9-mEXMfZ9juz8AwTN8AWkc.js"></script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c12cfc37af14d90"></script>
+<script src="/sites/default/files/js/js_jtQiBymFh_X8f7sBNcb2Q2HKuESZVl8nvrjb9_C4GRk.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9bb400200b","applicationID":"616425105","transactionName":"NVMAY0RVWhJXVhAKDAwZI1RCXVsPGXEWFhMDWj5ZWVBRPXVaChcRDVoOUkRoeg5SUDIKBhV1DVlCRlsNWlAWTl0UXwdA","queueTime":0,"applicationTime":501,"atts":"GRQDFQxPSRw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+        </html>
+https://www.mediamatters.org/coronavirus-covid-19/persistent-anti-science-propaganda-foxs-medical-correspondent-marc-siegel

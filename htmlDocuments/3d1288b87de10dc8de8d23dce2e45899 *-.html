@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Fox TV Stations: Anvato Player Frame</title>
+        <meta name="prism.channel" content="fts">
+        <script type="text/javascript">
+        var playerId,
+          props,
+          decodedProps,
+          stationCallSign;
+
+        function uuidv4() {
+          return 'xxxxxxxx-xxxx-4xxx-bxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+          });
+        }
+        playerId = "player-" + uuidv4();
+        var playerDiv = document.createElement("div");
+        playerDiv.setAttribute("id", playerId);
+
+        props = getQueryParam("props") || null;
+        decodedProps = JSON.parse(atob(props));
+        stationCallSign = getQueryParam("station") || '';
+        upperCaseCallSign = stationCallSign.toUpperCase();
+        source = getQueryParam("source") || '';
+
+        var favicon = document.createElement("link");
+        favicon.type = "image/x-icon";
+        favicon.rel = "shortcut icon";
+        favicon.setAttribute("href", "https://www."+ decodedProps.plugins.customSegmentPlugin.app_name +"/favicons/"+stationCallSign+"/favicon.ico");
+        document.getElementsByTagName('head')[0].appendChild(favicon);
+
+        var metaValues = {
+          'prism.stationCallSign': stationCallSign,
+          'fox.app_version': 'v77',
+          'fox.app_build': 'no build version',
+          'fox.name': 'Post Landing',
+          'fox.category': decodedProps.plugins.dfp.clientSide.keyValues.stype[0],
+          'fox.page_content_category': decodedProps.plugins.dfp.clientSide.keyValues.stype[0],
+          'fox.page_name': upperCaseCallSign + ':web:post:article:' + decodedProps.title,
+          'fox.page_content_level_1': upperCaseCallSign + ':web:post',
+          'fox.page_content_level_2': upperCaseCallSign + ':web:post:article',
+          'fox.page_content_level_3': upperCaseCallSign + ':web:post:article' + decodedProps.title,
+          'fox.page_content_level_4': upperCaseCallSign + ':web:post:article' + decodedProps.title,
+          'fox.page_type': 'post-article',
+          'fox.page_content_distributor': source,
+          'fox.page_content_type_of_story': 'no story type'
+        };
+
+        for (var x in metaValues) {
+          buildMetaTag(x, metaValues[x]);
+        }
+
+        function getQueryParam(param) {
+        var ret = "",
+        str = window.location.search.slice(1);
+
+        var ampRegex = /&amp;/gi;
+        var equalSignRegex = /%3D/gi;
+        var ampParams = str.replace(ampRegex, "&");
+        var normalizedParams = ampParams.replace(equalSignRegex, '=');
+
+        if (normalizedParams.length > 0) {
+          var sp = normalizedParams.split("&"),
+          match = false;
+          for (var i = 0; i < sp.length; i++) {
+            if (sp[i].indexOf(param) === 0) {
+              match = sp[i]; break;
+            }
+          }
+          if (match) {
+            var arr = match.match(/\=(.+)/);
+            ret = (arr && arr[1]) ? arr[1] : "";
+          }
+        }
+        return ret;
+      }
+
+      function buildMetaTag(tagName, contentValue) {
+        var meta = document.createElement("meta");
+        meta.name = tagName;
+        meta.setAttribute("content", contentValue);
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+
+      </script>
+      <script src="https://static.foxtv.com/static/orion/scripts/core/ag.core.js"></script>
+      <script src="https://global.fncstatic.com/static/isa/core.js"></script>
+      <script src="https://static.foxtv.com/static/orion/scripts/station/default/loader.js"></script>
+      <script src="https://w3.cdn.anvato.net/player/prod/v3/scripts/anvload.js"></script>
+      <script async src="https://static.foxnews.com/static/leap/loader.js"></script>
+    </head>
+    <body style="margin:0;padding: 0;">
+      <div class="site-header"></div>
+        <script type="text/javascript">
+
+          (function(){
+
+            window.AnvatoPlayer(playerId).init({
+              "video": decodedProps.video,
+              "accessKey": decodedProps.accessKey,
+              "token": decodedProps.token,
+              "mcp": decodedProps.mcp,
+              "format": decodedProps.format,
+              "title": decodedProps.title,
+              "description": decodedProps.description,
+              "autoplay": false,
+              "width": "100%",
+              "plugins": {
+                "customSegmentPlugin": {
+                  "script": `https://static.foxtv.com/static/orion/scripts/core/utils/CustomSegmentPlugin.js`,
+                  "segmentId": decodedProps.plugins.customSegmentPlugin.segmentId,
+                  "primary_business_unit": "fts",
+                  "secondary_business_unit": decodedProps.plugins.customSegmentPlugin.secondary_business_unit,
+                  "app_name": decodedProps.plugins.customSegmentPlugin.app_name,
+                  "app_platform": decodedProps.plugins.customSegmentPlugin.app_platform,
+                  "app_version": decodedProps.plugins.customSegmentPlugin.app_version
+                },
+                "dfp": {
+                  "clientSide": {
+                    "adTagUrl": decodedProps.plugins.dfp.clientSide.adTagUrl,
+                    "keyValues": {
+                      "stype": decodedProps.plugins.dfp.clientSide.keyValues.stype,
+                      "ptype": decodedProps.plugins.dfp.clientSide.keyValues.ptype,
+                      "c": decodedProps.plugins.dfp.clientSide.keyValues.c,
+                      "d": decodedProps.plugins.dfp.clientSide.keyValues.d
+                    }
+                  }
+                }
+              }
+            })
+
+          })();
+
+        </script>
+    </body>
+</html>https://static.fox4news.com/segment/player-frame.html?site=fts

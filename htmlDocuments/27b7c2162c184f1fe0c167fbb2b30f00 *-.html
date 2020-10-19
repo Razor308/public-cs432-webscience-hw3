@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html id="scoped-css" class="not-logged-in no-js commerce locale-en">
+
+  <head prefix="fb: http://www.facebook.com/2008/fbml og: http://opengraphprotocol.org/schema/">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Official Home Page of Meresha</title>
+
+
+
+    
+  <meta name="google-site-verification" content="fWh_HT6IUohyi3qQN5Jzda05lTDp6VpvCT_1AvH6eAo">
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '680308565457330');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=680308565457330&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+  <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.agent='plbandzoogle';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '680308565457330');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=680308565457330&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="//imagery.zoogletools.com/u/169509/c2337fe65cf32bed84699c1bd1a50fffcd02a1eb/original/meresha-orange-avatar-square-200-x-200.png/!!/b%3AW1sicmVzaXplIixbNjQsNjQsIl4iXV0sWyJleHRyYWN0Iix7IndpZHRoIjo2NCwiaGVpZ2h0Ijo2NCwiZ3Jhdml0eSI6IkNlbnRlciJ9XV0%3D.ico" />
+
+<meta name="viewport" content="width=device-width" />
+
+
+<link rel="stylesheet" media="screen" href="//assets-production.bndzgl.com/assets/usersite/application-be5ad61ffd0afc6bebb9d17d1b7cfb2d408da3b16df48c6f9e9e1792627d1b2f.css" />
+    <link href="https://s3.amazonaws.com/content.sitezoogle.com/u/169509/theme_configs/39/764499.css?1600027172" rel="stylesheet" type="text/css" />
+
+
+<link rel="stylesheet" media="print" href="//assets-production.bndzgl.com/assets/usersite_print-898d57949af0ad2bc4f547f83dd6ff3afcc8a33f1513e732d597872e7fa68553.css" />
+
+
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","name":"Meresha","url":"https:\/\/meresha.com\/","sameAs":["https:\/\/spoti.fi\/3cZxZ6b","https:\/\/apple.co\/379s8J9","http:\/\/www.facebook.com\/mereshas","http:\/\/twitter.com\/mereshas","http:\/\/bit.ly\/YouTubeMeresha","http:\/\/instagram.com\/mereshas"]}</script>
+
+
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="//assets-production.bndzgl.com/assets/usersite/application-c12af0d79c6101c57bf756c15003c4bb0abc7e5b99abbf627379d7d50c8959ad.js"></script>
+<script src="//assets-production.bndzgl.com/packs/js/usersite-aa733b10154a7b0c52c3.js" async="async"></script>
+
+  <script type="text/javascript">
+    themeJsManager.registerTheme(171, $.extend({}, themeJsManager.blankJs, {
+	// helper function
+	_throttle: function (func, limit, context) {
+		var wait = false;
+		return function () {
+			if (!wait) {
+				func.call(context);
+				wait = true;
+				setTimeout(function () {
+					wait = false;
+					func.call(context);
+				}, limit);
+			}
+		}
+	},
+
+	_scrollCheck: function () {
+		if (!this._isUserSite()) { // not for control panel
+			return;
+		}
+
+		if ($('.ie-flexbox-fix-wrapper').css('position') === 'sticky') { // not if we are already handling this in CSS
+			return;
+		}
+
+		if (this._shouldRemoveSticky()) {
+			$('.title-nav-container').removeClass('sticky');
+
+		} else if (this._shouldAddSticky()) {
+			$('.title-nav-container').addClass('sticky');
+		}
+	},
+
+	_shouldAddSticky: function () {
+		var barTop = $('.title-nav-container')[0].getBoundingClientRect().top;
+		return barTop < 0;
+	},
+
+	_shouldRemoveSticky: function () {
+		var barHeight = $('.title-nav-container')[0].offsetHeight;
+		var headerBottom = $('#page-header')[0].getBoundingClientRect().bottom;
+		return headerBottom - barHeight >= 0;
+	},
+
+	_setHeaderHeight: function() {
+		var pageHeader = $('#usersite-container #page-header');
+		var navContainer = $('.title-nav-container');
+		if (pageHeader.length === 0 || navContainer.length === 0) {
+			return;
+		}
+		pageHeader.css('height', '');
+		var headerHeight = pageHeader[0].getBoundingClientRect().height;
+		var navHeight = navContainer[0].getBoundingClientRect().height;
+		var newHeight = headerHeight > navHeight ? headerHeight : navHeight;
+		pageHeader.css('height', Math.floor(newHeight));
+	},
+
+	_needsHeaderHeightSet: function() {
+		var pageHeader = $('#usersite-container #page-header');
+		var navContainer = $('.title-nav-container');
+		if (pageHeader.length === 0 || navContainer.length === 0) {
+			return false;
+		}
+		return navContainer.outerHeight() >= pageHeader.outerHeight();
+	},
+
+	_isUserSite: function () {
+		// no wysiwyg or view site bar
+		return $('.wysiwyg').length === 0 && $('#edit-bar-wrap').length === 0;
+	},
+
+	_setupScrollCheck: function () {
+		this.scrollListenerFn = this._throttle(this._scrollCheck, 50, this);
+		this.$window.on('scroll.requiemScrollCheck', this.scrollListenerFn);
+		this.$container.on('scroll.requiemScrollCheck', this.scrollListenerFn);
+	},
+
+	_removeScrollCheck: function () {
+		this.$window.off('scroll.requiemScrollCheck', this.scrollListenerFn);
+		this.$container.off('scroll.requiemScrollCheck', this.scrollListenerFn);
+	},
+
+	_setupHeaderHeightCheck: function() {
+		if (!this._isUserSite() || !this._needsHeaderHeightSet()) {
+			return;
+		}
+		this.setHeaderHeightFn = this._throttle(this._setHeaderHeight, 50, this);
+		this.$window.on('resize.setRequiemHeaderHeight', this.setHeaderHeightFn);
+		this.$window.on('load.setRequiemHeaderHeight', this._setHeaderHeightFn);
+	},
+
+	_removeHeaderHeightCheck: function () {
+		this.$window.off('load.setRequiemHeaderHeight', this._setHeaderHeightFn);
+		this.$window.off('resize.setRequiemHeaderHeight', this._setHeaderHeightFn)
+	},
+
+	setup: function () {
+		this.$window = $(window);
+		this.$container = $('#usersite-container');
+		if ($('.intro-page').length > 0) {
+			return;
+		}
+		this._setupScrollCheck();
+		this._setupHeaderHeightCheck();
+	},
+
+	tearDown: function () {
+		this._removeScrollCheck();
+		this._removeHeaderHeightCheck();
+	},
+
+	plugins: {
+		scrollToContentTab: {
+			scrollTop: function() {
+				return $(window).height();
+			}
+		},
+		parallaxyPagePhoto: {
+			containerSelector: '.page-media-container',
+			elementSelector: '.page-media-container',
+			scrollSpeed: 1.2
+		},
+		navTitleNextToFlexbox: {}
+	}
+}
+));
+  </script>
+
+
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="cKY3bbdFF1PxYXomIohLAH0EHVCK5Iryw70RV6ch/ZDmiVyttCdskWXkQFWRkZpIzAai2QMgmH0kvW8+SD7NHQ==" />
+<meta name="title" content="Official Home Page of Meresha" />
+<meta property="og:title" content="Official Home Page of Meresha" />
+<meta name="twitter:title" content="Official Home Page of Meresha" />
+<meta name="description" content="Home Page of Meresha  - (❁´◡`❁)(musical) artist &amp; alien luver." />
+<meta property="og:description" content="Home Page of Meresha  - (❁´◡`❁)(musical) artist &amp; alien luver." />
+<meta name="twitter:description" content="Home Page of Meresha  - (❁´◡`❁)(musical) artist &amp; alien luver." />
+<meta name="image" content="https://imagery.zoogletools.com/u/169509/651d2ef4094b4206994f89ba82a960148271e072/original/meresha-orange-avatar-square-200-x-200.png" />
+<meta property="og:image" content="https://s3.amazonaws.com/content.sitezoogle.com/u/169509/651d2ef4094b4206994f89ba82a960148271e072/original/meresha-orange-avatar-square-200-x-200.png" />
+<meta name="image:width" content="200" />
+<meta name="image:height" content="200" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta name="twitter:image" content="https://imagery.zoogletools.com/u/169509/651d2ef4094b4206994f89ba82a960148271e072/original/meresha-orange-avatar-square-200-x-200.png" />
+<meta name="url" content="https://meresha.com/home" />
+<meta property="og:url" content="https://meresha.com/home" />
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<link rel="canonical" href="https://meresha.com/home">
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="turbolinks-visit-control" content="reload">
+
+
+    
+</head>
+  <body class="theme-requiem theme-requiem-a has-swms bz not-intro-page" data-slug="home" data-turbolinks="false" data-controller="live-chat">
+
+    
+
+    
+      
+      <div class="usersite-container-wrap">
+  <div id="usersite-container-inner-wrap">
+    <div id="usersite-container">
+        		<nav id="main-nav" class="mobile"><ul class="mobile list balance_4 top menu-length-8"><li class="top selected"><div><a class="top" href="/home">Home</a></div></li><li class="top"><div><a class="top" href="/music">Music</a></div></li><li class="top"><div><a class="top no-pjax" href="/vids">Vids</a></div></li><li class="top"><div><a class="top" href="/pics">Pics</a></div></li><li class="top"><div><a class="top" href="/shop">Shop</a></div></li><li class="top"><div><a class="top" href="/bio">Bio</a></div></li><li class="top"><div><a class="top" href="/contact">Contact</a></div></li><li class="has-submenu top"><div><a class="top" href="/members-only">Members Only</a></div><ul><li class="subpage"><div><a class="" href="/forum">Forum</a></div></li><li class="subpage"><div><a class="" href="/new-music-more">New Music + more</a></div></li><li class="subpage"><div><a class="" href="/best-of-meresha-free-download">Best of Meresha - free download</a></div></li><li class="subpage"><div><a class="" href="/vault-unreleased">Vault - Unreleased</a></div></li><li class="subpage"><div><a class="" href="/vault-2013">Vault 2013</a></div></li><li class="subpage"><div><a class="" href="/vault-2014">Vault 2014</a></div></li><li class="subpage"><div><a class="" href="/vault-2015">Vault 2015</a></div></li><li class="subpage"><div><a class="" href="/vault-2016">Vault 2016</a></div></li><li class="subpage"><div><a class="" href="/free-stickers-autographed-picture">Free stickers + autographed picture</a></div></li></ul></li></ul><ul class="my-sites"><li class="spotify"><a class="icon spotify" rel="noopener" target="_blank" title="https://spoti.fi/3cZxZ6b" href="https://spoti.fi/3cZxZ6b"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="icon">
+  <path d="M67,232 C68.2421872,232 69.4140628,232.234375 70.515625,232.703125 C71.6171872,233.171875 72.5722654,233.816406 73.3808596,234.636719 C74.1894532,235.457031 74.828125,236.40625 75.296875,237.484375 C75.765625,238.585937 76,239.757812 76,241 C76,242.21875 75.765625,243.378906 75.296875,244.480469 C74.828125,245.582031 74.1835936,246.537109 73.3632814,247.345703 C72.5429686,248.154297 71.5820314,248.792969 70.4804686,249.261719 C69.4023436,249.753906 68.2421872,250 67,250 C65.7578128,250 64.5976564,249.753906 63.5195314,249.261719 C62.4179686,248.792969 61.4570314,248.154297 60.6367186,247.345703 C59.8164064,246.537109 59.171875,245.582031 58.703125,244.480469 C58.234375,243.378906 58,242.21875 58,241 C58,239.757812 58.234375,238.585937 58.703125,237.484375 C59.171875,236.40625 59.8164064,235.457031 60.6367186,234.636719 C61.4570314,233.816406 62.4179686,233.171875 63.5195314,232.703125 C64.5976564,232.234375 65.7578128,232 67,232 Z M66.9472654,242.898437 C65.4824218,242.734375 63.8945314,242.851562 62.1835936,243.25 C62.0429686,243.273437 61.9316404,243.349609 61.8496096,243.478515 C61.7675782,243.607422 61.75,243.753906 61.796875,243.917969 C61.8203128,244.058594 61.8964846,244.169922 62.0253904,244.251953 C62.1285155,244.317578 62.2428907,244.341953 62.3685156,244.325078 L62.4648436,244.304687 C64.0351564,243.953125 65.4824218,243.847656 66.8066404,243.988281 C68.1308596,244.128906 69.3203128,244.527344 70.375,245.183594 C70.515625,245.253906 70.65625,245.271484 70.796875,245.236328 C70.9375,245.201172 71.0546872,245.113281 71.1484372,244.972656 C71.21875,244.855469 71.2363282,244.720703 71.2011718,244.568359 C71.1660154,244.416015 71.0664064,244.304687 70.9023436,244.234375 C69.7304686,243.507812 68.4121096,243.0625 66.9472654,242.898437 Z M67.1582032,239.998047 C65.2949218,239.77539 63.5429686,239.910156 61.9023436,240.402344 C61.7382814,240.449219 61.6152346,240.560547 61.5332032,240.736328 C61.4675781,240.876953 61.443203,241.013828 61.460078,241.146953 L61.4804686,241.246094 C61.5039064,241.433594 61.6035154,241.568359 61.7792968,241.65039 C61.9550782,241.732422 62.1367186,241.75 62.3242186,241.703125 C63.7304686,241.257812 65.2714846,241.134765 66.9472654,241.333984 C68.6230468,241.533203 70.0703128,241.996094 71.2890628,242.722656 C71.4296872,242.839844 71.59375,242.875 71.78125,242.828125 C71.96875,242.78125 72.1210936,242.675781 72.2382814,242.511719 C72.3320311,242.347656 72.3554686,242.171875 72.3085936,241.984375 C72.2617186,241.796875 72.1679686,241.667969 72.0273436,241.597656 C70.6445314,240.753906 69.0214846,240.220703 67.1582032,239.998047 Z M67.2285154,236.904297 C66.1621096,236.822265 65.1132814,236.816406 64.0820314,236.886719 C63.0742186,236.980469 62.171875,237.144531 61.375,237.378906 C61.1640628,237.449219 61.0058596,237.583984 60.9003904,237.783203 C60.7949218,237.982422 60.7773436,238.199219 60.8476564,238.433594 C60.9179686,238.621094 61.046875,238.773437 61.234375,238.890625 C61.421875,239.007812 61.6328128,239.03125 61.8671872,238.960937 C62.546875,238.75 63.34375,238.597656 64.2578128,238.503906 C65.1484372,238.433594 66.0742186,238.439453 67.0351564,238.521484 C67.9960936,238.603515 68.9335936,238.761719 69.8476564,238.996094 C70.7617186,239.230469 71.5820314,239.558594 72.3085936,239.980469 C72.5195314,240.097656 72.7421872,240.132812 72.9765628,240.085937 C73.2109372,240.039062 73.375,239.933594 73.46875,239.769531 C73.5859375,239.558594 73.6152346,239.341797 73.5566404,239.11914 C73.4980468,238.896484 73.3632814,238.726562 73.1523436,238.609375 C72.3320314,238.117187 71.40625,237.730469 70.375,237.449219 C69.34375,237.167969 68.2949218,236.986328 67.2285154,236.904297 Z" transform="translate(-58 -232)"></path>
+</svg>
+</a></li> <li class="apple-music"><a class="icon apple-music" rel="noopener" target="_blank" title="https://apple.co/379s8J9" href="https://apple.co/379s8J9"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 18" class="icon">
+  <path d="M74.142681,471.084268 L74.142681,477.392886 C74.142681,477.6342 74.1254446,477.866895 74.0909708,478.090971 C74.0564979,478.315048 73.9875513,478.530506 73.8841317,478.737346 C73.7117647,479.047606 73.4963061,479.306156 73.2377568,479.512996 C72.9792067,479.719836 72.677565,479.874965 72.3328317,479.978386 C72.1259918,480.047333 71.9277705,480.099043 71.738167,480.133516 C71.5485635,480.167989 71.3503422,480.185226 71.1435023,480.185226 C70.626402,480.2197 70.1696305,480.073188 69.7731871,479.745691 C69.3767445,479.418194 69.1268121,478.995896 69.0233926,478.478796 C68.954446,478.065116 69.014774,477.642819 69.2043775,477.211901 C69.393981,476.780985 69.7128591,476.462107 70.1610127,476.255267 C70.3333789,476.151846 70.5143638,476.074282 70.7039673,476.022572 C70.8935708,475.970862 71.0917921,475.92777 71.298632,475.893297 C71.5054719,475.858823 71.7123119,475.815732 71.9191518,475.764022 C72.1259918,475.712312 72.3328317,475.669221 72.5396717,475.634747 C72.677565,475.600273 72.7982218,475.539945 72.9016413,475.453762 C73.0050618,475.367579 73.0740084,475.238304 73.1084813,475.065937 C73.1084813,475.031464 73.1084813,474.996991 73.1084813,474.962517 C73.1084813,474.928044 73.1084813,474.89357 73.1084813,474.859098 C73.1084813,473.859371 73.1084813,472.859645 73.1084813,471.859918 C73.1084813,470.860192 73.1084813,469.860465 73.1084813,468.860739 C73.1084813,468.826265 73.1084813,468.791792 73.1084813,468.757319 C73.1084813,468.722846 73.1084813,468.688372 73.1084813,468.653899 C73.0740084,468.550479 73.0309169,468.481532 72.9792067,468.447059 C72.9274964,468.412585 72.8499311,468.395349 72.7465116,468.395349 C72.677565,468.395349 72.5913819,468.403968 72.4879615,468.421204 C72.3845419,468.438441 72.298358,468.447059 72.2294122,468.447059 C71.8157323,468.550479 71.3934338,468.645281 70.9625174,468.731464 C70.5316002,468.817648 70.1093025,468.895212 69.6956227,468.964159 L65.610534,469.791518 C65.610534,469.791518 65.5932967,469.791518 65.5588238,469.791518 C65.4209305,469.825992 65.3175101,469.88632 65.2485634,469.972503 C65.1796168,470.058687 65.1451439,470.187962 65.1451439,470.360328 C65.1451439,470.360328 65.1451439,470.377565 65.1451439,470.412038 C65.1451439,470.446512 65.1451439,470.463748 65.1451439,470.463748 C65.1451439,471.911628 65.1451439,473.350889 65.1451439,474.781532 C65.1451439,476.212175 65.1451439,477.651436 65.1451439,479.099316 C65.1451439,479.34063 65.1279066,479.573325 65.0934337,479.797401 C65.0589608,480.021477 64.9900133,480.236936 64.8865937,480.443776 C64.7487004,480.788509 64.5418605,481.072914 64.2660739,481.296991 C63.9902873,481.521067 63.6800278,481.684816 63.3352937,481.788235 C63.1284547,481.857182 62.9302325,481.908892 62.740629,481.943365 C62.5510264,481.977839 62.3528042,481.995075 62.1459643,481.995075 C61.6288648,482.029549 61.1720934,481.883037 60.77565,481.55554 C60.3792065,481.228044 60.129275,480.805746 60.0258546,480.288645 C59.9569088,479.840493 60.0258546,479.400958 60.2326954,478.970041 C60.4395345,478.539125 60.8015051,478.220246 61.3186045,478.013407 C61.4909715,477.909986 61.6805742,477.832421 61.887415,477.780712 C62.094254,477.729002 62.3010949,477.68591 62.5079339,477.651436 C62.680301,477.616963 62.8440494,477.58249 62.9991791,477.548017 C63.1543089,477.513543 63.3180573,477.47907 63.4904243,477.444596 C63.6972643,477.410123 63.852394,477.32394 63.9558144,477.186047 C64.059234,477.048154 64.1109442,476.875787 64.1109442,476.668947 L64.1109442,476.513817 C64.1109442,474.89357 64.1109442,473.264706 64.1109442,471.627223 C64.1109442,469.989741 64.1109442,468.360876 64.1109442,466.740629 C64.1109442,466.671683 64.1195619,466.602736 64.1367993,466.53379 C64.1540357,466.464843 64.1626535,466.395896 64.1626535,466.32695 C64.1971273,466.154583 64.2746926,466.025308 64.3953485,465.939125 C64.5160054,465.852942 64.6452809,465.792613 64.7831742,465.75814 C64.9210675,465.723666 65.0589608,465.689193 65.1968541,465.65472 C65.3347474,465.620247 65.4726407,465.585773 65.610534,465.5513 C66.0242139,465.482353 66.4378938,465.404788 66.8515736,465.318605 C67.2652535,465.232422 67.6616961,465.154857 68.0409031,465.08591 L70.5746926,464.56881 C70.919425,464.499864 71.2813956,464.422299 71.6606017,464.336115 C72.0398087,464.249931 72.4190148,464.172367 72.7982218,464.10342 C72.9016413,464.10342 73.0136795,464.086184 73.1343364,464.05171 C73.2549932,464.017236 73.3842679,464 73.5221612,464 C73.6945282,464 73.8324215,464.043092 73.9358411,464.129276 C74.0392615,464.215459 74.1082081,464.344733 74.142681,464.5171 C74.142681,464.551573 74.142681,464.594665 74.142681,464.646375 C74.142681,464.698085 74.142681,464.741177 74.142681,464.77565 C74.142681,465.844323 74.142681,466.904378 74.142681,467.955814 C74.142681,469.00725 74.142681,470.050069 74.142681,471.084268 Z" transform="translate(-60 -464)"></path>
+</svg>
+</a></li> <li class="facebook"><a class="icon facebook" rel="noopener" target="_blank" title="http://www.facebook.com/mereshas" href="http://www.facebook.com/mereshas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 18" class="icon">
+  <path fill-rule="evenodd" d="M5.90740659,192 L5.90740659,182.998864 L4,182.998864 L4,179.897374 L5.90740659,179.897374 L5.90740659,178.035345 C5.90740659,175.505302 6.983858,174 10.0441056,174 L12.5912019,174 L12.5912019,177.102626 L10.9992667,177.102626 C9.80793935,177.102626 9.72921729,177.536039 9.72921729,178.344926 L9.72396915,179.897374 L12.6086957,179.897374 L12.2710654,182.998864 L9.72396915,182.998864 L9.72396915,192 L5.90740659,192 Z" transform="translate(-4 -174)"></path>
+</svg>
+</a></li> <li class="twitter"><a class="icon twitter" rel="noopener" target="_blank" title="http://twitter.com/mereshas" href="http://twitter.com/mereshas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" class="icon">
+  <path fill-rule="evenodd" d="M73.8795563,4.43919853 C74.6423666,3.95782175 75.2276809,3.19452756 75.5023772,2.28526031 C74.7881669,2.73209385 73.9989435,3.0552403 73.1568938,3.2301851 C72.4849445,2.47246239 71.5245642,2 70.461701,2 C68.4226096,2 66.770206,3.74387652 66.770206,5.89447184 C66.770206,6.19978952 66.8008452,6.49730711 66.8642367,6.78145313 C63.7960909,6.61876561 61.0755415,5.06989125 59.2530375,2.71203648 C58.9350238,3.2892429 58.7533016,3.95782175 58.7533016,4.67097253 C58.7533016,6.02150183 59.405177,7.21380079 60.3961965,7.91357999 C59.7908082,7.89352263 59.2213418,7.71634923 58.7226624,7.42663172 L58.7226624,7.47454654 C58.7226624,9.36216752 59.9947174,10.9366707 61.6862124,11.2932461 C61.3755943,11.3846186 61.0501849,11.4303048 60.7120972,11.4303048 C60.4743793,11.4303048 60.241944,11.4069045 60.0179609,11.3612183 C60.4870576,12.9078641 61.8510301,14.0355337 63.4675119,14.0656198 C62.2028526,15.1108314 60.6106709,15.7326097 58.881141,15.7326097 C58.5832013,15.7326097 58.2884311,15.7158953 58,15.6791234 C59.6344427,16.7833928 61.5752773,17.4285714 63.6608558,17.4285714 C70.4543053,17.4285714 74.1669308,11.4938198 74.1669308,6.34687687 C74.1669308,6.17750356 74.1648177,6.00924455 74.1574221,5.84321413 C74.879028,5.29386517 75.5066033,4.60745754 76,3.82633458 C75.3375594,4.13610945 74.6254622,4.34559749 73.8795563,4.43919853 Z" transform="translate(-58 -2)"></path>
+</svg>
+</a></li> <li class="youtube"><a class="icon youtube" rel="noopener" target="_blank" title="http://bit.ly/YouTubeMeresha" href="http://bit.ly/YouTubeMeresha"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14" class="icon">
+  <path d="M7.51817203,3.01103658 L9.32840145,3.00097264 C10.2992794,3.00547809 13.218176,3.0308536 15.3,3.17377313 L15.6553333,3.22313328 C16.0495,3.28524537 16.605,3.43250201 17.1,3.9847144 C17.5632353,4.46173868 17.7594291,5.41017518 17.8142479,5.73006205 L17.83125,5.83829445 C17.83125,5.83829445 17.9856451,7.21621572 17.9990707,8.65404662 L18,10.2405471 C18,10.8953444 17.9681002,11.5501417 17.9320395,12.0811588 L17.83125,13.2526146 C17.83125,13.2526146 17.6625,14.5269509 17.1,15.1061947 C16.425,15.8592116 15.6375,15.8592116 15.3,15.917136 L14.7634435,15.9504883 C12.6521029,16.0693722 9.98469971,16.0876059 9.21614431,16.0904025 L7.08447218,16.0597111 C5.61920504,16.0314231 3.71156939,15.9838981 2.86875,15.917136 C2.475,15.8012872 1.575,15.8592116 0.9,15.1061947 C0.469852941,14.6632436 0.269961073,13.8138197 0.199708681,13.438614 L0.16875,13.2526146 C0.16875,13.2526146 0.0143549149,11.8746934 0.000929255363,10.4368625 L0.000929255363,8.65404662 L0.00786399688,8.26438652 C0.0195143626,7.81382657 0.0427180077,7.3814623 0.0679604668,7.00975034 L0.16875,5.83829445 C0.16875,5.83829445 0.3375,4.56395817 0.9,3.9847144 C1.575,3.23169751 2.3625,3.23169751 2.7,3.17377313 L3.44978633,3.12884728 C4.82696478,3.05679739 6.39944393,3.02503696 7.51817203,3.01103658 Z M6.54545455,6.27272727 L6.54545455,12.8181818 L13.0909091,9.54545455 L6.54545455,6.27272727 Z" transform="translate(0 -3)"></path>
+</svg>
+</a></li> <li class="instagram"><a class="icon instagram" rel="noopener" target="_blank" title="http://instagram.com/mereshas" href="http://instagram.com/mereshas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="icon">
+  <path fill-rule="evenodd" d="M180.955012,117.627645 L183.53748,117.621843 C185.45289,117.623336 185.763644,117.634264 186.636737,117.6741 C187.514228,117.714148 187.990771,117.860766 188.307942,117.983983 C188.728003,118.147249 189.027848,118.34231 189.342769,118.657231 C189.612701,118.927163 189.794573,119.186019 189.94382,119.518997 L190.015981,119.692058 C190.128963,119.982798 190.261578,120.407455 190.313743,121.152076 L190.344164,121.779142 C190.356047,122.069906 190.364023,122.332267 190.369258,122.696064 L190.378157,125.537515 C190.376664,127.452925 190.365736,127.76368 190.3259,128.636772 C190.289189,129.441139 190.162931,129.908598 190.047206,130.225225 L190.015981,130.307978 C189.852751,130.728039 189.65769,131.027884 189.342769,131.342805 C189.027848,131.657725 188.728003,131.852787 188.307942,132.016017 C188.017202,132.128999 187.592545,132.261614 186.847896,132.313779 L185.638825,132.363102 C185.293731,132.371093 184.876812,132.37522 184.209964,132.377084 L180.954912,132.372391 C180.262744,132.3656 179.93255,132.351916 179.363228,132.325936 C178.485737,132.285888 178.009193,132.13927 177.692058,132.016017 C177.271961,131.852787 176.972116,131.657725 176.657195,131.342805 C176.342275,131.027884 176.147213,130.728039 175.983983,130.307978 C175.871001,130.017238 175.738386,129.592581 175.686221,128.847959 L175.636898,127.638766 C175.628907,127.293655 175.62478,126.876746 175.622916,126.209932 L175.627609,122.95505 C175.6344,122.2629 175.648084,121.932672 175.674064,121.363263 C175.714112,120.485772 175.86073,120.009229 175.983983,119.692058 C176.147213,119.271997 176.342275,118.972152 176.657195,118.657231 C176.972116,118.34231 177.271961,118.147249 177.692058,117.983983 C177.982765,117.871034 178.40742,117.738422 179.152041,117.686257 L179.779107,117.655836 C180.134484,117.641312 180.447433,117.632625 180.955012,117.627645 Z M180.969591,116.005911 L185.030383,116.005911 C185.776674,116.012916 186.119939,116.027206 186.710653,116.05416 C187.668634,116.097888 188.32284,116.250007 188.895342,116.472506 C189.487172,116.702507 189.98908,117.010247 190.489416,117.510584 C190.989753,118.01092 191.297493,118.512828 191.527494,119.104658 C191.72527,119.613549 191.867439,120.186996 191.927302,120.980967 L191.962299,121.660939 C191.988304,122.280602 191.997541,122.754009 191.999551,124.235021 L191.995258,126.89348 C191.988732,127.736928 191.97439,128.084998 191.94584,128.710688 C191.902112,129.668669 191.749993,130.322876 191.527494,130.895378 C191.297493,131.487207 190.989753,131.989116 190.489416,132.489452 C189.98908,132.989788 189.487172,133.297528 188.895342,133.52753 C188.386451,133.725306 187.813004,133.867475 187.019033,133.927337 L186.224306,133.967013 C185.694154,133.987959 185.220765,133.996514 184.031143,133.999089 L181.106529,133.995268 C180.263088,133.988752 179.915025,133.974425 179.289312,133.945876 C178.331331,133.902148 177.677124,133.750028 177.104622,133.52753 C176.512793,133.297528 176.010884,132.989788 175.510548,132.489452 C175.010212,131.989116 174.702472,131.487172 174.47247,130.895378 C174.274694,130.386487 174.132525,129.81304 174.072663,129.019069 L174.02985,128.142836 C174.008608,127.574913 174.001407,127.026759 174.000194,125.527402 L174.005899,122.969617 C174.012894,122.223326 174.027171,121.880061 174.054124,121.289347 C174.097852,120.331366 174.249972,119.67716 174.47247,119.104658 C174.702472,118.512828 175.010212,118.01092 175.510548,117.510584 C176.010884,117.010247 176.512793,116.702507 177.104622,116.472506 C177.613513,116.27473 178.18696,116.132561 178.980931,116.072698 L179.857178,116.029882 C180.176639,116.017928 180.489837,116.010414 180.969591,116.005911 Z M183.017857,120.392857 C180.463551,120.392857 178.392857,122.463551 178.392857,125.017857 C178.392857,127.572163 180.463551,129.642857 183.017857,129.642857 C185.572163,129.642857 187.642857,127.572163 187.642857,125.017857 C187.642857,122.463551 185.572163,120.392857 183.017857,120.392857 Z M183.017857,122.015656 C184.675907,122.015656 186.020058,123.359807 186.020058,125.017857 C186.020058,126.675907 184.675907,128.020058 183.017857,128.020058 C181.359807,128.020058 180.015656,126.675907 180.015656,125.017857 C180.015656,123.359807 181.359807,122.015656 183.017857,122.015656 Z M187.785732,119.107143 C187.193993,119.107143 186.714286,119.586815 186.714286,120.178554 C186.714286,120.770293 187.193993,121.25 187.785732,121.25 C188.377471,121.25 188.857143,120.770293 188.857143,120.178554 C188.857143,119.586815 188.377471,119.107143 187.785732,119.107143 Z" transform="translate(-174 -116)"></path>
+</svg>
+</a></li></ul></nav>
+
+		<div data-pjax-container>
+			
+        
+  <div id="page-root" data-page-id="791894" data-slug="home" class="landing-page display-type-text website-page-home has-swms has-cta has-section-styles">
+    <div id="container">
+	<div class="ie-flexbox-fix-wrapper"> <!-- this element is only here to fix an IE11 flexbox bug. see css for details. -->
+		<header id="page-header">
+			<div class="parallax-wrapper">
+					  <div class="page-photos page-media-container display-time-medium transition-speed-medium transition-type-fade">
+  <div class="page-photo page-media page-photo-background" style="background-image: url(&#39;//imagery.zoogletools.com/u/169509/ade1c39c343c71a5d40b873e7f8a4e218f8ea9ae/original/screen-shot-2020-09-13-at-3-50-11-pm.png/!!/b%3AW1siZXh0cmFjdCIseyJsZWZ0IjozMSwidG9wIjo0NSwid2lkdGgiOjM3NzQsImhlaWdodCI6MjA2Nn1dLFsicmVzaXplIiwxNjAwXSxbIm1heCJdLFsid2UiXV0%3D.png&#39;); background-position: 38% 42%;"></div>
+
+</div>
+
+
+			</div>
+
+			<div class="title-nav-container">
+				<div id="title-wrap" class="title-wrap"
+						 data-apply-textfit="false">
+					<h1 id="page-title" class="page-title display-type-text text-fit"><a href="/home"><span class="outer" data-max-font-size="48"><span class="inner">MERESHA</span></span></a></h1>
+				</div>
+				<div class="nav-bar">
+					    <span id="toggle-mobile-menu" class="toggle-mobile-menu"><a href="javascript:"><i class="icon-hamburger"></i></a></span><nav id="main-nav" class="non-mobile"><ul class="horizontal list balance_4 top menu-length-8"><li class="top selected"><div><a class="top" href="/home">Home</a></div></li><li class="top"><div><a class="top" href="/music">Music</a></div></li><li class="top"><div><a class="top no-pjax" href="/vids">Vids</a></div></li><li class="top"><div><a class="top" href="/pics">Pics</a></div></li><li class="top"><div><a class="top" href="/shop">Shop</a></div></li><li class="top"><div><a class="top" href="/bio">Bio</a></div></li><li class="top"><div><a class="top" href="/contact">Contact</a></div></li><li class="has-submenu top"><div><a class="top" href="/members-only">Members Only</a></div><ul><li class="subpage"><div><a class="" href="/forum">Forum</a></div></li><li class="subpage"><div><a class="" href="/new-music-more">New Music + more</a></div></li><li class="subpage"><div><a class="" href="/best-of-meresha-free-download">Best of Meresha - free download</a></div></li><li class="subpage"><div><a class="" href="/vault-unreleased">Vault - Unreleased</a></div></li><li class="subpage"><div><a class="" href="/vault-2013">Vault 2013</a></div></li><li class="subpage"><div><a class="" href="/vault-2014">Vault 2014</a></div></li><li class="subpage"><div><a class="" href="/vault-2015">Vault 2015</a></div></li><li class="subpage"><div><a class="" href="/vault-2016">Vault 2016</a></div></li><li class="subpage"><div><a class="" href="/free-stickers-autographed-picture">Free stickers + autographed picture</a></div></li></ul></li></ul></nav>
+
+				</div>
+			</div>
+		</header>
+	</div>
+
+
+	<div id="content-wrap">
+		<div id="content">
+			<div class="zoogle_flash">
+</div>
+
+<section id="cart" class="cart hide"></section>
+
+<div id="page-content-wrap"><div class="zoogle-content block" data-arrangement-id="879399"><div class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 default-section-style padding-small title-alignment-center block block-row layout_full zoogle-columns-first" data-row-id="11661273"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" data-column-id="13832438"><div class="zoogle-feature block layout_full" data-block-id="14344876"><section class="feature image_feature " data-feature-id="1482148">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/hNqY8-9K"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/bd99aee4e99c9dd6a6a3b2a27fddc1bf00172eff/original/spotify-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/bd99aee4e99c9dd6a6a3b2a27fddc1bf00172eff/original/spotify-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/bd99aee4e99c9dd6a6a3b2a27fddc1bf00172eff/original/spotify-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14344892"><section class="feature image_feature " data-feature-id="1482152">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/gYhyRGDL"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/d3d38c70ca8440b440e9f141074820a4fcd3c2a2/original/apple-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/d3d38c70ca8440b440e9f141074820a4fcd3c2a2/original/apple-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/d3d38c70ca8440b440e9f141074820a4fcd3c2a2/original/apple-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14443667"><section class="feature image_feature " data-feature-id="1490982">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/qtvq5Tcm"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/86c9b2eb0bfed0a9d69c2a3d2f3c44b4942a8143/original/youtube-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/86c9b2eb0bfed0a9d69c2a3d2f3c44b4942a8143/original/youtube-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/86c9b2eb0bfed0a9d69c2a3d2f3c44b4942a8143/original/youtube-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14344899"><section class="feature image_feature " data-feature-id="1482155">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/yfOatTLc"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/b803d910fb673d9d2027c4dae9987a2658a856e8/original/deezer-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/b803d910fb673d9d2027c4dae9987a2658a856e8/original/deezer-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/b803d910fb673d9d2027c4dae9987a2658a856e8/original/deezer-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14443873"><section class="feature image_feature " data-feature-id="1491000">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/sCfUls6H"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/a4354cd75c9d7981eaebec6eaad283ab13bda551/original/amazon-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/a4354cd75c9d7981eaebec6eaad283ab13bda551/original/amazon-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/a4354cd75c9d7981eaebec6eaad283ab13bda551/original/amazon-music-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div></div><div class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" data-column-id="13832469"><div class="zoogle-feature block layout_full" data-block-id="14344895"><section class="feature image_feature " data-feature-id="1482153">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/Nbob6S2O"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/5979531a71a4f9e5ed7da6db83c7837044bd0300/original/youtube-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/5979531a71a4f9e5ed7da6db83c7837044bd0300/original/youtube-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/5979531a71a4f9e5ed7da6db83c7837044bd0300/original/youtube-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14344912"><section class="feature image_feature " data-feature-id="1482159">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/YC30jxbq"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/9ca26a3095d2f61d0dc2bae7fd8e4d660b6e9b6b/original/tidal-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/9ca26a3095d2f61d0dc2bae7fd8e4d660b6e9b6b/original/tidal-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/9ca26a3095d2f61d0dc2bae7fd8e4d660b6e9b6b/original/tidal-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14344914"><section class="feature image_feature " data-feature-id="1482160">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/binQuQN8"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/9ffeb634d5d3085fb6683b8eac5e594a86cf1517/original/napster-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/9ffeb634d5d3085fb6683b8eac5e594a86cf1517/original/napster-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/9ffeb634d5d3085fb6683b8eac5e594a86cf1517/original/napster-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14443932"><section class="feature image_feature " data-feature-id="1491013">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/9aDYQbv5"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/bd9d6e1353908c50b38e6acc8f4e346fc3ad612b/original/jiosaavn-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/bd9d6e1353908c50b38e6acc8f4e346fc3ad612b/original/jiosaavn-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/bd9d6e1353908c50b38e6acc8f4e346fc3ad612b/original/jiosaavn-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div><div class="zoogle-feature block layout_full" data-block-id="14443925"><section class="feature image_feature " data-feature-id="1491012">    <figure class="image custom center" style="width: 100%;">
+        <a target="_blank" href="https://pxle.me/SrmoGOOl"><span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/428867c36a15232000ce66e0b1c74326c55ae6f9/original/pandora-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/428867c36a15232000ce66e0b1c74326c55ae6f9/original/pandora-purple-button.png/!!/b%3AW1sicmVzaXplIiw4MDJdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 802w" src="//imagery.zoogletools.com/u/169509/428867c36a15232000ce66e0b1c74326c55ae6f9/original/pandora-purple-button.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span></a>
+
+</figure>
+</section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-small title-alignment-center block block-row layout_full" data-row-id="12525524"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="14818507"></div></div></div><div class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 default-section-style padding-small title-alignment-left false block block-row layout_full hide-title" data-row-id="11157254"><div class="zoogle-columns-inner site-wrap"><h2 class="subtitle-wrap heading-primary row-title"><span class="subtitle" data-binding-ref="row-title" data-action="input-&gt;binding#update" data-binding-to="row-title-input:value" contenteditable="false">Meresha // Look How Far</span></h2><div class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" data-column-id="14724922"><div class="zoogle-feature block layout_full" data-block-id="15126942"><section class="feature image_feature " data-feature-id="1554424">    <figure class="image custom center" style="width: 100%;">
+        <span class="image-filter-container filter-none-container shape-custom"><img sizes="(max-width: 500px) 100vw, 50vw" srcset="//imagery.zoogletools.com/u/169509/ecdc98f24ca592be3154a656b158298c8e3100e8/original/screen-shot-2020-08-19-at-4-50-44-pm.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png 500w, //imagery.zoogletools.com/u/169509/ecdc98f24ca592be3154a656b158298c8e3100e8/original/screen-shot-2020-08-19-at-4-50-44-pm.png/!!/b%3AW1sicmVzaXplIiwxMDAwXSxbIm1heCJdLFsid2UiXV0%3D.png 1000w" src="//imagery.zoogletools.com/u/169509/ecdc98f24ca592be3154a656b158298c8e3100e8/original/screen-shot-2020-08-19-at-4-50-44-pm.png/!!/b%3AW1sicmVzaXplIiw1MDBdLFsibWF4Il0sWyJ3ZSJdXQ%3D%3D.png" /><span class="image-filter-overlay" style=""></span></span>
+
+</figure>
+</section></div></div><div class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" data-column-id="13410610"><div class="zoogle-feature block layout_full" data-block-id="13850626"><section class="feature text_feature " data-feature-id="3054639"><div class="feature-placeholder" data-block-id="13850626"></div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-small title-alignment-center block block-row layout_full" data-row-id="12488737"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="14775484"><div class="zoogle-feature block layout_full" data-block-id="15172896"><section class="feature image_feature " data-feature-id="1559363"><div class="feature-placeholder" data-block-id="15172896"></div></section></div><div class="zoogle-feature block layout_full" data-block-id="15172895"><section class="feature text_feature " data-feature-id="3440894"><div class="feature-placeholder" data-block-id="15172895"></div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 default-section-style padding-small title-alignment-center block block-row layout_full" data-row-id="12659678"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" data-column-id="14975268"><div class="zoogle-feature block layout_full" data-block-id="15353879"><section class="feature image_feature " data-feature-id="1578787"><div class="feature-placeholder" data-block-id="15353879"></div></section></div></div><div class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" data-column-id="14975269"><div class="zoogle-feature block layout_full" data-block-id="15353877"><section class="feature store_feature " data-feature-id="655846"><div class="feature-placeholder" data-block-id="15353877"></div></section></div></div></div></div><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-small title-alignment-center block block-row layout_full" data-row-id="9401978"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="11163937"><div class="zoogle-feature block layout_full" data-block-id="10893475"><section class="feature mailing_list_feature " data-feature-id="339042">
+<p class="mailing-list-result-339042 hide-on-return alert"></p>
+
+<div class="mailing-list-form" id="list-339042">
+  <form class="simple_form captcha form-list-339042 member" id="new_member_339042" data-sitekey="6Lfxx4EUAAAAAIuk746FxFg6gj7Ytjx--6K2eaia" data-controller="recaptcha" role="member" action="/home/mailing_list_features/339042/join" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" />
+    <h3>Get the latest - first</h3>
+
+
+      <div class="control">
+        <div class="input email required member_email string"><span class="input_field"><input id="member_email_339042" size="25" class="string email required" required="required" aria-required="" placeholder="Your email" type="email" name="member[email]" /></span></div>
+        <div class="actions">
+          <button type="submit" class="button positive -input-height">
+            Sign up
+          </button>
+        </div>
+      </div>
+</form></div>
+</section></div></div></div></div></div></div>
+
+		</div>
+	</div>
+
+	<div id="footer-wrap">
+		
+
+  <footer class="site-wide-footer"><div class="zoogle-content block" data-arrangement-id="3326520"><div class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 default-section-style padding-none title-alignment-left block block-row layout_full" data-row-id="10012250"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" data-column-id="11869792"></div><div class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" data-column-id="11908833"></div></div><div class="zoogle-columns-inner site-wrap">  <div class="injected-footer">
+  <footer id="page-footer">
+
+
+    <div class="block layout_full"><section class="feature text_feature " data-feature-id="844424"><div data-controller="zoogle-video" data-action="message@window->zoogle-video#handleVimeoPostMessage"><p>©️ Meresha, 2020, All rights reserved</p></div></section></div>
+
+      
+<div id="site-wide-header" class="site-wide-feature-area"><div class="zoogle-content block" data-arrangement-id="879407"><div class="zoogle-columns zoogle-columns-1 zoogle-columns-100 default-section-style padding-none title-alignment-left block block-row layout_full" data-row-id="3369702"><div class="zoogle-columns-inner site-wrap"><div class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" data-column-id="3724301"><div class="zoogle-feature block layout_full" data-block-id="2916411"><section class="feature my_site_feature " data-feature-id="178396">  <ul class="my_sites -align-center my_sites_font_face my_sites_count_6  site_wide_my_sites" style="--my-sites-feature-size: 20px;">
+      <li class="spotify">
+          <a class="icon spotify" target="_blank" title="https://spoti.fi/3cZxZ6b" href="https://spoti.fi/3cZxZ6b"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="icon">
+  <path d="M67,232 C68.2421872,232 69.4140628,232.234375 70.515625,232.703125 C71.6171872,233.171875 72.5722654,233.816406 73.3808596,234.636719 C74.1894532,235.457031 74.828125,236.40625 75.296875,237.484375 C75.765625,238.585937 76,239.757812 76,241 C76,242.21875 75.765625,243.378906 75.296875,244.480469 C74.828125,245.582031 74.1835936,246.537109 73.3632814,247.345703 C72.5429686,248.154297 71.5820314,248.792969 70.4804686,249.261719 C69.4023436,249.753906 68.2421872,250 67,250 C65.7578128,250 64.5976564,249.753906 63.5195314,249.261719 C62.4179686,248.792969 61.4570314,248.154297 60.6367186,247.345703 C59.8164064,246.537109 59.171875,245.582031 58.703125,244.480469 C58.234375,243.378906 58,242.21875 58,241 C58,239.757812 58.234375,238.585937 58.703125,237.484375 C59.171875,236.40625 59.8164064,235.457031 60.6367186,234.636719 C61.4570314,233.816406 62.4179686,233.171875 63.5195314,232.703125 C64.5976564,232.234375 65.7578128,232 67,232 Z M66.9472654,242.898437 C65.4824218,242.734375 63.8945314,242.851562 62.1835936,243.25 C62.0429686,243.273437 61.9316404,243.349609 61.8496096,243.478515 C61.7675782,243.607422 61.75,243.753906 61.796875,243.917969 C61.8203128,244.058594 61.8964846,244.169922 62.0253904,244.251953 C62.1285155,244.317578 62.2428907,244.341953 62.3685156,244.325078 L62.4648436,244.304687 C64.0351564,243.953125 65.4824218,243.847656 66.8066404,243.988281 C68.1308596,244.128906 69.3203128,244.527344 70.375,245.183594 C70.515625,245.253906 70.65625,245.271484 70.796875,245.236328 C70.9375,245.201172 71.0546872,245.113281 71.1484372,244.972656 C71.21875,244.855469 71.2363282,244.720703 71.2011718,244.568359 C71.1660154,244.416015 71.0664064,244.304687 70.9023436,244.234375 C69.7304686,243.507812 68.4121096,243.0625 66.9472654,242.898437 Z M67.1582032,239.998047 C65.2949218,239.77539 63.5429686,239.910156 61.9023436,240.402344 C61.7382814,240.449219 61.6152346,240.560547 61.5332032,240.736328 C61.4675781,240.876953 61.443203,241.013828 61.460078,241.146953 L61.4804686,241.246094 C61.5039064,241.433594 61.6035154,241.568359 61.7792968,241.65039 C61.9550782,241.732422 62.1367186,241.75 62.3242186,241.703125 C63.7304686,241.257812 65.2714846,241.134765 66.9472654,241.333984 C68.6230468,241.533203 70.0703128,241.996094 71.2890628,242.722656 C71.4296872,242.839844 71.59375,242.875 71.78125,242.828125 C71.96875,242.78125 72.1210936,242.675781 72.2382814,242.511719 C72.3320311,242.347656 72.3554686,242.171875 72.3085936,241.984375 C72.2617186,241.796875 72.1679686,241.667969 72.0273436,241.597656 C70.6445314,240.753906 69.0214846,240.220703 67.1582032,239.998047 Z M67.2285154,236.904297 C66.1621096,236.822265 65.1132814,236.816406 64.0820314,236.886719 C63.0742186,236.980469 62.171875,237.144531 61.375,237.378906 C61.1640628,237.449219 61.0058596,237.583984 60.9003904,237.783203 C60.7949218,237.982422 60.7773436,238.199219 60.8476564,238.433594 C60.9179686,238.621094 61.046875,238.773437 61.234375,238.890625 C61.421875,239.007812 61.6328128,239.03125 61.8671872,238.960937 C62.546875,238.75 63.34375,238.597656 64.2578128,238.503906 C65.1484372,238.433594 66.0742186,238.439453 67.0351564,238.521484 C67.9960936,238.603515 68.9335936,238.761719 69.8476564,238.996094 C70.7617186,239.230469 71.5820314,239.558594 72.3085936,239.980469 C72.5195314,240.097656 72.7421872,240.132812 72.9765628,240.085937 C73.2109372,240.039062 73.375,239.933594 73.46875,239.769531 C73.5859375,239.558594 73.6152346,239.341797 73.5566404,239.11914 C73.4980468,238.896484 73.3632814,238.726562 73.1523436,238.609375 C72.3320314,238.117187 71.40625,237.730469 70.375,237.449219 C69.34375,237.167969 68.2949218,236.986328 67.2285154,236.904297 Z" transform="translate(-58 -232)"></path>
+</svg>
+</a>
+</li>      <li class="apple-music">
+          <a class="icon apple-music" target="_blank" title="https://apple.co/379s8J9" href="https://apple.co/379s8J9"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 18" class="icon">
+  <path d="M74.142681,471.084268 L74.142681,477.392886 C74.142681,477.6342 74.1254446,477.866895 74.0909708,478.090971 C74.0564979,478.315048 73.9875513,478.530506 73.8841317,478.737346 C73.7117647,479.047606 73.4963061,479.306156 73.2377568,479.512996 C72.9792067,479.719836 72.677565,479.874965 72.3328317,479.978386 C72.1259918,480.047333 71.9277705,480.099043 71.738167,480.133516 C71.5485635,480.167989 71.3503422,480.185226 71.1435023,480.185226 C70.626402,480.2197 70.1696305,480.073188 69.7731871,479.745691 C69.3767445,479.418194 69.1268121,478.995896 69.0233926,478.478796 C68.954446,478.065116 69.014774,477.642819 69.2043775,477.211901 C69.393981,476.780985 69.7128591,476.462107 70.1610127,476.255267 C70.3333789,476.151846 70.5143638,476.074282 70.7039673,476.022572 C70.8935708,475.970862 71.0917921,475.92777 71.298632,475.893297 C71.5054719,475.858823 71.7123119,475.815732 71.9191518,475.764022 C72.1259918,475.712312 72.3328317,475.669221 72.5396717,475.634747 C72.677565,475.600273 72.7982218,475.539945 72.9016413,475.453762 C73.0050618,475.367579 73.0740084,475.238304 73.1084813,475.065937 C73.1084813,475.031464 73.1084813,474.996991 73.1084813,474.962517 C73.1084813,474.928044 73.1084813,474.89357 73.1084813,474.859098 C73.1084813,473.859371 73.1084813,472.859645 73.1084813,471.859918 C73.1084813,470.860192 73.1084813,469.860465 73.1084813,468.860739 C73.1084813,468.826265 73.1084813,468.791792 73.1084813,468.757319 C73.1084813,468.722846 73.1084813,468.688372 73.1084813,468.653899 C73.0740084,468.550479 73.0309169,468.481532 72.9792067,468.447059 C72.9274964,468.412585 72.8499311,468.395349 72.7465116,468.395349 C72.677565,468.395349 72.5913819,468.403968 72.4879615,468.421204 C72.3845419,468.438441 72.298358,468.447059 72.2294122,468.447059 C71.8157323,468.550479 71.3934338,468.645281 70.9625174,468.731464 C70.5316002,468.817648 70.1093025,468.895212 69.6956227,468.964159 L65.610534,469.791518 C65.610534,469.791518 65.5932967,469.791518 65.5588238,469.791518 C65.4209305,469.825992 65.3175101,469.88632 65.2485634,469.972503 C65.1796168,470.058687 65.1451439,470.187962 65.1451439,470.360328 C65.1451439,470.360328 65.1451439,470.377565 65.1451439,470.412038 C65.1451439,470.446512 65.1451439,470.463748 65.1451439,470.463748 C65.1451439,471.911628 65.1451439,473.350889 65.1451439,474.781532 C65.1451439,476.212175 65.1451439,477.651436 65.1451439,479.099316 C65.1451439,479.34063 65.1279066,479.573325 65.0934337,479.797401 C65.0589608,480.021477 64.9900133,480.236936 64.8865937,480.443776 C64.7487004,480.788509 64.5418605,481.072914 64.2660739,481.296991 C63.9902873,481.521067 63.6800278,481.684816 63.3352937,481.788235 C63.1284547,481.857182 62.9302325,481.908892 62.740629,481.943365 C62.5510264,481.977839 62.3528042,481.995075 62.1459643,481.995075 C61.6288648,482.029549 61.1720934,481.883037 60.77565,481.55554 C60.3792065,481.228044 60.129275,480.805746 60.0258546,480.288645 C59.9569088,479.840493 60.0258546,479.400958 60.2326954,478.970041 C60.4395345,478.539125 60.8015051,478.220246 61.3186045,478.013407 C61.4909715,477.909986 61.6805742,477.832421 61.887415,477.780712 C62.094254,477.729002 62.3010949,477.68591 62.5079339,477.651436 C62.680301,477.616963 62.8440494,477.58249 62.9991791,477.548017 C63.1543089,477.513543 63.3180573,477.47907 63.4904243,477.444596 C63.6972643,477.410123 63.852394,477.32394 63.9558144,477.186047 C64.059234,477.048154 64.1109442,476.875787 64.1109442,476.668947 L64.1109442,476.513817 C64.1109442,474.89357 64.1109442,473.264706 64.1109442,471.627223 C64.1109442,469.989741 64.1109442,468.360876 64.1109442,466.740629 C64.1109442,466.671683 64.1195619,466.602736 64.1367993,466.53379 C64.1540357,466.464843 64.1626535,466.395896 64.1626535,466.32695 C64.1971273,466.154583 64.2746926,466.025308 64.3953485,465.939125 C64.5160054,465.852942 64.6452809,465.792613 64.7831742,465.75814 C64.9210675,465.723666 65.0589608,465.689193 65.1968541,465.65472 C65.3347474,465.620247 65.4726407,465.585773 65.610534,465.5513 C66.0242139,465.482353 66.4378938,465.404788 66.8515736,465.318605 C67.2652535,465.232422 67.6616961,465.154857 68.0409031,465.08591 L70.5746926,464.56881 C70.919425,464.499864 71.2813956,464.422299 71.6606017,464.336115 C72.0398087,464.249931 72.4190148,464.172367 72.7982218,464.10342 C72.9016413,464.10342 73.0136795,464.086184 73.1343364,464.05171 C73.2549932,464.017236 73.3842679,464 73.5221612,464 C73.6945282,464 73.8324215,464.043092 73.9358411,464.129276 C74.0392615,464.215459 74.1082081,464.344733 74.142681,464.5171 C74.142681,464.551573 74.142681,464.594665 74.142681,464.646375 C74.142681,464.698085 74.142681,464.741177 74.142681,464.77565 C74.142681,465.844323 74.142681,466.904378 74.142681,467.955814 C74.142681,469.00725 74.142681,470.050069 74.142681,471.084268 Z" transform="translate(-60 -464)"></path>
+</svg>
+</a>
+</li>      <li class="facebook">
+          <a class="icon facebook" target="_blank" title="http://www.facebook.com/mereshas" href="http://www.facebook.com/mereshas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 18" class="icon">
+  <path fill-rule="evenodd" d="M5.90740659,192 L5.90740659,182.998864 L4,182.998864 L4,179.897374 L5.90740659,179.897374 L5.90740659,178.035345 C5.90740659,175.505302 6.983858,174 10.0441056,174 L12.5912019,174 L12.5912019,177.102626 L10.9992667,177.102626 C9.80793935,177.102626 9.72921729,177.536039 9.72921729,178.344926 L9.72396915,179.897374 L12.6086957,179.897374 L12.2710654,182.998864 L9.72396915,182.998864 L9.72396915,192 L5.90740659,192 Z" transform="translate(-4 -174)"></path>
+</svg>
+</a>
+</li>      <li class="twitter">
+          <a class="icon twitter" target="_blank" title="http://twitter.com/mereshas" href="http://twitter.com/mereshas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" class="icon">
+  <path fill-rule="evenodd" d="M73.8795563,4.43919853 C74.6423666,3.95782175 75.2276809,3.19452756 75.5023772,2.28526031 C74.7881669,2.73209385 73.9989435,3.0552403 73.1568938,3.2301851 C72.4849445,2.47246239 71.5245642,2 70.461701,2 C68.4226096,2 66.770206,3.74387652 66.770206,5.89447184 C66.770206,6.19978952 66.8008452,6.49730711 66.8642367,6.78145313 C63.7960909,6.61876561 61.0755415,5.06989125 59.2530375,2.71203648 C58.9350238,3.2892429 58.7533016,3.95782175 58.7533016,4.67097253 C58.7533016,6.02150183 59.405177,7.21380079 60.3961965,7.91357999 C59.7908082,7.89352263 59.2213418,7.71634923 58.7226624,7.42663172 L58.7226624,7.47454654 C58.7226624,9.36216752 59.9947174,10.9366707 61.6862124,11.2932461 C61.3755943,11.3846186 61.0501849,11.4303048 60.7120972,11.4303048 C60.4743793,11.4303048 60.241944,11.4069045 60.0179609,11.3612183 C60.4870576,12.9078641 61.8510301,14.0355337 63.4675119,14.0656198 C62.2028526,15.1108314 60.6106709,15.7326097 58.881141,15.7326097 C58.5832013,15.7326097 58.2884311,15.7158953 58,15.6791234 C59.6344427,16.7833928 61.5752773,17.4285714 63.6608558,17.4285714 C70.4543053,17.4285714 74.1669308,11.4938198 74.1669308,6.34687687 C74.1669308,6.17750356 74.1648177,6.00924455 74.1574221,5.84321413 C74.879028,5.29386517 75.5066033,4.60745754 76,3.82633458 C75.3375594,4.13610945 74.6254622,4.34559749 73.8795563,4.43919853 Z" transform="translate(-58 -2)"></path>
+</svg>
+</a>
+</li>      <li class="youtube">
+          <a class="icon youtube" target="_blank" title="http://bit.ly/YouTubeMeresha" href="http://bit.ly/YouTubeMeresha"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14" class="icon">
+  <path d="M7.51817203,3.01103658 L9.32840145,3.00097264 C10.2992794,3.00547809 13.218176,3.0308536 15.3,3.17377313 L15.6553333,3.22313328 C16.0495,3.28524537 16.605,3.43250201 17.1,3.9847144 C17.5632353,4.46173868 17.7594291,5.41017518 17.8142479,5.73006205 L17.83125,5.83829445 C17.83125,5.83829445 17.9856451,7.21621572 17.9990707,8.65404662 L18,10.2405471 C18,10.8953444 17.9681002,11.5501417 17.9320395,12.0811588 L17.83125,13.2526146 C17.83125,13.2526146 17.6625,14.5269509 17.1,15.1061947 C16.425,15.8592116 15.6375,15.8592116 15.3,15.917136 L14.7634435,15.9504883 C12.6521029,16.0693722 9.98469971,16.0876059 9.21614431,16.0904025 L7.08447218,16.0597111 C5.61920504,16.0314231 3.71156939,15.9838981 2.86875,15.917136 C2.475,15.8012872 1.575,15.8592116 0.9,15.1061947 C0.469852941,14.6632436 0.269961073,13.8138197 0.199708681,13.438614 L0.16875,13.2526146 C0.16875,13.2526146 0.0143549149,11.8746934 0.000929255363,10.4368625 L0.000929255363,8.65404662 L0.00786399688,8.26438652 C0.0195143626,7.81382657 0.0427180077,7.3814623 0.0679604668,7.00975034 L0.16875,5.83829445 C0.16875,5.83829445 0.3375,4.56395817 0.9,3.9847144 C1.575,3.23169751 2.3625,3.23169751 2.7,3.17377313 L3.44978633,3.12884728 C4.82696478,3.05679739 6.39944393,3.02503696 7.51817203,3.01103658 Z M6.54545455,6.27272727 L6.54545455,12.8181818 L13.0909091,9.54545455 L6.54545455,6.27272727 Z" transform="translate(0 -3)"></path>
+</svg>
+</a>
+</li>      <li class="instagram">
+          <a class="icon instagram" target="_blank" title="http://instagram.com/mereshas" href="http://instagram.com/mereshas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="icon">
+  <path fill-rule="evenodd" d="M180.955012,117.627645 L183.53748,117.621843 C185.45289,117.623336 185.763644,117.634264 186.636737,117.6741 C187.514228,117.714148 187.990771,117.860766 188.307942,117.983983 C188.728003,118.147249 189.027848,118.34231 189.342769,118.657231 C189.612701,118.927163 189.794573,119.186019 189.94382,119.518997 L190.015981,119.692058 C190.128963,119.982798 190.261578,120.407455 190.313743,121.152076 L190.344164,121.779142 C190.356047,122.069906 190.364023,122.332267 190.369258,122.696064 L190.378157,125.537515 C190.376664,127.452925 190.365736,127.76368 190.3259,128.636772 C190.289189,129.441139 190.162931,129.908598 190.047206,130.225225 L190.015981,130.307978 C189.852751,130.728039 189.65769,131.027884 189.342769,131.342805 C189.027848,131.657725 188.728003,131.852787 188.307942,132.016017 C188.017202,132.128999 187.592545,132.261614 186.847896,132.313779 L185.638825,132.363102 C185.293731,132.371093 184.876812,132.37522 184.209964,132.377084 L180.954912,132.372391 C180.262744,132.3656 179.93255,132.351916 179.363228,132.325936 C178.485737,132.285888 178.009193,132.13927 177.692058,132.016017 C177.271961,131.852787 176.972116,131.657725 176.657195,131.342805 C176.342275,131.027884 176.147213,130.728039 175.983983,130.307978 C175.871001,130.017238 175.738386,129.592581 175.686221,128.847959 L175.636898,127.638766 C175.628907,127.293655 175.62478,126.876746 175.622916,126.209932 L175.627609,122.95505 C175.6344,122.2629 175.648084,121.932672 175.674064,121.363263 C175.714112,120.485772 175.86073,120.009229 175.983983,119.692058 C176.147213,119.271997 176.342275,118.972152 176.657195,118.657231 C176.972116,118.34231 177.271961,118.147249 177.692058,117.983983 C177.982765,117.871034 178.40742,117.738422 179.152041,117.686257 L179.779107,117.655836 C180.134484,117.641312 180.447433,117.632625 180.955012,117.627645 Z M180.969591,116.005911 L185.030383,116.005911 C185.776674,116.012916 186.119939,116.027206 186.710653,116.05416 C187.668634,116.097888 188.32284,116.250007 188.895342,116.472506 C189.487172,116.702507 189.98908,117.010247 190.489416,117.510584 C190.989753,118.01092 191.297493,118.512828 191.527494,119.104658 C191.72527,119.613549 191.867439,120.186996 191.927302,120.980967 L191.962299,121.660939 C191.988304,122.280602 191.997541,122.754009 191.999551,124.235021 L191.995258,126.89348 C191.988732,127.736928 191.97439,128.084998 191.94584,128.710688 C191.902112,129.668669 191.749993,130.322876 191.527494,130.895378 C191.297493,131.487207 190.989753,131.989116 190.489416,132.489452 C189.98908,132.989788 189.487172,133.297528 188.895342,133.52753 C188.386451,133.725306 187.813004,133.867475 187.019033,133.927337 L186.224306,133.967013 C185.694154,133.987959 185.220765,133.996514 184.031143,133.999089 L181.106529,133.995268 C180.263088,133.988752 179.915025,133.974425 179.289312,133.945876 C178.331331,133.902148 177.677124,133.750028 177.104622,133.52753 C176.512793,133.297528 176.010884,132.989788 175.510548,132.489452 C175.010212,131.989116 174.702472,131.487172 174.47247,130.895378 C174.274694,130.386487 174.132525,129.81304 174.072663,129.019069 L174.02985,128.142836 C174.008608,127.574913 174.001407,127.026759 174.000194,125.527402 L174.005899,122.969617 C174.012894,122.223326 174.027171,121.880061 174.054124,121.289347 C174.097852,120.331366 174.249972,119.67716 174.47247,119.104658 C174.702472,118.512828 175.010212,118.01092 175.510548,117.510584 C176.010884,117.010247 176.512793,116.702507 177.104622,116.472506 C177.613513,116.27473 178.18696,116.132561 178.980931,116.072698 L179.857178,116.029882 C180.176639,116.017928 180.489837,116.010414 180.969591,116.005911 Z M183.017857,120.392857 C180.463551,120.392857 178.392857,122.463551 178.392857,125.017857 C178.392857,127.572163 180.463551,129.642857 183.017857,129.642857 C185.572163,129.642857 187.642857,127.572163 187.642857,125.017857 C187.642857,122.463551 185.572163,120.392857 183.017857,120.392857 Z M183.017857,122.015656 C184.675907,122.015656 186.020058,123.359807 186.020058,125.017857 C186.020058,126.675907 184.675907,128.020058 183.017857,128.020058 C181.359807,128.020058 180.015656,126.675907 180.015656,125.017857 C180.015656,123.359807 181.359807,122.015656 183.017857,122.015656 Z M187.785732,119.107143 C187.193993,119.107143 186.714286,119.586815 186.714286,120.178554 C186.714286,120.770293 187.193993,121.25 187.785732,121.25 C188.377471,121.25 188.857143,120.770293 188.857143,120.178554 C188.857143,119.586815 188.377471,119.107143 187.785732,119.107143 Z" transform="translate(-174 -116)"></path>
+</svg>
+</a>
+</li></ul></section></div></div></div></div></div></div>
+
+
+
+
+
+    
+<nav><ul><li><a class="no-pjax" href="/go/help">Contact</a></li><li><a class="login no-pjax" rel="nofollow" href="/user_sessions/new">Log in</a></li></ul></nav>
+
+    
+  </footer>
+</div>
+
+
+</div></div></div></footer>
+
+	</div>
+</div>
+
+</div>
+
+		</div>
+		<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42322374-1"></script>
+<script>
+  window.GA_TRACKING_CODE = 'UA-42322374-1';
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', window.GA_TRACKING_CODE, { 'anonymize_ip': true });
+</script>
+<script type="text/javascript">
+var _zaq = _zaq || [];
+var dntStatus = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+var dontTrack = dntStatus === true || dntStatus === "1";
+if ( ! dontTrack ) {
+  _zaq.push(['_setWebsite', '171728']);
+  _zaq.push(['_setZone', 'Eastern Time (US &amp; Canada)']);
+  _zaq.push(['_setHash', '9895843b4d5a1d07cdc71e3fb0ef9986']);
+  _zaq.push(['_trackPage', '791894']);
+
+  (function() {
+    var zs = document.createElement('script'); zs.type = 'text/javascript'; zs.async = true;
+    zs.src = "https://stats.bandzoogle.com/stats.js";
+    zs.id = "zstats";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(zs, s);
+  })();
+}
+</script>
+
+		
+
+</div>
+  </div>
+</div>
+      
+
+</body></html>https://meresha.com/
