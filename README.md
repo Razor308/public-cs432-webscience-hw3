@@ -1,3 +1,6 @@
+# Below is an assignment for ODU's CS432 Web Science Course.
+# The completed report written in LaTeX can be veiwed [here](HW3_report.pdf)
+
 # Homework 3 - Ranking Webpages
 **Due:** Sunday, October 18, 2020 by 11:59pm
 
